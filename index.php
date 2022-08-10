@@ -1,3 +1,13 @@
+<?php
+include('./config/connect.php');
+session_start();
+if (isset($_SESSION["wcSession"]) != session_id()) {
+    header("Location: ./index.php");
+    die();
+} else {
+    
+?>
+
 <!doctype html>
 <html lang="en" class="pxp-root">
     
@@ -26,7 +36,7 @@
             <div class="pxp-container">
                 <div class="pxp-header-container">
                     <div class="pxp-logo">
-                        <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                        <a href="index.php" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
                     </div>
                     <div class="pxp-nav-trigger navbar d-xl-none flex-fill">
                         <a role="button" data-bs-toggle="offcanvas" data-bs-target="#pxpMobileNav" aria-controls="pxpMobileNav">
@@ -48,7 +58,7 @@
                                             <a role="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Home</a>
                                             <ul class="dropdown-menu">
                                                 <li class="pxp-dropdown-header">Home Page Versions</li>
-                                                <li class="nav-item"><a href="index.html">Hero with Animated Cards</a></li>
+                                                <li class="nav-item"><a href="index.php">Hero with Animated Cards</a></li>
                                                 <li class="nav-item"><a href="index-2.html">Center Image Rotator Hero</a></li>
                                                 <li class="nav-item"><a href="index-3.html">Hero with Illustration</a></li>
                                                 <li class="nav-item"><a href="index-4.html">Boxed Hero with Animation</a></li>
@@ -624,6 +634,7 @@
                     <nav class="pxp-user-nav d-none d-sm-flex">
                         <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
                         <a href="login.php" role="button">Sign in</a>
+                        <a href="./auth/logoutController.php"><img class="log-out-btn" src="./images/login_icons/power-off-ico.svg" alt="" /></a>
                     </nav>
                 </div>
             </div>
@@ -1105,7 +1116,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-xl-5 col-xxl-4 mb-4">
                             <div class="pxp-footer-logo">
-                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                                <a href="index.php" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
                             </div>
                             <div class="pxp-footer-section mt-3 mt-md-4">
                                 <h3>Call us</h3>
@@ -1269,3 +1280,7 @@
 
 <!-- Mirrored from pixelprime.co/themes/jobster/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:22:51 GMT -->
 </html>
+
+<?php
+}
+?>

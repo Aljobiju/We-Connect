@@ -1,6 +1,6 @@
 <?php
 $dbHost = 'localhost';
-$dbName = 'pms_db';
+$dbName = 'wc_db';
 $dbUsername = 'root';
 $dbPassword = '';
 $connect= mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName); 

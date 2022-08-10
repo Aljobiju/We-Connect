@@ -1,13 +1,13 @@
 <?php
-/*session_start();
+session_start();
 include('./config/connect.php');
-if (isset($_SESSION["pmsSession"]) == session_id()) {
-    header("Location: ./login.php");
+if (isset($_SESSION["wcSession"]) == session_id()) {
+    header("Location: ./index.php");
     die();
-} else if(isset($_SESSION["pmsSessionAdmin"]) == session_id()) {
+} else if(isset($_SESSION["wcSessionAdmin"]) == session_id()) {
     header("Location: ./adminDashboard.php");
     die();
-}else {*/
+}else {
 ?>
 <!DOCTYPE html>
 <html>
@@ -201,5 +201,5 @@ const whiteSpaceValidate = (str) => {
 
 </html>
 <?php
-//}
+}
 ?>
