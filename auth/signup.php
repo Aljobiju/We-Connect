@@ -4,7 +4,7 @@ include('../config/connect.php');
 if (isset($_SESSION["wcSession"]) == session_id()) {
     header("Location: ../index.php");
     die();
-  } else if(isset($_SESSION["wcSessionAdmin"]) == session_id()) {
+  } else if(isset($_SESSION["wcSessionAdmin"]) == 'admin') {
     header("Location: ../adminDashboard.php");
     die();
 }else {

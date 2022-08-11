@@ -1,12 +1,3 @@
-<?php
-include('./config/connect.php');
-session_start();
-if (isset($_SESSION["wcSession"]) != session_id()) {
-    header("Location: ./index.php");
-    die();
-} else {
-    
-?>
 
 <!doctype html>
 <html lang="en" class="pxp-root">
@@ -634,7 +625,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <nav class="pxp-user-nav d-none d-sm-flex">
                         <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
                         <a href="login.php" role="button">Sign in</a>
-                        <a href="./auth/logoutController.php"><img class="log-out-btn" src="./images/login_icons/power-off-ico.svg" alt="" /></a>
+                         
                     </nav>
                 </div>
             </div>
@@ -1280,7 +1271,3 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
 
 <!-- Mirrored from pixelprime.co/themes/jobster/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:22:51 GMT -->
 </html>
-
-<?php
-}
-?>

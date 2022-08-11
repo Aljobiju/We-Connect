@@ -86,15 +86,25 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                         $_SESSION['wcSessionAdmin'] = session_id();
                         header("Location: ../adminDashboard.php");
                         die();
-                    } else {
+                    } 
+                    else if ($userData['type_id'] == 2){
                         $_SESSION['wcSession'] = session_id();
-                        header("Location: ../index.php");
+                        header("Location: ../customer_index.php");
+                        die();
+                    }
+                    else if ($userData['type_id'] == 3){
+                        $_SESSION['wcSession'] = session_id();
+                        header("Location: ../worker_index.php");
+                        die();
+                    }
+                    else {
+                        header("Location: ../login.php");
                         die();
                     }
                 }
             } else {
                 $_SESSION['loginMessage'] = "User Login Failed";
-                header("Location: ../login.php");
+                header("Location: ../index.php");
                 die();
             }
         } else {
