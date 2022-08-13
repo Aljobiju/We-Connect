@@ -624,7 +624,7 @@
                     </nav>
                     <nav class="pxp-user-nav d-none d-sm-flex">
                         <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
-                        <a href="login.php" role="button">Sign in</a>
+                        <a href="login.php" class="btn rounded-pill pxp-nav-btn" role="button">Sign in</a>
                          
                     </nav>
                 </div>
@@ -661,15 +661,15 @@
                                 <div class="pxp-hero-searches-label">Popular Searches</div>
                                 <div class="pxp-hero-searches">
                                     <div class="pxp-hero-searches-items">
-                                        <a href="jobs-list-1.html">Work from home</a>
-                                        <a href="jobs-list-1.html">Part-time</a>
-                                        <a href="jobs-list-1.html">Administration</a>
-                                        <a href="jobs-list-1.html">Finance</a>
-                                        <a href="jobs-list-1.html">Retail</a>
-                                        <a href="jobs-list-1.html">IT</a>
-                                        <a href="jobs-list-1.html">Engineering</a>
-                                        <a href="jobs-list-1.html">Sales</a>
-                                        <a href="jobs-list-1.html">Manufacturing</a>
+                                        <a href="jobs-list-1.html">Carpenter</a>
+                                        <a href="jobs-list-1.html">Electrician</a>
+                                        <a href="jobs-list-1.html">Cleaner</a>
+                                        <a href="jobs-list-1.html">Plumber</a>
+                                        <a href="jobs-list-1.html">Cook</a>
+                                        <a href="jobs-list-1.html">Driver</a>
+                                        <a href="jobs-list-1.html">Farm Workers</a>
+                                        <a href="jobs-list-1.html">Mechanic</a>
+                                        <a href="jobs-list-1.html">Painter</a>
                                     </div>
                                 </div>
                             </div>
@@ -683,7 +683,7 @@
                 </div>
             </div>
 
-            <div class="pxp-hero-logos-carousel-container">
+            <!-- <div class="pxp-hero-logos-carousel-container">
                 <div class="pxp-container">
                     <div class="row pxp-pl-80">
                         <div class="col-12 col-xl-6">
@@ -702,7 +702,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="pxp-hero-right-bg-card pxp-has-animation"></div>
         </section>
@@ -728,7 +728,7 @@
                                 <span class="fa fa-pie-chart"></span>
                             </div>
                         </div>
-                        <div class="pxp-categories-card-2-title">Business Development</div>
+                        <div class="pxp-categories-card-2-title">Carpenter</div>
                         <div class="pxp-categories-card-2-subtitle">139 open positions</div>
                     </a>
                     <a href="jobs-list-1.html" class="pxp-categories-card-2">
@@ -737,7 +737,7 @@
                                 <span class="fa fa-bullhorn"></span>
                             </div>
                         </div>
-                        <div class="pxp-categories-card-2-title">Marketing & Communication</div>
+                        <div class="pxp-categories-card-2-title">Electrician</div>
                         <div class="pxp-categories-card-2-subtitle">366 open positions</div>
                     </a>
                     <a href="jobs-list-1.html" class="pxp-categories-card-2">
@@ -746,7 +746,7 @@
                                 <span class="fa fa-address-card-o"></span>
                             </div>
                         </div>
-                        <div class="pxp-categories-card-2-title">Human Resources</div>
+                        <div class="pxp-categories-card-2-title">Plumber</div>
                         <div class="pxp-categories-card-2-subtitle">435 open positions</div>
                     </a>
                     <a href="jobs-list-1.html" class="pxp-categories-card-2">
@@ -755,7 +755,7 @@
                                 <span class="fa fa-calendar-o"></span>
                             </div>
                         </div>
-                        <div class="pxp-categories-card-2-title">Project Management</div>
+                        <div class="pxp-categories-card-2-title">Cleaner</div>
                         <div class="pxp-categories-card-2-subtitle">324 open positions</div>
                     </a>
                     <a href="jobs-list-1.html" class="pxp-categories-card-2">
@@ -764,7 +764,7 @@
                                 <span class="fa fa-comments-o"></span>
                             </div>
                         </div>
-                        <div class="pxp-categories-card-2-title">Customer Service</div>
+                        <div class="pxp-categories-card-2-title">Driver</div>
                         <div class="pxp-categories-card-2-subtitle">39 open positions</div>
                     </a>
                     <a href="jobs-list-1.html" class="pxp-categories-card-2">
@@ -773,7 +773,7 @@
                                 <span class="fa fa-terminal"></span>
                             </div>
                         </div>
-                        <div class="pxp-categories-card-2-title">Software Engineering</div>
+                        <div class="pxp-categories-card-2-title">Cook</div>
                         <div class="pxp-categories-card-2-subtitle">439 open positions</div>
                     </a>
                     <a href="jobs-list-1.html" class="pxp-categories-card-2">
@@ -782,7 +782,7 @@
                                 <span class="fa fa-bank"></span>
                             </div>
                         </div>
-                        <div class="pxp-categories-card-2-title">Finance</div>
+                        <div class="pxp-categories-card-2-title">Farm Worker</div>
                         <div class="pxp-categories-card-2-subtitle">139 open positions</div>
                     </a>
                     <a href="jobs-list-1.html" class="pxp-categories-card-2">
@@ -791,10 +791,10 @@
                                 <span class="fa fa-building-o"></span>
                             </div>
                         </div>
-                        <div class="pxp-categories-card-2-title">Construction</div>
+                        <div class="pxp-categories-card-2-title">Mechanic</div>
                         <div class="pxp-categories-card-2-subtitle">366 open positions</div>
                     </a>
-                    <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                    <!-- <a href="jobs-list-1.html" class="pxp-categories-card-2">
                         <div class="pxp-categories-card-2-icon-container">
                             <div class="pxp-categories-card-2-icon">
                                 <span class="fa fa-stethoscope"></span>
@@ -811,8 +811,8 @@
                         </div>
                         <div class="pxp-categories-card-2-title">Business Development</div>
                         <div class="pxp-categories-card-2-subtitle">139 open positions</div>
-                    </a>
-                    <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                    </a> -->
+                    <!-- <a href="jobs-list-1.html" class="pxp-categories-card-2">
                         <div class="pxp-categories-card-2-icon-container">
                             <div class="pxp-categories-card-2-icon">
                                 <span class="fa fa-bullhorn"></span>
@@ -856,7 +856,7 @@
                         </div>
                         <div class="pxp-categories-card-2-title">Software Engineering</div>
                         <div class="pxp-categories-card-2-subtitle">439 open positions</div>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </section>
@@ -887,7 +887,7 @@
                         <a href="jobs-list-1.html" class="pxp-cities-card-1 text-center">
                             <div class="pxp-cities-card-1-top">
                                 <div class="pxp-cities-card-1-image pxp-cover" style="background-image: url(images/city-1.jpg);"></div>
-                                <div class="pxp-cities-card-1-name">Paris, France</div>
+                                <div class="pxp-cities-card-1-name">Kottayam, Kerala</div>
                             </div>
                             <div class="pxp-cities-card-1-bottom">
                                 <div class="pxp-cities-card-1-jobs">366 open positions</div>
@@ -898,7 +898,7 @@
                         <a href="jobs-list-1.html" class="pxp-cities-card-1 text-center">
                             <div class="pxp-cities-card-1-top">
                                 <div class="pxp-cities-card-1-image pxp-cover" style="background-image: url(images/city-2.jpg);"></div>
-                                <div class="pxp-cities-card-1-name">San Francisco, CA</div>
+                                <div class="pxp-cities-card-1-name">Bangalore, Karnataka</div>
                             </div>
                             <div class="pxp-cities-card-1-bottom">
                                 <div class="pxp-cities-card-1-jobs">288 open positions</div>
@@ -909,7 +909,7 @@
                         <a href="jobs-list-1.html" class="pxp-cities-card-1 text-center">
                             <div class="pxp-cities-card-1-top">
                                 <div class="pxp-cities-card-1-image pxp-cover" style="background-image: url(images/city-3.jpg);"></div>
-                                <div class="pxp-cities-card-1-name">London, UK</div>
+                                <div class="pxp-cities-card-1-name">Kochi, Kerala</div>
                             </div>
                             <div class="pxp-cities-card-1-bottom">
                                 <div class="pxp-cities-card-1-jobs">452 open positions</div>
@@ -920,7 +920,7 @@
                         <a href="jobs-list-1.html" class="pxp-cities-card-1 text-center">
                             <div class="pxp-cities-card-1-top">
                                 <div class="pxp-cities-card-1-image pxp-cover" style="background-image: url(images/city-4.jpg);"></div>
-                                <div class="pxp-cities-card-1-name">New York, NY</div>
+                                <div class="pxp-cities-card-1-name">Theni, TamilNadu</div>
                             </div>
                             <div class="pxp-cities-card-1-bottom">
                                 <div class="pxp-cities-card-1-jobs">123 open positions</div>
@@ -931,7 +931,7 @@
                         <a href="jobs-list-1.html" class="pxp-cities-card-1 text-center">
                             <div class="pxp-cities-card-1-top">
                                 <div class="pxp-cities-card-1-image pxp-cover" style="background-image: url(images/city-5.jpg);"></div>
-                                <div class="pxp-cities-card-1-name">Los Angeles, CA</div>
+                                <div class="pxp-cities-card-1-name">gurgaon, Delhi</div>
                             </div>
                             <div class="pxp-cities-card-1-bottom">
                                 <div class="pxp-cities-card-1-jobs">423 open positions</div>
@@ -942,7 +942,7 @@
                         <a href="jobs-list-1.html" class="pxp-cities-card-1 text-center">
                             <div class="pxp-cities-card-1-top">
                                 <div class="pxp-cities-card-1-image pxp-cover" style="background-image: url(images/city-6.jpg);"></div>
-                                <div class="pxp-cities-card-1-name">San Francisco, CA</div>
+                                <div class="pxp-cities-card-1-name">Bandra, Mumbai</div>
                             </div>
                             <div class="pxp-cities-card-1-bottom">
                                 <div class="pxp-cities-card-1-jobs">1245 open positions</div>
@@ -953,7 +953,7 @@
                         <a href="jobs-list-1.html" class="pxp-cities-card-1 text-center">
                             <div class="pxp-cities-card-1-top">
                                 <div class="pxp-cities-card-1-image pxp-cover" style="background-image: url(images/city-4.jpg);"></div>
-                                <div class="pxp-cities-card-1-name">New York, NY</div>
+                                <div class="pxp-cities-card-1-name">Calicut, Kerala</div>
                             </div>
                             <div class="pxp-cities-card-1-bottom">
                                 <div class="pxp-cities-card-1-jobs">123 open positions</div>
@@ -964,7 +964,7 @@
                         <a href="jobs-list-1.html" class="pxp-cities-card-1 text-center">
                             <div class="pxp-cities-card-1-top">
                                 <div class="pxp-cities-card-1-image pxp-cover" style="background-image: url(images/city-5.jpg);"></div>
-                                <div class="pxp-cities-card-1-name">Los Angeles, CA</div>
+                                <div class="pxp-cities-card-1-name">Surat, Gujarat</div>
                             </div>
                             <div class="pxp-cities-card-1-bottom">
                                 <div class="pxp-cities-card-1-jobs">423 open positions</div>
@@ -975,7 +975,7 @@
                         <a href="jobs-list-1.html" class="pxp-cities-card-1 text-center">
                             <div class="pxp-cities-card-1-top">
                                 <div class="pxp-cities-card-1-image pxp-cover" style="background-image: url(images/city-6.jpg);"></div>
-                                <div class="pxp-cities-card-1-name">San Francisco, CA</div>
+                                <div class="pxp-cities-card-1-name">Howrah, West Bengal</div>
                             </div>
                             <div class="pxp-cities-card-1-bottom">
                                 <div class="pxp-cities-card-1-jobs">1245 open positions</div>

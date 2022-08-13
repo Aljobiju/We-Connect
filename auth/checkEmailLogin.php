@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email_check']) && $_POS
 
     $email = mysqli_real_escape_string($connect, $_POST['email']);
 
-    $sqlcheck = "SELECT email FROM tbl_user WHERE email = '$email' ";
+    $sqlcheck = "SELECT email FROM tbl_register WHERE email = '$email' ";
 
     $checkResult = $connect->query($sqlcheck);
 

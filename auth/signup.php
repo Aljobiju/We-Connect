@@ -55,7 +55,7 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
 
         <div class="right-lg-container">
           <div class="form-container">
-            <form id="msform" action="../auth/authentication.php" method="post">
+            <form id="msform" action="../auth/authentication.php" method="post" >
               <h1 class="lg-frm-heading">Get started</h1>
               <!-- progressbar -->
               <div class="progress-container">
@@ -78,6 +78,8 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                     class="form-control"
                     placeholder="john@example.com"
                     autocomplete="off"
+                    required
+                    onkeyup="manage(this)"
                   />
                   <small id="errMsgEmail" class="errMsg"></small>
                 </div>
@@ -89,6 +91,8 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                     id="password"
                     class="form-control"
                     placeholder="**********"
+                    required
+                    onkeyup="manage(this)"
                   />
                   <small id="errMsgPassword" class="errMsg"></small>
                 </div>
@@ -100,12 +104,25 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                     id="cpassword"
                     class="form-control"
                     placeholder="**********"
+                    required
+                    onkeyup="manage(this)"
                   />
                   <small id="errMsgCpassword" class="errMsg"></small>
                 </div>
 
                 <div class="form-group">
-                  <button id="next1" class="next btn-primary mt-4">Next</button>
+                  <button id="next1" class="next btn-primary mt-4"  disabled>Next</button>
+                  <script>
+    function manage(txt) {
+        var bt = document.getElementById('next1');
+        if (txt.value != '') {
+            bt.disabled = false;
+        }
+        else {
+            bt.disabled = true;
+        }
+    }
+</script>
                 </div>
 
                 <div class="form-group">
@@ -124,7 +141,7 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                 />
                 <div class="form-group">
                   <label for="role">Select your role <sup>*</sup></label>
-                  <select name="role" id="role" class="form-control">
+                  <select name="role" id="role" class="form-control" required>
                   <option value="" disabled selected>Select your role</option>
                   <?php
                                 $sql = "SELECT * FROM tbl_user_role WHERE role_id != 1";
@@ -161,6 +178,7 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                     placeholder="House No, City, Town, State"
                     
                     autocomplete="off"
+                    required
                   />
                   <small id="errMsgUaddress" class="errMsg"></small>
                 </div>
@@ -184,8 +202,8 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                     id="uname"
                     class="form-control"
                     placeholder="John Wick"
-                    
                     autocomplete="off"
+                    required
                   />
                   <small id="errMsgUname" class="errMsg"></small>
                 </div>
@@ -199,11 +217,12 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                     placeholder="8590456210"
                     autocomplete="off"
                     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="10"
+                    required
                   />
                   <small id="errMsgMob" class="errMsg"></small>
                 </div>
                 <div class="form-group">
-                  <label for="name">Date of birth <sup>*</sup></label>
+                  <label for="dob">Date of birth <sup>*</sup></label>
                   <input
                     type="date"
                     name="dob"
