@@ -157,17 +157,7 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                   <small id="errMsgRole" class="errMsg"></small>
                 </div>
 
-                <!-- <div class="form-group">
-                  <label for="referral">Referral code(if any)</label>
-                  <input
-                    type="text"
-                    name="referral"
-                    id="referral"
-                    class="form-control"
-                    placeholder="RXL23"
-                    autocomplete="off" 
-                  />
-                </div> -->
+               
                 <div class="form-group">
                   <label for="uadress">Address <sup>*</sup></label>
                   <input
