@@ -2,7 +2,6 @@
 <!doctype html>
 <html lang="en" class="pxp-root">
     
-<!-- Mirrored from pixelprime.co/themes/jobster/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:22:50 GMT -->
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,7 +17,7 @@
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/style.css">
 
-        <title>Jobster - Home v3</title>
+        <title>We-Connect - Home </title>
     </head>
     <body>
         <div class="pxp-preloader"><span>Loading...</span></div>
@@ -27,7 +26,7 @@
             <div class="pxp-container">
                 <div class="pxp-header-container">
                     <div class="pxp-logo">
-                        <a href="index.php" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                        <a href="index.php" class="pxp-animate"><span style="color: var(--pxpMainColor)">We-</span>Connect</a>
                     </div>
                     <div class="pxp-nav-trigger navbar d-xl-none flex-fill">
                         <a role="button" data-bs-toggle="offcanvas" data-bs-target="#pxpMobileNav" aria-controls="pxpMobileNav">
@@ -38,7 +37,7 @@
                         <div class="offcanvas offcanvas-start pxp-nav-mobile-container" tabindex="-1" id="pxpMobileNav">
                             <div class="offcanvas-header">
                                 <div class="pxp-logo">
-                                    <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                                    <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                                 </div>
                                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
@@ -794,69 +793,6 @@
                         <div class="pxp-categories-card-2-title">Mechanic</div>
                         <div class="pxp-categories-card-2-subtitle">366 open positions</div>
                     </a>
-                    <!-- <a href="jobs-list-1.html" class="pxp-categories-card-2">
-                        <div class="pxp-categories-card-2-icon-container">
-                            <div class="pxp-categories-card-2-icon">
-                                <span class="fa fa-stethoscope"></span>
-                            </div>
-                        </div>
-                        <div class="pxp-categories-card-2-title">Healtcare</div>
-                        <div class="pxp-categories-card-2-subtitle">435 open positions</div>
-                    </a>
-                    <a href="jobs-list-1.html" class="pxp-categories-card-2">
-                        <div class="pxp-categories-card-2-icon-container">
-                            <div class="pxp-categories-card-2-icon">
-                                <span class="fa fa-pie-chart"></span>
-                            </div>
-                        </div>
-                        <div class="pxp-categories-card-2-title">Business Development</div>
-                        <div class="pxp-categories-card-2-subtitle">139 open positions</div>
-                    </a> -->
-                    <!-- <a href="jobs-list-1.html" class="pxp-categories-card-2">
-                        <div class="pxp-categories-card-2-icon-container">
-                            <div class="pxp-categories-card-2-icon">
-                                <span class="fa fa-bullhorn"></span>
-                            </div>
-                        </div>
-                        <div class="pxp-categories-card-2-title">Marketing & Communication</div>
-                        <div class="pxp-categories-card-2-subtitle">366 open positions</div>
-                    </a>
-                    <a href="jobs-list-1.html" class="pxp-categories-card-2">
-                        <div class="pxp-categories-card-2-icon-container">
-                            <div class="pxp-categories-card-2-icon">
-                                <span class="fa fa-address-card-o"></span>
-                            </div>
-                        </div>
-                        <div class="pxp-categories-card-2-title">Human Resources</div>
-                        <div class="pxp-categories-card-2-subtitle">435 open positions</div>
-                    </a>
-                    <a href="jobs-list-1.html" class="pxp-categories-card-2">
-                        <div class="pxp-categories-card-2-icon-container">
-                            <div class="pxp-categories-card-2-icon">
-                                <span class="fa fa-calendar-o"></span>
-                            </div>
-                        </div>
-                        <div class="pxp-categories-card-2-title">Project Management</div>
-                        <div class="pxp-categories-card-2-subtitle">324 open positions</div>
-                    </a>
-                    <a href="jobs-list-1.html" class="pxp-categories-card-2">
-                        <div class="pxp-categories-card-2-icon-container">
-                            <div class="pxp-categories-card-2-icon">
-                                <span class="fa fa-comments-o"></span>
-                            </div>
-                        </div>
-                        <div class="pxp-categories-card-2-title">Customer Service</div>
-                        <div class="pxp-categories-card-2-subtitle">39 open positions</div>
-                    </a>
-                    <a href="jobs-list-1.html" class="pxp-categories-card-2">
-                        <div class="pxp-categories-card-2-icon-container">
-                            <div class="pxp-categories-card-2-icon">
-                                <span class="fa fa-terminal"></span>
-                            </div>
-                        </div>
-                        <div class="pxp-categories-card-2-title">Software Engineering</div>
-                        <div class="pxp-categories-card-2-subtitle">439 open positions</div>
-                    </a> -->
                 </div>
             </div>
         </section>
@@ -876,6 +812,89 @@
                 </div>
             </div>
         </section>
+
+        <!-- <section class="choose-section choose-section2" dir="">
+        <div class="container">
+            <br>
+            <h3>WHY JOBOY?</h3>
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-2">
+                    <div style="visibility: visible;">
+
+                    <div class="pxp-categories-card-2-icon-container">
+                            <div class="pxp-categories-card-2-icon">
+                            <img loading="lazy" src="images/services-ball-shape.png" alt="" class="service__shape">
+                            <div class="pxp-categories-card-2-icon">
+                                <img loading="lazy" src="images/On-Demand-Scheduled.png" alt="" class=""></div>
+                            </div>
+                        </div>
+        
+                        <div class="choose-text choose-text2">
+                            <h3>On Demand /<br> Scheduled</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6  col-sm-6 col-md-6 col-lg-2">
+                    <div class="single-choose single-choose2" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s;">
+                        <div class="choose-icon choose-icon2">
+                            <img loading="lazy" src="images/services-ball-shape.png" alt="" class="service__shape">
+                            <div class="service__icon"><img loading="lazy" src="images/Verified-Partners.png" alt="" class=""></div>
+                        </div>
+                        <div class="choose-text choose-text2">
+                            <h3>Verified Partners </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-2">
+                    <div class="single-choose single-choose2" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s;">
+                        <div class="choose-icon choose-icon2">
+                            <img loading="lazy" src="images/services-ball-shape.png" alt="" class="service__shape">
+                            <div class="service__icon"><img loading="lazy" src="images/Service-Warranty.png" alt="" class=""></div>
+                        </div>
+                        <div class="choose-text choose-text2">
+                            <h3>Service Warranty </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-2" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s;">
+                    <div class="single-choose single-choose2">
+                        <div class="choose-icon choose-icon2">
+                            <img loading="lazy" src="images/services-ball-shape.png" alt="" class="service__shape">
+                            <div class="service__icon"><img loading="lazy" src="images/Transparent-Pricing.png" alt="" class=""></div>
+                        </div>
+                        <div class="choose-text choose-text2">
+                            <h3>Transparent Pricing</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-6 col-md-6 col-lg-2" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s;">
+                    <div class="single-choose single-choose2">
+                        <div class="choose-icon choose-icon2">
+                            <img loading="lazy" src="images/services-ball-shape.png" alt="" class="service__shape">
+                            <div class="service__icon"><img loading="lazy" src="images/Online-Payments.png" alt="" class=""></div>
+                        </div>
+                        <div class="choose-text choose-text2">
+                            <h3>Online Payments</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-6 col-md-6 col-lg-2 wow fadeInUp" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s;">
+                    <div class="single-choose single-choose2">
+                        <div class="choose-icon choose-icon2">
+                            <img loading="lazy" src="images/services-ball-shape.png" alt="" class="service__shape">
+                            <div class="service__icon"><img loading="lazy" src="images/customer-support.png" alt="" class=""></div>
+                            <div class=""></div>
+                        </div>
+                        <div class="choose-text choose-text2">
+                            <h3>Support</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
         <section class="mt-100">
             <div class="pxp-container">
@@ -1107,7 +1126,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-xl-5 col-xxl-4 mb-4">
                             <div class="pxp-footer-logo">
-                                <a href="index.php" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                                <a href="index.php" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                             </div>
                             <div class="pxp-footer-section mt-3 mt-md-4">
                                 <h3>Call us</h3>
@@ -1269,5 +1288,5 @@
         <script src="js/main.js"></script>
     </body>
 
-<!-- Mirrored from pixelprime.co/themes/jobster/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:22:51 GMT -->
+
 </html>

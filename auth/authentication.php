@@ -94,7 +94,7 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                     $_SESSION['currentUserTypeId'] = $userData['type_id'];
                     if ($userData['type_id'] == 1) {
                         $_SESSION['wcSessionAdmin'] = session_id();
-                        header("Location: ../adminDashboard.php");
+                        header("Location: ../admin/adminDashboard.php");
                         die();
                     } 
                     else if ($userData['type_id'] == 2){
@@ -124,3 +124,4 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
         }
     }
 }
+?>

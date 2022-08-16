@@ -5,7 +5,7 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
     header("Location: ./index.php");
     die();
 } else if (isset($_SESSION["wcSessionAdmin"]) == session_id()) {
-    header("Location: ./adminDashboard.php");
+    header("Location: ./admin/adminDashboard.php");
     die();
 }else {
 ?>
@@ -46,11 +46,11 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
         <div class="lg-container">
             <div class="left-lg-container" >
             
-                <h1 class="lft-heading" >We-Connect</h1>
+                <!-- <h1 class="lft-heading" >We-Connect</h1>
                
                 <p class="lft-text">
                 Changing Careers, Changing Lives. <b></b>
-                </p>
+                </p> -->
             </div>
 
             <div class="right-lg-container">
