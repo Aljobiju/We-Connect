@@ -1,58 +1,7 @@
-/*
-    Table of Contents
 
-    Name                 : Jobie
-    Author               : DexignZone
-    Author Portfolio     : https://themeforest.net/user/dexignzone/portfolio
-    
+/* 12602 */
 
 
-    Table of Sass Contents
-
-    1. Abstracts
-        _bs-custom
-        _inheritance
-        _maps
-        _mixin
-        _variable
-
-    2. bootstrap 
-        -Here goes all official bootstrap scss files
-
-    3. Global/Base
-        _color
-        _custom-grid
-        _fonts
-        _helper
-        _reset
-
-    4. layout
-        +footer
-        +header
-        +rtl
-        +sidebar
-        +tables
-        +theme
-        +version-dark
-
-    5. Conponents
-        +app
-        +charts
-        +forms
-        +map
-        +uc
-        +ui
-        +widget
-
-    6. Page
-        _index-1
-        _page-error
-        _page-register
-        _page-signin
-        _page-user-lock
-        _page-user-lock
-
-*/
 /*$primary  : #7356f1 !default;*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
@@ -12599,7 +12548,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       right: 0;
       top: -50px;
       box-shadow: 10px 10px 0 0 #F2F2F2; }
-    [data-sidebar-style="full"][data-layout="vertical"] .deznav .metismenu > li > a:after {
+    /* [data-sidebar-style="full"][data-layout="vertical"] .deznav .metismenu > li > a:after {
       content: "";
       height: 50px;
       width: 38px;
@@ -12611,7 +12560,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       bottom: -50px;
       box-shadow: 10px -10px 0 0 #F2F2F2;
       transform: rotate(0);
-      border: 0; }
+      border: 0; } */
     [data-sidebar-style="full"][data-layout="vertical"] .deznav .metismenu > li > a:marker {
       color: red; }
   [data-sidebar-style="full"][data-layout="vertical"] .deznav .metismenu > li.mm-active.has-menu:after {

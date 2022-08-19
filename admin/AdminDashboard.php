@@ -177,11 +177,20 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                     </li>
                     <li class="has-menu"><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-network"></i>
-							<span class="nav-text">Manage</span>
+							<span class="nav-text">Customers</span>
 						</a>
                         <ul aria-expanded="false">
                             <!-- <li><a href="table-bootstrap-basic.html">Bootstrap</a></li> -->
-                            <li><a href="manageUsers.php">Manage Users</a></li>
+                            <li><a href="manageUsers.php">Manage Customers</a></li>
+                        </ul>
+                    </li>
+					<li class="has-menu"><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-network"></i>
+							<span class="nav-text">Workers</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <!-- <li><a href="table-bootstrap-basic.html">Bootstrap</a></li> -->
+							<li><a href="manageWorkers.php">Manage Workers</a></li>
                         </ul>
                     </li>
                     <!-- <li class="has-menu"><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">

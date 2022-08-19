@@ -218,8 +218,8 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
             <div class="container-fluid">
                 <div class="page-titles">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="javascript:void(0)">Customers</a></li>
-						<li class="breadcrumb-item active"><a href="javascript:void(0)">Manage Customers</a></li>
+						<li class="breadcrumb-item"><a href="javascript:void(0)">Workers</a></li>
+						<li class="breadcrumb-item active"><a href="javascript:void(0)">Manage Workers</a></li>
 					</ol>
                 </div>
                 <!-- row -->
@@ -229,7 +229,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 					<div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Customer Information</h4>
+                                <h4 class="card-title">Worker Information</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -251,38 +251,34 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                                         <tbody>
                                         
                                         <?php
-                                         $sql="SELECT * FROM tbl_customer";
+                                         $sql="SELECT * FROM tbl_worker";
                                         $result = $connect->query($sql);
                                          if($result->num_rows > 0){ 
                                         while($row = $result->fetch_assoc()) {
                                             ?>
                                                 <tr>
                                             
-                                                <td><?php echo $row['cus_name'];?></td>
+                                                <td><?php echo $row['wor_name'];?></td>
                                                 <td><?php echo $row['mob']; ?></td>
                                                 <td><?php echo $row['email'] ;?></td>
                                                 <td><?php echo $row['dob']; ?></td>
                                                 <td><?php echo $row['address']; ?></td>
 												<td>
-													
+													<span class="badge light badge-success">
                                                         <?php
                                                             if ($row['status'] == 0) {
                                                         ?>
-                                                        <span class="badge light badge-danger">
 														<i class="fa fa-circle text-danger me-1"></i>
 														<?php echo 'Inactive'; ?>
-                                                        </span>
                                                         <?php
                                                             } 
                                                         else
                                                         {
                                                             ?>
-                                                            <span class="badge light badge-success">
                                                             <i class="fa fa-circle text-success me-1"></i>
 														<?php echo 'Active'; 
                                                         }?>
-                                                        </span>
-													
+													</span>
 												</td>
                                                 <td>
 													<div class="dropdown ms-auto text-end">
