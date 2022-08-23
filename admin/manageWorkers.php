@@ -255,6 +255,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                                         $result = $connect->query($sql);
                                          if($result->num_rows > 0){ 
                                         while($row = $result->fetch_assoc()) {
+                                            $user_id=trim($row['user_id']);
                                             ?>
                                                 <tr>
                                             
@@ -264,21 +265,25 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                                                 <td><?php echo $row['dob']; ?></td>
                                                 <td><?php echo $row['address']; ?></td>
 												<td>
-													<span class="badge light badge-success">
+													
                                                         <?php
                                                             if ($row['status'] == 0) {
                                                         ?>
+                                                        <span class="badge light badge-danger">
 														<i class="fa fa-circle text-danger me-1"></i>
 														<?php echo 'Inactive'; ?>
+                                                        </span>
                                                         <?php
                                                             } 
                                                         else
                                                         {
                                                             ?>
+                                                            <span class="badge light badge-success">
                                                             <i class="fa fa-circle text-success me-1"></i>
 														<?php echo 'Active'; 
                                                         }?>
-													</span>
+                                                        </span>
+													
 												</td>
                                                 <td>
 													<div class="dropdown ms-auto text-end">
@@ -286,8 +291,12 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 															<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg>
 														</div>
 														<div class="dropdown-menu dropdown-menu-end">
-															<a class="dropdown-item" href="#">Enable</a>
-															<a class="dropdown-item" href="#">Disable</a>
+															<!-- <a class="dropdown-item" href="#enable_user">Enable</a>
+															<a class="dropdown-item" href="#disable_user">Disable</a> -->
+
+                                                            <a class="dropdown-item" href="disableWorker.php?uid= <?php echo $user_id ?> ">Disable</a>
+                                                             <a class="dropdown-item" href="enableWorker.php?uid= <?php echo $user_id ?> ">Enable</a>
+                                                             
 														</div>
 													</div>
 												</td>												

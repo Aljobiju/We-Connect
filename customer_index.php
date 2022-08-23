@@ -635,7 +635,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 </li>
                             </ul>
                         </nav>
-                        <nav class="pxp-user-nav pxp-on-light d-none d-sm-flex">
+                        <na v class="pxp-user-nav pxp-on-light d-none d-sm-flex">
                             <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
                             <a class="btn rounded-pill pxp-user-nav-trigger" data-bs-toggle="modal" href="./auth/logoutController.php" role="button"><img class="log-out-btn" src="./images/login_icons/power-off-ico.svg" alt="" /> Logout</a>
                             <!-- <a class="btn rounded-pill pxp-user-nav-trigger" data-bs-toggle="modal" href="#pxp-signin-modal" role="button">Sign in</a> -->
