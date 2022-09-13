@@ -260,7 +260,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                                                 <tr>
                                             
                                                 <td><?php echo $row['wor_name'];?></td>
-                                                <td><?php echo $row['mob']; ?></td>
+                                                <td><?php echo $row ['mob']; ?></td>
                                                 <td><?php echo $row['email'] ;?></td>
                                                 <td><?php echo $row['dob']; ?></td>
                                                 <td><?php echo $row['address']; ?></td>

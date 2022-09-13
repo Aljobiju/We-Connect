@@ -1,6 +1,6 @@
 <?php
 $uId = $_GET['uid'];
-include('../config/connect.php');
+include('../config/connect.php');  
 //update user_status in tbl_user table
 $sql1 = "UPDATE `tbl_customer` SET `status`='0' WHERE `user_id`='$uId'";
             $result1 = mysqli_query($connect, $sql1);

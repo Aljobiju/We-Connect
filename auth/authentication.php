@@ -99,6 +99,7 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                     } 
                     else if ($userData['type_id'] == 2){
                         $_SESSION['wcSession'] = session_id();
+                        
                         header("Location: ../customer_index.php");
                         die();
                     }
