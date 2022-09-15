@@ -22,7 +22,6 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/login_css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
-    <link rel="icon" href="images/login_images/logo2.png" type="image/icon type" />
 </head>
 
 <body>
@@ -41,16 +40,16 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
   ?>
     <div class="main">
         <div class="logo">
-            <!-- <img src="images/login_images/logo.svg" alt="Ease-iT-logo" /> -->
+            <!-- <img src="images/login_images/logo.svg" /> -->
         </div>
         <div class="lg-container">
             <div class="left-lg-container" >
             
-                <!-- <h1 class="lft-heading" >We-Connect</h1>
+                <h1 class="lft-heading" >We-Connect</h1>
                
                 <p class="lft-text">
                 Changing Careers, Changing Lives. <b></b>
-                </p> -->
+                </p>
             </div>
 
             <div class="right-lg-container">
@@ -70,7 +69,7 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                                 <small id="errMsgPassword" class="errMsg"></small>
                         </div>
                         <div class="form-group">
-                            <a class="forgot-pass" href="forgotPassword.php">Forgot Password ?</a>
+                            <a class="forgot-pass" href="#">Forgot Password ?</a>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn-primary" name="LoginSubmit">Sign in</button>

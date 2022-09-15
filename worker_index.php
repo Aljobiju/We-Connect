@@ -28,7 +28,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/style.css">
 
-        <title>Jobster - Home v1</title>
+        <title>We-Connect</title>
     </head>
     <body>
         <div class="pxp-preloader"><span>Loading...</span></div>
@@ -1213,7 +1213,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 <div class="pxp-footer-text">
                                     90 Fifth Avenue, 3rd Floor<br>
                                     San Francisco, CA 1980<br>
-                                    office@jobster.com
+                                    office@We-Connect.com
                                 </div>
                             </div>
                         </div>
@@ -1274,7 +1274,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <div class="pxp-container">
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-auto">
-                            <div class="pxp-footer-copyright pxp-text-light">© 2021 Jobster. All Right Reserved.</div>
+                            <div class="pxp-footer-copyright pxp-text-light">© 2022 We-Connect. All Right Reserved.</div>
                         </div>
                         <div class="col-lg-auto">
                             <div class="pxp-footer-social mt-3 mt-lg-0">
@@ -1318,7 +1318,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 <a href="#" class="pxp-modal-link">Forgot password</a>
                             </div>
                             <div class="mt-4 text-center pxp-modal-small">
-                                New to Jobster? <a role="button" class="" data-bs-target="#pxp-signup-modal" data-bs-toggle="modal" data-bs-dismiss="modal">Create an account</a>
+                                New to We-Connect? <a role="button" class="" data-bs-target="#pxp-signup-modal" data-bs-toggle="modal" data-bs-dismiss="modal">Create an account</a>
                             </div>
                         </form>
                     </div>

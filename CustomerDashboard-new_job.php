@@ -1,7 +1,18 @@
+<?php
+include('./config/connect.php');
+session_start();
+if (isset($_SESSION["wcSession"]) != session_id()) {
+    header("Location: ./login.php");
+    die();
+} else {
+    
+?>
+
+
 <!doctype html>
 <html lang="en" class="pxp-root">
     
-<!-- Mirrored from pixelprime.co/themes/jobster/company-dashboard-new-job.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:23:07 GMT -->
+
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,7 +28,7 @@
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/style.css">
 
-        <title>Jobster - Company dashboard - New job offer</title>
+        <title>We-Connect</title>
     </head>
     <body style="background-color: var(--pxpMainColorLight);">
         <div class="pxp-preloader"><span>Loading...</span></div>
@@ -32,11 +43,11 @@
                 <ul class="list-unstyled">
                     <li><a href="company-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
                     <li><a href="CustomerDashboard-Profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
-                    <li class="pxp-active"><a href="company-dashboard-new-job.html"><span class="fa fa-file-text-o"></span>New Job Offer</a></li>
+                    <li class="pxp-active"><a href="company-dashboard-new-job.html"><span class="fa fa-file-text-o"></span>New Job</a></li>
                     <li><a href="company-dashboard-jobs.html"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
                     <li><a href="company-dashboard-candidates.html"><span class="fa fa-user-circle-o"></span>Candidates</a></li>
                     <li><a href="company-dashboard-subscriptions.html"><span class="fa fa-credit-card"></span>Subscriptions</a></li>
-                    <li><a href="company-dashboard-password.html"><span class="fa fa-lock"></span>Change Password</a></li>
+                    <li><a href="CustomerDashboard-changepassword.php"><span class="fa fa-lock"></span>Change Password</a></li>
                 </ul>
                 <!-- <div class="pxp-dashboard-side-label mt-3 mt-lg-4">Insights</div>
                 <ul class="list-unstyled">
@@ -60,7 +71,7 @@
                     <div class="dropdown pxp-dashboard-side-user-nav-dropdown dropup">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
                             <div class="pxp-dashboard-side-user-nav-avatar pxp-cover" style="background-image: url(images/company-logo-1.png);"></div>
-                            <div class="pxp-dashboard-side-user-nav-name">hello</div>
+                            <div class="pxp-dashboard-side-user-nav-name"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
@@ -92,12 +103,12 @@
                                     <li class="pxp-dropdown-header">Customer tools</li>
                                     <li class="nav-item"><a href="company-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-Profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
-                                    <li class="nav-item"><a href="company-dashboard-new-job.html"><span class="fa fa-file-text-o"></span>New Job Offer</a></li>
+                                    <li class="nav-item"><a href="company-dashboard-new-job.html"><span class="fa fa-file-text-o"></span>New Job</a></li>
                                     <li class="nav-item"><a href="company-dashboard-jobs.html"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
                                     <li class="nav-item"><a href="company-dashboard-candidates.html"><span class="fa fa-user-circle-o"></span>Candidates</a></li>
                                     <li class="nav-item"><a href="company-dashboard-subscriptions.html"><span class="fa fa-credit-card"></span>Subscriptions</a></li>
-                                    <li class="nav-item"><a href="company-dashboard-password.html"><span class="fa fa-lock"></span>Change Password</a></li>
-                                    <li class="pxp-dropdown-header mt-4">Insights</li>
+                                    <li class="nav-item"><a href="CustomerDashboard-changepassword.php"><span class="fa fa-lock"></span>Change Password</a></li>
+                                    <!-- <li class="pxp-dropdown-header mt-4">Insights</li>
                                     <li class="nav-item">
                                         <a href="company-dashboard-inbox.html" class="d-flex justify-content-between align-items-center">
                                             <div><span class="fa fa-envelope-o"></span>Inbox</div>
@@ -109,7 +120,7 @@
                                             <div><span class="fa fa-bell-o"></span>Notifications</div>
                                             <span class="badge rounded-pill">5</span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </nav>
                         </div>
@@ -117,7 +128,7 @@
                 </div>
                 <nav class="pxp-user-nav pxp-on-light">
                     <a href="CustomerDashboard-new_job.php" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
-                    <div class="dropdown pxp-user-nav-dropdown pxp-user-notifications">
+                    <!-- <div class="dropdown pxp-user-nav-dropdown pxp-user-notifications">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
                             <span class="fa fa-bell-o"></span>
                             <div class="pxp-user-notifications-counter">5</div>
@@ -132,11 +143,11 @@
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item pxp-link" href="company-dashboard-notifications.html">Read All</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                     <div class="dropdown pxp-user-nav-dropdown">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
                             <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(images/company-logo-1.png);"></div>
-                            <div class="pxp-user-nav-name d-none d-md-block">Artistre Studio</div>
+                            <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
@@ -148,8 +159,8 @@
             </div>
 
             <div class="pxp-dashboard-content-details">
-                <h1>New Job Offer</h1>
-                <p class="pxp-text-light">Add a new job to your company's jobs list.</p>
+                <h1>New Job</h1>
+                <p class="pxp-text-light">Add a new job to your jobs list.</p>
 
                 <form>
                     <div class="row mt-4 mt-lg-5">
@@ -256,5 +267,8 @@
         <script src="js/main.js"></script>
     </body>
 
-<!-- Mirrored from pixelprime.co/themes/jobster/company-dashboard-new-job.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:23:07 GMT -->
+
 </html>
+<?php
+}
+?>

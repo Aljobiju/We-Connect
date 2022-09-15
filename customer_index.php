@@ -30,7 +30,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/style.css">
 
-        <title>We-Connect - Home v4</title>
+        <title>We-Connect - Home </title>
     </head>
     <body>
         <div class="pxp-preloader"><span>Loading...</span></div>
@@ -121,8 +121,8 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 <div class="pxp-hero-searches-label">Popular Searches</div>
                                 <div class="pxp-hero-searches">
                                     <div class="pxp-hero-searches-items">
-                                        <a href="jobs-list-1.html">Work from home</a>
-                                        <a href="jobs-list-1.html">Part-time</a>
+                                        <a href="jobs-list-1.html">Electrician</a>
+                                        <a href="jobs-list-1.html">Plumber</a>
                                         <a href="jobs-list-1.html">Administration</a>
                                         <a href="jobs-list-1.html">Finance</a>
                                         <a href="jobs-list-1.html">Retail</a>
@@ -720,7 +720,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <div class="pxp-container">
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-auto">
-                            <div class="pxp-footer-copyright pxp-text-light">© 2021 Jobster. All Right Reserved.</div>
+                            <div class="pxp-footer-copyright pxp-text-light">© 2022 We-Connect. All Right Reserved.</div>
                         </div>
                         <div class="col-lg-auto">
                             <div class="pxp-footer-social mt-3 mt-lg-0">
@@ -737,7 +737,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             </div>
         </footer>
 
-        <div class="modal fade pxp-user-modal" id="pxp-signin-modal" aria-hidden="true" aria-labelledby="signinModal" tabindex="-1">
+        <!-- <div class="modal fade pxp-user-modal" id="pxp-signin-modal" aria-hidden="true" aria-labelledby="signinModal" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -770,9 +770,9 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div class="modal fade pxp-user-modal" id="pxp-signup-modal" aria-hidden="true" aria-labelledby="signupModal" tabindex="-1">
+        <!-- <div class="modal fade pxp-user-modal" id="pxp-signup-modal" aria-hidden="true" aria-labelledby="signupModal" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -802,7 +802,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>

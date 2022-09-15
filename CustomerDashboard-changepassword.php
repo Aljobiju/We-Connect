@@ -8,6 +8,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
     
 ?>
 
+
 <!doctype html>
 <html lang="en" class="pxp-root">
     
@@ -26,7 +27,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/style.css">
 
-        <title>We-Connect - Customer dashboard - Edit profile</title>
+        <title>We-Connect - Company dashboard - Change password</title>
     </head>
     <body style="background-color: var(--pxpMainColorLight);">
         <div class="pxp-preloader"><span>Loading...</span></div>
@@ -40,12 +41,27 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <div class="pxp-dashboard-side-label">Customer tools</div>
                 <ul class="list-unstyled">
                     <li><a href="company-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
-                    <li class="pxp-active"><a href="CustomerDashboard-Profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
+                    <li><a href="CustomerDashboard-Profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                     <li><a href="CustomerDashboard-new_job.php"><span class="fa fa-file-text-o"></span>New Job</a></li>
                     <li><a href="company-dashboard-jobs.html"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
                     <li><a href="company-dashboard-candidates.html"><span class="fa fa-user-circle-o"></span>Candidates</a></li>
                     <li><a href="company-dashboard-subscriptions.html"><span class="fa fa-credit-card"></span>Subscriptions</a></li>
-                    <li><a href="CustomerDashboard-changepassword.php"><span class="fa fa-lock"></span>Change Password</a></li>
+                    <li class="pxp-active"><a href="company-dashboard-password.html"><span class="fa fa-lock"></span>Change Password</a></li>
+                </ul>
+                <!-- <div class="pxp-dashboard-side-label mt-3 mt-lg-4">Insights</div>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="company-dashboard-inbox.html" class="d-flex justify-content-between align-items-center">
+                            <div><span class="fa fa-envelope-o"></span>Inbox</div>
+                            <span class="badge rounded-pill">14</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="company-dashboard-notifications.html" class="d-flex justify-content-between align-items-center">
+                            <div><span class="fa fa-bell-o"></span>Notifications</div>
+                            <span class="badge rounded-pill">5</span>
+                        </a>
+                    </li> -->
                 </ul>
             </nav>
 
@@ -83,25 +99,54 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                         <div class="offcanvas-body">
                             <nav class="pxp-nav-mobile">
                                 <ul class="navbar-nav justify-content-end flex-grow-1">
-                                    <li class="pxp-dropdown-header">Admin tools</li>
+                                    <li class="pxp-dropdown-header">Customer tools</li>
                                     <li class="nav-item"><a href="company-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-Profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-new_job.php"><span class="fa fa-file-text-o"></span>New Job</a></li>
                                     <li class="nav-item"><a href="company-dashboard-jobs.html"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
                                     <li class="nav-item"><a href="company-dashboard-candidates.html"><span class="fa fa-user-circle-o"></span>Candidates</a></li>
                                     <li class="nav-item"><a href="company-dashboard-subscriptions.html"><span class="fa fa-credit-card"></span>Subscriptions</a></li>
-                                    <li class="nav-item"><a href="CustomerDashboard-changepassword.php"><span class="fa fa-lock"></span>Change Password</a></li>
+                                    <li class="nav-item"><a href="company-dashboard-password.html"><span class="fa fa-lock"></span>Change Password</a></li>
+                                    <!-- <li class="pxp-dropdown-header mt-4">Insights</li>
+                                    <li class="nav-item">
+                                        <a href="company-dashboard-inbox.html" class="d-flex justify-content-between align-items-center">
+                                            <div><span class="fa fa-envelope-o"></span>Inbox</div>
+                                            <span class="badge rounded-pill">14</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="company-dashboard-notifications.html" class="d-flex justify-content-between align-items-center">
+                                            <div><span class="fa fa-bell-o"></span>Notifications</div>
+                                            <span class="badge rounded-pill">5</span>
+                                        </a>
+                                    </li> -->
                                 </ul>
                             </nav>
                         </div>
                     </div>
                 </div>
                 <nav class="pxp-user-nav pxp-on-light">
-                    <a href="CustomerDashboard-new_job.php" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
+                    <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
+                    <!-- <div class="dropdown pxp-user-nav-dropdown pxp-user-notifications">
+                        <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
+                            <span class="fa fa-bell-o"></span>
+                            <div class="pxp-user-notifications-counter">5</div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="company-dashboard-notifications.html"><strong>Scott Goodwin</strong> applied for <strong>Software Engineer</strong>. <span class="pxp-is-time">20m</span></a></li>
+                            <li><a class="dropdown-item" href="company-dashboard-notifications.html"><strong>Alayna Becker</strong> sent you a message. <span class="pxp-is-time">1h</span></a></li>
+                            <li><a class="dropdown-item" href="company-dashboard-notifications.html"><strong>Erika Tillman</strong> applied for <strong>Team Leader</strong>. <span class="pxp-is-time">2h</span></a></li>
+                            <li><a class="dropdown-item" href="company-dashboard-notifications.html"><strong>Scott Goodwin</strong> applied for <strong>Software Engineer</strong>. <span class="pxp-is-time">5h</span></a></li>
+                            <li><a class="dropdown-item" href="company-dashboard-notifications.html"><strong>Alayna Becker</strong> sent you a message. <span class="pxp-is-time">1d</span></a></li>
+                            <li><a class="dropdown-item" href="company-dashboard-notifications.html"><strong>Erika Tillman</strong> applied for <strong>Software Engineer</strong>. <span class="pxp-is-time">3d</span></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item pxp-link" href="company-dashboard-notifications.html">Read All</a></li>
+                        </ul>
+                    </div> -->
                     <div class="dropdown pxp-user-nav-dropdown">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
                             <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(images/company-logo-1.png);"></div>
-                            <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?> </div>
+                            <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
@@ -113,58 +158,48 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             </div>
 
             <div class="pxp-dashboard-content-details">
-                <h1>Edit Profile</h1>
-                <p class="pxp-text-light">Edit your profile page info.</p>
-<?php
+                <h1>Change Password</h1>
+                <p class="pxp-text-light">Choose a new account password.</p>
+                <?php
  $sql="SELECT * FROM tbl_customer WHERE `user_id`= $_SESSION[userId]";
  $result = $connect->query($sql);
  while($row = $result->fetch_assoc()) {
     // $user_id=trim($row['user_id']);
      ?>
-                <form action="updateprofile.php" method="POST">
+
+                <form action="changepassword.php" method="POST">
                     <div class="row mt-4 mt-lg-5">
-                        <div class="col-xxl-8">
+                        <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="pxp-company-name" class="form-label">Name</label>
-                                <input type="text" name="cus_name" id="cus_name" class="form-control" value="<?php echo $row["cus_name"]?>" placeholder="Enter Name">
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="mb-3">
-                                        <label for="pxp-company-email" class="form-label">Email</label>
-                                        <input type="email" readonly name="cus_email" id="cus_email" class="form-control" value="<?php echo $row["email"]?>" placeholder="example@email.com">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="mb-3">
-                                        <label for="pxp-company-phone" class="form-label">Phone</label>
-                                        <input type="tel" name="cus_phone"id="cus_phone" class="form-control" value="<?php echo $row["mob"]?>" placeholder="(+12) 345 6789">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="pxp-company-website" class="form-label">Address</label>
-                                <input type="text" name="cus_address" id="cus_address" class="form-control" value="<?php echo $row["address"]?>" placeholder="Address">
+                                <label for="pxp-company-old-password" class="form-label">Old password</label>
+                                <input type="password" name="oldpassword" id="oldpassword" class="form-control" placeholder="Enter old password">
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="pxp-company-industry" class="form-label">Date of birth</label>
-                                <input type="Date" name="cus_dob" id="cus_dob" class="form-control"  value="<?php echo $row["dob"]?>"placeholder="01/01/2022">
+                                <label for="pxp-company-new-password" class="form-label">New password</label>
+                                <input type="password"  name="newpassword" id="newpassword" class="form-control" placeholder="Enter new password">
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="pxp-company-new-password-repeat" class="form-label">Confirm new Password</label>
+                                <input type="password" name="confirmpassword" id="confirmpassword" class="form-control" placeholder="Repeat new password">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="mt-4 mt-lg-5">
-                        <button type="submit" value ="<?=$row['user_id']?>" class="btn rounded-pill pxp-section-cta" name="updatebtn" id="updatebtn">Save Profile</button>
+                        <button type="submit" value ="<?=$row['user_id']?>" id="savepassword" name="savepassword" class="btn rounded-pill pxp-section-cta" >Save New Password</button>
                     </div>
                 </form>
-              
             </div>
 
             <footer>
-                <div class="pxp-footer-copyright pxp-text-light">© 2022 We-Connect. All Rights Reserved.</div>
+                <div class="pxp-footer-copyright pxp-text-light">© 2022 We-Connect. All Right Reserved.</div>
             </footer>
         </div>
 
@@ -175,11 +210,10 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <script src="js/Chart.min.js"></script>
         <script src="js/main.js"></script>
     </body>
-</html>
 
+
+</html>
 <?php
 }
-  }
-
-// }
+}
 ?>

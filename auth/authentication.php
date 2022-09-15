@@ -30,7 +30,7 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                         $password = md5( $password);
                         $date = date("Y-m-d");
                         //Insert into database
-                        $insertDb = "INSERT INTO `tbl_register`(`username`, `mob`, `email`,`dob`, `password`, `user_created_at`, `type_id`) VALUES ('$uname','$mob','$email','$dob','$password','$date','$role')";
+                        $insertDb = "INSERT INTO `tbl_register`(`username`, `mob`, `email`,`dob`, `password`, `address`, `user_created_at`, `type_id`) VALUES ('$uname','$mob','$email','$dob','$password','$uaddress','$date','$role')";
                         $insertDbResult = mysqli_query($connect, $insertDb);
 
                         $insertLogin = "INSERT INTO `tbl_login`(`user_id`,`username`,`email`,`password`,`type_id`) VALUES ((select user_id from tbl_register where `email`='$email'),'$uname','$email','$password','$role')";
@@ -38,11 +38,11 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                         if ($insertDbResult) {
                             $userInsertedId = mysqli_insert_id($connect);
                               if ($role == 2) {
-                                $insertDb2 = "INSERT INTO `tbl_customer`(`user_id`,`cus_name`, `mob`, `email`,`dob`, `password`, `user_created_at`) VALUES ((select user_id from tbl_register where `email`='$email'),'$uname','$mob','$email','$dob','$password','$date')";
+                                $insertDb2 = "INSERT INTO `tbl_customer`(`user_id`,`cus_name`, `mob`, `email`,`dob`, `password`,`address`, `user_created_at`) VALUES ((select user_id from tbl_register where `email`='$email'),'$uname','$mob','$email','$dob','$password','$uaddress','$date')";
                                 $insertDbResult2 = mysqli_query($connect, $insertDb2);
                               }
                               if ($role == 3) {
-                                $insertDb3 = "INSERT INTO `tbl_worker`(`user_id`,`wor_name`, `mob`, `email`,`dob`, `password`,`address`,`user_created_at`) VALUES ((select user_id from tbl_register where `email`='$email'),'$uname','$mob','$email','$dob','$password','$address','$date')";
+                                $insertDb3 = "INSERT INTO `tbl_worker`(`user_id`,`wor_name`, `mob`, `email`,`dob`, `password`,`address`,`user_created_at`) VALUES ((select user_id from tbl_register where `email`='$email'),'$uname','$mob','$email','$dob','$password','$uaddress','$date')";
                                 $insertDbResult3 = mysqli_query($connect, $insertDb3);
                               }
                             $_SESSION['loginMessage'] = "Register Success";

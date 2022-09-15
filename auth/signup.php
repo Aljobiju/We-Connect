@@ -41,16 +41,16 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
   ?>
     <div class="main">
       <div class="logo">
-        <!-- <img src="../images/login_images/logo.svg" alt="Ease-iT-logo" /> -->
+        <!-- <img src="../images/login_images/logo.svg" /> -->
       </div>
       <div class="lg-container">
         <div class="left-lg-container">
           <h1 class="lft-heading"></h1>
-          <!-- <p class="lft-text">
+          <p class="lft-text">
             Changing careers, Changing lives
             <br />
             — accomplish it all with <b>We-Connect</b>
-          </p> -->
+          </p>
         </div>
 
         <div class="right-lg-container">
