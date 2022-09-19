@@ -28,7 +28,7 @@ if(isset($_POST['savepassword']))
         {
                
 
-        $_SESSION['status'] = "old password is incorrect";
+        $_SESSION['status'] = "old password is incorrect,check carefully";
        $_SESSION['status_code'] = "error";
        echo "<script> alert('old password is incorrect'); 
        window.location.href='CustomerDashboard-Profile.php';
