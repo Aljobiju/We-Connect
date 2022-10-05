@@ -1,8 +1,8 @@
 <?php
-include('./config/connect.php');
+include('../config/connect.php');
 session_start();
 if (isset($_SESSION["wcSession"]) != session_id()) {
-    header("Location: ./login.php");
+    header("Location: ../login.php");
     die();
 } else {
     
@@ -19,16 +19,16 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com/">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&amp;display=swap" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="../css/animate.css">
+        <link rel="stylesheet" href="../css/style.css">
 
         <title>We-Connect - Home </title>
     </head>
@@ -48,7 +48,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <a href="customer_index.php">Home</a>
                                 </li>
                                 <li class="dropdown">
-                                    <a>Find Workers</a>
+                                <a href="worker_list.php">Find workers</a>
                                 </li>
                                 <li class="dropdown">
                                     <a>Plans</a>
@@ -81,7 +81,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                         </nav>
                         <na v class="pxp-user-nav pxp-on-light d-none d-sm-flex">
                             <a href="CustomerDashboard-new_job.php" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
-                            <a class="btn rounded-pill pxp-user-nav-trigger" data-bs-toggle="modal" href="./auth/logoutController.php" role="button"><img class="log-out-btn" src="./images/login_icons/power-off-ico.svg" alt="" /> Logout</a>
+                            <a class="btn rounded-pill pxp-user-nav-trigger" data-bs-toggle="modal" href="../auth/logoutController.php" role="button"><img class="log-out-btn" src="../images/login_icons/power-off-ico.svg" alt="" /> Logout</a>
                             <!-- <a class="btn rounded-pill pxp-user-nav-trigger" data-bs-toggle="modal" href="#pxp-signin-modal" role="button">Sign in</a> -->
                         </nav>
                     </div>
@@ -151,10 +151,10 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
 
                             <div class="pxp-hero-boxed-icon-circles">
                                 <div class="pxp-hero-boxed-icon-circle-1 pxp-animate-icon-circle-bounce">
-                                    <img src="images/paper-icon.png" alt="Paper icon">
+                                    <img src="../images/paper-icon.png" alt="Paper icon">
                                 </div>
                                 <div class="pxp-hero-boxed-icon-circle-2 pxp-animate-icon-circle-bounce">
-                                    <img src="images/folder-icon.png" alt="Folder icon">
+                                    <img src="../images/folder-icon.png" alt="Folder icon">
                                 </div>
                             </div>
 
@@ -162,7 +162,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 <div class="pxp-hero-boxed-info-card-big pxp-animate-info-card">
                                     <div class="pxp-hero-boxed-info-card-big-content">
                                         <div class="pxp-hero-boxed-info-card-big-icon">
-                                            <img src="images/service-2-icon.png" alt="Job Fit Scoring">
+                                            <img src="../images/service-2-icon.png" alt="Job Fit Scoring">
                                         </div>
                                         <div class="pxp-hero-boxed-info-card-big-title">Job Fit Scoring</div>
                                         <div class="pxp-hero-boxed-info-card-big-text pxp-text-light">Search your career opportunity through 12,800 jobs</div>
@@ -171,7 +171,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 <div class="pxp-hero-boxed-info-card-small pxp-animate-info-card">
                                     <div class="pxp-hero-boxed-info-card-small-content">
                                         <div class="pxp-hero-boxed-info-card-small-icon">
-                                            <img src="images/service-1-icon.png" alt="Full-service recruiting">
+                                            <img src="../images/service-1-icon.png" alt="Full-service recruiting">
                                         </div>
                                         <div class="pxp-hero-boxed-info-card-small-title">Full-service recruiting</div>
                                     </div>
@@ -225,7 +225,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
                                     <a href="single-company-1.html" class="pxp-jobs-card-1-company">Artistre Studio</a>
                                 </div>
-                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-1.png);"></a>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(../images/company-logo-1.png);"></a>
                             </div>
                         </div>
                     </div>
@@ -249,7 +249,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
                                     <a href="single-company-1.html" class="pxp-jobs-card-1-company">Craftgenics</a>
                                 </div>
-                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-2.png);"></a>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(../images/company-logo-2.png);"></a>
                             </div>
                         </div>
                     </div>
@@ -273,7 +273,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
                                     <a href="single-company-1.html" class="pxp-jobs-card-1-company">Illuminate Studio</a>
                                 </div>
-                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-3.png);"></a>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(../images/company-logo-3.png);"></a>
                             </div>
                         </div>
                     </div>
@@ -297,7 +297,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
                                     <a href="single-company-1.html" class="pxp-jobs-card-1-company">Syspresoft</a>
                                 </div>
-                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-4.png);"></a>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(../images/company-logo-4.png);"></a>
                             </div>
                         </div>
                     </div>
@@ -321,7 +321,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
                                     <a href="single-company-1.html" class="pxp-jobs-card-1-company">Gramware</a>
                                 </div>
-                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-5.png);"></a>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(../images/company-logo-5.png);"></a>
                             </div>
                         </div>
                     </div>
@@ -345,7 +345,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
                                     <a href="single-company-1.html" class="pxp-jobs-card-1-company">Bitbytech</a>
                                 </div>
-                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-6.png);"></a>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(../images/company-logo-6.png);"></a>
                             </div>
                         </div>
                     </div>
@@ -369,7 +369,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
                                     <a href="single-company-1.html" class="pxp-jobs-card-1-company">CoderBotics</a>
                                 </div>
-                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-7.png);"></a>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(../images/company-logo-7.png);"></a>
                             </div>
                         </div>
                     </div>
@@ -393,7 +393,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <div class="pxp-jobs-card-1-date pxp-text-light">3 days ago by</div>
                                     <a href="single-company-1.html" class="pxp-jobs-card-1-company">Artistre Studio</a>
                                 </div>
-                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(images/company-logo-1.png);"></a>
+                                <a href="single-company-1.html" class="pxp-jobs-card-1-company-logo" style="background-image: url(../images/company-logo-1.png);"></a>
                             </div>
                         </div>
                     </div>
@@ -414,7 +414,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
                         <div class="pxp-candiadates-card-1 pxp-has-shadow text-center">
                             <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(images/avatar-1.jpg);"></div>
+                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-1.jpg);"></div>
                                 <div class="pxp-candiadates-card-1-name">Derek Cotner</div>
                                 <div class="pxp-candiadates-card-1-title">UI Designer</div>
                                 <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>London, UK</div>
@@ -429,7 +429,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
                         <div class="pxp-candiadates-card-1 pxp-has-shadow text-center">
                             <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(images/avatar-2.jpg);"></div>
+                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-2.jpg);"></div>
                                 <div class="pxp-candiadates-card-1-name">Kenneth Spiers</div>
                                 <div class="pxp-candiadates-card-1-title">Software Developer</div>
                                 <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>San Francisco, CA</div>
@@ -444,7 +444,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
                         <div class="pxp-candiadates-card-1 pxp-has-shadow text-center">
                             <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(images/avatar-3.jpg);"></div>
+                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-3.jpg);"></div>
                                 <div class="pxp-candiadates-card-1-name">Rebecca Eason</div>
                                 <div class="pxp-candiadates-card-1-title">Marketing Expert</div>
                                 <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>Los Angeles, CA</div>
@@ -459,7 +459,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
                         <div class="pxp-candiadates-card-1 pxp-has-shadow text-center">
                             <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(images/avatar-4.jpg);"></div>
+                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-4.jpg);"></div>
                                 <div class="pxp-candiadates-card-1-name">Susanne Weil</div>
                                 <div class="pxp-candiadates-card-1-title">Architect</div>
                                 <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>Paris, France</div>
@@ -488,7 +488,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="col-md-6 col-xl-4 col-xxl-3 pxp-companies-card-1-container">
                         <div class="pxp-companies-card-1 pxp-has-shadow">
                             <div class="pxp-companies-card-1-top">
-                                <a href="single-company-1.html" class="pxp-companies-card-1-company-logo" style="background-image: url(images/company-logo-1.png);"></a>
+                                <a href="single-company-1.html" class="pxp-companies-card-1-company-logo" style="background-image: url(../images/company-logo-1.png);"></a>
                                 <a href="single-company-1.html" class="pxp-companies-card-1-company-name">Artistre Studio</a>
                                 <div class="pxp-companies-card-1-company-description pxp-text-light">Is an American multinational computer software company. Incorporated in Delaware and headquartered in San Jose, California, it has historically specialized in software for the creation.</div>
                             </div>
@@ -500,7 +500,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="col-md-6 col-xl-4 col-xxl-3 pxp-companies-card-1-container">
                         <div class="pxp-companies-card-1 pxp-has-shadow">
                             <div class="pxp-companies-card-1-top">
-                                <a href="single-company-1.html" class="pxp-companies-card-1-company-logo" style="background-image: url(images/company-logo-7.png);"></a>
+                                <a href="single-company-1.html" class="pxp-companies-card-1-company-logo" style="background-image: url(../images/company-logo-7.png);"></a>
                                 <a href="single-company-1.html" class="pxp-companies-card-1-company-name">CoderBotics</a>
                                 <div class="pxp-companies-card-1-company-description pxp-text-light">Is an American multinational computer software company. Incorporated in Delaware and headquartered in San Jose, California.</div>
                             </div>
@@ -512,7 +512,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="col-md-6 col-xl-4 col-xxl-3 pxp-companies-card-1-container">
                         <div class="pxp-companies-card-1 pxp-has-shadow">
                             <div class="pxp-companies-card-1-top">
-                                <a href="single-company-1.html" class="pxp-companies-card-1-company-logo" style="background-image: url(images/company-logo-4.png);"></a>
+                                <a href="single-company-1.html" class="pxp-companies-card-1-company-logo" style="background-image: url(../images/company-logo-4.png);"></a>
                                 <a href="single-company-1.html" class="pxp-companies-card-1-company-name">Syspresoft</a>
                                 <div class="pxp-companies-card-1-company-description pxp-text-light">Is an American multinational computer software company. Incorporated in Delaware and headquartered in San Jose, California, it has historically specialized in software for the creation.</div>
                             </div>
@@ -524,7 +524,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="col-md-6 col-xl-4 col-xxl-3 pxp-companies-card-1-container">
                         <div class="pxp-companies-card-1 pxp-has-shadow">
                             <div class="pxp-companies-card-1-top">
-                                <a href="single-company-1.html" class="pxp-companies-card-1-company-logo" style="background-image: url(images/company-logo-3.png);"></a>
+                                <a href="single-company-1.html" class="pxp-companies-card-1-company-logo" style="background-image: url(../images/company-logo-3.png);"></a>
                                 <a href="single-company-1.html" class="pxp-companies-card-1-company-name">Illuminate Studio</a>
                                 <div class="pxp-companies-card-1-company-description pxp-text-light">Is an American multinational computer software company. Incorporated in Delaware and headquartered in San Jose, California.</div>
                             </div>
@@ -551,7 +551,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                         <div class="pxp-posts-card-1 pxp-has-border">
                             <div class="pxp-posts-card-1-top">
                                 <div class="pxp-posts-card-1-top-bg">
-                                    <div class="pxp-posts-card-1-image pxp-cover" style="background-image: url(images/post-card-1.jpg);"></div>
+                                    <div class="pxp-posts-card-1-image pxp-cover" style="background-image: url(../images/post-card-1.jpg);"></div>
                                     <div class="pxp-posts-card-1-info">
                                         <div class="pxp-posts-card-1-date">August 31, 2021</div>
                                         <a href="blog-list-1.html" class="pxp-posts-card-1-category">Assessments</a>
@@ -573,7 +573,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                         <div class="pxp-posts-card-1 pxp-has-border">
                             <div class="pxp-posts-card-1-top">
                                 <div class="pxp-posts-card-1-top-bg">
-                                    <div class="pxp-posts-card-1-image pxp-cover" style="background-image: url(images/post-card-2.jpg);"></div>
+                                    <div class="pxp-posts-card-1-image pxp-cover" style="background-image: url(../images/post-card-2.jpg);"></div>
                                     <div class="pxp-posts-card-1-info">
                                         <div class="pxp-posts-card-1-date">September 5, 2021</div>
                                         <a href="blog-list-1.html" class="pxp-posts-card-1-category">Jobs</a>
@@ -595,7 +595,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                         <div class="pxp-posts-card-1 pxp-has-border">
                             <div class="pxp-posts-card-1-top">
                                 <div class="pxp-posts-card-1-top-bg">
-                                    <div class="pxp-posts-card-1-image pxp-cover" style="background-image: url(images/post-card-3.jpg);"></div>
+                                    <div class="pxp-posts-card-1-image pxp-cover" style="background-image: url(../images/post-card-3.jpg);"></div>
                                     <div class="pxp-posts-card-1-info">
                                         <div class="pxp-posts-card-1-date">September 10, 2021</div>
                                         <a href="blog-list-1.html" class="pxp-posts-card-1-category">Resume</a>
@@ -617,7 +617,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                         <div class="pxp-posts-card-1 pxp-has-border">
                             <div class="pxp-posts-card-1-top">
                                 <div class="pxp-posts-card-1-top-bg">
-                                    <div class="pxp-posts-card-1-image pxp-cover" style="background-image: url(images/post-card-4.jpg);"></div>
+                                    <div class="pxp-posts-card-1-image pxp-cover" style="background-image: url(../images/post-card-4.jpg);"></div>
                                     <div class="pxp-posts-card-1-info">
                                         <div class="pxp-posts-card-1-date">September 15, 2021</div>
                                         <a href="blog-list-1.html" class="pxp-posts-card-1-category">Interview</a>
@@ -804,11 +804,11 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             </div>
         </div> -->
 
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/nav.js"></script>
-        <script src="js/main.js"></script>
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/owl.carousel.min.js"></script>
+        <script src="../js/nav.js"></script>
+        <script src="../js/main.js"></script>
     </body>
 
 </html>

@@ -1,8 +1,8 @@
 <?php
-include('./config/connect.php');
+include('../config/connect.php');
 session_start();
 if (isset($_SESSION["wcSession"]) != session_id()) {
-    header("Location: ./login.php");
+    header("Location: ../login.php");
     die();
 } else {
     

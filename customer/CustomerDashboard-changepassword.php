@@ -1,8 +1,8 @@
 <?php
-include('./config/connect.php');
+include('../config/connect.php');
 session_start();
 if (isset($_SESSION["wcSession"]) != session_id()) {
-    header("Location: ./login.php");
+    header("Location: ../login.php");
     die();
 } else {
     
@@ -16,16 +16,16 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com/">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&amp;display=swap" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="../css/animate.css">
+        <link rel="stylesheet" href="../css/style.css">
 
         <title>We-Connect - Company dashboard - Change password</title>
     </head>
@@ -69,13 +69,13 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <div class="pxp-dashboard-side-user-nav">
                     <div class="dropdown pxp-dashboard-side-user-nav-dropdown dropup">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <div class="pxp-dashboard-side-user-nav-avatar pxp-cover" style="background-image: url(images/company-logo-1.png);"></div>
+                            <div class="pxp-dashboard-side-user-nav-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
                             <div class="pxp-dashboard-side-user-nav-name"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
                             <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Edit profile</a></li>
-                            <li><a class="dropdown-item" href="./auth/logoutController.php">Logout</a></li>
+                            <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
                     </div>
                 </div>
@@ -145,13 +145,13 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     </div> -->
                     <div class="dropdown pxp-user-nav-dropdown">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(images/company-logo-1.png);"></div>
+                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
                             <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
                             <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Edit profile</a></li>
-                            <li><a class="dropdown-item" href="./auth/logoutController.php">Logout</a></li>
+                            <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -203,12 +203,12 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             </footer>
         </div>
 
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/nav.js"></script>
-        <script src="js/Chart.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/owl.carousel.min.js"></script>
+        <script src="../js/nav.js"></script>
+        <script src="../js/Chart.min.js"></script>
+        <script src="../js/main.js"></script>
     </body>
 
 

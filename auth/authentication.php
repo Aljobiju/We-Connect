@@ -100,12 +100,12 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                     else if ($userData['type_id'] == 2){
                         $_SESSION['wcSession'] = session_id();
                         
-                        header("Location: ../customer_index.php");
+                        header("Location: ../customer/customer_index.php");
                         die();
                     }
                     else if ($userData['type_id'] == 3){
                         $_SESSION['wcSession'] = session_id();
-                        header("Location: ../worker_index.php");
+                        header("Location: ../worker/worker_index.php");
                         die();
                     }
                     else {
@@ -115,7 +115,7 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                 }
             } else {
                 $_SESSION['loginMessage'] = "User Login Failed";
-                header("Location: ../index.php");
+                header("Location: ../login.php");
                 die();
             }
         } else {

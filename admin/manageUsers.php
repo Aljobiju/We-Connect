@@ -314,7 +314,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright © Designed & Developed by : AljoBIju</p>
+                <p>Copyright © Designed & Developed by : AljoBiju</p>
             </div>
         </div>
         <!--**********************************

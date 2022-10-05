@@ -1,23 +1,34 @@
+<?php
+include('../config/connect.php');
+session_start();
+if (isset($_SESSION["wcSession"]) != session_id()) {
+    header("Location: ../login.php");
+    die();
+} else {
+    
+?>
+
+
 <!doctype html>
 <html lang="en" class="pxp-root">
     
-<!-- Mirrored from pixelprime.co/themes/jobster/candidates-list-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:23:01 GMT -->
+<!-- Mirrored from pixelprime.co/themes/jobster/jobs-list-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:22:53 GMT -->
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com/">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&amp;display=swap" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="../css/animate.css">
+        <link rel="stylesheet" href="../css/style.css">
 
-        <title>Jobster - Candidates list v1</title>
+        <title>We-Connect  - Joblist</title>
     </head>
     <body>
         <div class="pxp-preloader"><span>Loading...</span></div>
@@ -27,7 +38,7 @@
                 <div class="pxp-header-container">
                     <div class="pxp-logo-nav-container">
                         <div class="pxp-logo">
-                            <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                            <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                         </div>
                         <div class="pxp-nav-trigger navbar d-xl-none flex-fill">
                             <a role="button" data-bs-toggle="offcanvas" data-bs-target="#pxpMobileNav" aria-controls="pxpMobileNav">
@@ -35,10 +46,10 @@
                                 <div class="pxp-line-2"></div>
                                 <div class="pxp-line-3"></div>
                             </a>
-                            <div class="offcanvas offcanvas-start pxp-nav-mobile-container" tabindex="-1" id="pxpMobileNav">
+                            <div class="offcanvas offcanvas-start pxp-nav-mobile-container" tabindex="-1" id="pxpMobileNav" >
                                 <div class="offcanvas-header">
                                     <div class="pxp-logo">
-                                        <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                                        <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                                     </div>
                                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                 </div>
@@ -624,16 +635,16 @@
                         </nav>
                     </div>
                     <nav class="pxp-user-nav pxp-on-light">
-                        <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
+                        <!-- <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a> -->
                         <div class="dropdown pxp-user-nav-dropdown">
                             <a href="index.html" class="dropdown-toggle" data-bs-toggle="dropdown">
-                                <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(images/avatar-1.jpg);"></div>
-                                <div class="pxp-user-nav-name d-none d-md-block">Derek Cotner</div>
+                                <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(../images/avatar-1.jpg);"></div>
+                                <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li><a class="dropdown-item" href="candidate-dashboard.html">Dashboard</a></li>
                                 <li><a class="dropdown-item" href="candidate-dashboard-profile.html">Edit profile</a></li>
-                                <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                                <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -641,16 +652,16 @@
             </div>
         </header>
 
-        <section class="pxp-page-header-simple" style="background-color: var(--pxpSecondaryColor);">
+        <section class="pxp-page-header-simple" style="background-color: var(--pxpMainColorLight);">
             <div class="pxp-container">
-                <h1>Search Candidates</h1>
-                <div class="pxp-hero-subtitle pxp-text-light">Work with the most talented candidates in the world</div>
+                <h1>Search Jobs</h1>
+                <div class="pxp-hero-subtitle pxp-text-light">Search your career opportunity through <strong>12,800</strong> jobs</div>
                 <div class="pxp-hero-form pxp-hero-form-round pxp-large mt-3 mt-lg-4">
                     <form class="row gx-3 align-items-center">
                         <div class="col-12 col-lg">
                             <div class="input-group mb-3 mb-lg-0">
                                 <span class="input-group-text"><span class="fa fa-search"></span></span>
-                                <input type="text" class="form-control" placeholder="Candidate Name or Keyword">
+                                <input type="text" class="form-control" placeholder="Job Title or Keyword">
                             </div>
                         </div>
                         <div class="col-12 col-lg pxp-has-left-border">
@@ -663,21 +674,21 @@
                             <div class="input-group mb-3 mb-lg-0">
                                 <span class="input-group-text"><span class="fa fa-folder-o"></span></span>
                                 <select class="form-select">
-                                    <option selected>All Industries</option>
+                                    <option selected="">All categories</option>
                                     <option>Business Development</option>
                                     <option>Construction</option>
                                     <option>Customer Service</option>
                                     <option>Finance</option>
                                     <option>Healthcare</option>
                                     <option>Human Resources</option>
-                                    <option>Marketing & Communication</option>
+                                    <option>Marketing &amp; Communication</option>
                                     <option>Project Management</option>
                                     <option>Software Engineering</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-12 col-lg-auto">
-                            <button>Find Candidates</button>
+                            <button>Find Jobs</button>
                         </div>
                     </form>
                 </div>
@@ -686,158 +697,226 @@
 
         <section class="mt-100">
             <div class="pxp-container">
-                <div class="pxp-candidates-list-top">
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-auto">
-                            <h2><span class="pxp-text-light">Showing</span> 8,536 <span class="pxp-text-light">candidates</span></h2>
-                        </div>
-                        <div class="col-auto">
-                            <select class="form-select">
-                                <option value="0" selected>Most relevant</option>
-                                <option value="1">Name Asc</option>
-                                <option value="2">Name Desc</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="row">
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(images/avatar-1.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Scott Goodwin</div>
-                                <div class="pxp-candiadates-card-1-title">UI Designer</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>London, UK</div>
+                    <div class="col-lg-5 col-xl-4 col-xxl-3">
+                        <div class="pxp-jobs-list-side-filter">
+                            <div class="pxp-list-side-filter-header d-flex d-lg-none">
+                                <div class="pxp-list-side-filter-header-label">Filter Jobs</div>
+                                <a role="button"><span class="fa fa-sliders"></span></a>
                             </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
+                            <div class="mt-4 mt-lg-0 d-lg-block pxp-list-side-filter-panel">
+                                <h3>Type of Employment</h3>
+                                <div class="list-group mt-2 mt-lg-3">
+                                    <label class="list-group-item d-flex justify-content-between align-items-center pxp-checked">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="" checked>
+                                            Full Time
+                                        </span>
+                                        <span class="badge rounded-pill">56</span>
+                                    </label>
+                                    <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="">
+                                            Part Time
+                                        </span>
+                                        <span class="badge rounded-pill">34</span>
+                                    </label>
+                                    <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="">
+                                            Remote
+                                        </span>
+                                        <span class="badge rounded-pill">24</span>
+                                    </label>
+                                    <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="">
+                                            Internship
+                                        </span>
+                                        <span class="badge rounded-pill">27</span>
+                                    </label>
+                                    <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="">
+                                            Contract
+                                        </span>
+                                        <span class="badge rounded-pill">76</span>
+                                    </label>
+                                    <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="">
+                                            Training
+                                        </span>
+                                        <span class="badge rounded-pill">28</span>
+                                    </label>
+                                </div>
+    
+                                <h3 class="mt-3 mt-lg-4">Experience Level</h3>
+                                <div class="list-group mt-2 mt-lg-3">
+                                    <label class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="">
+                                            No Experience
+                                        </span>
+                                        <span class="badge rounded-pill">98</span>
+                                    </label>
+                                    <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3 pxp-checked">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="" checked>
+                                            Entry-Level
+                                        </span>
+                                        <span class="badge rounded-pill">44</span>
+                                    </label>
+                                    <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3 pxp-checked">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="" checked>
+                                            Mid-Level
+                                        </span>
+                                        <span class="badge rounded-pill">35</span>
+                                    </label>
+                                    <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="">
+                                            Senior-Level
+                                        </span>
+                                        <span class="badge rounded-pill">45</span>
+                                    </label>
+                                    <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="">
+                                            Manager / Executive
+                                        </span>
+                                        <span class="badge rounded-pill">21</span>
+                                    </label>
+                                </div>
+    
+                                <h3 class="mt-3 mt-lg-4">Salary Range</h3>
+                                <div class="list-group mt-2 mt-lg-3">
+                                    <label class="list-group-item d-flex justify-content-between align-items-center pxp-checked">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="" checked>
+                                            $700 - $1000
+                                        </span>
+                                        <span class="badge rounded-pill">34</span>
+                                    </label>
+                                    <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3 pxp-checked">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="" checked>
+                                            $1000 - $1200
+                                        </span>
+                                        <span class="badge rounded-pill">22</span>
+                                    </label>
+                                    <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="">
+                                            $1200 - $1400
+                                        </span>
+                                        <span class="badge rounded-pill">67</span>
+                                    </label>
+                                    <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="">
+                                            $1500 - $1800
+                                        </span>
+                                        <span class="badge rounded-pill">12</span>
+                                    </label>
+                                    <label class="list-group-item d-flex justify-content-between align-items-center mt-2 mt-lg-3">
+                                        <span class="d-flex">
+                                            <input class="form-check-input me-2" type="checkbox" value="">
+                                            $2000 - $3000
+                                        </span>
+                                        <span class="badge rounded-pill">26</span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(images/avatar-2.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Kenneth Spiers</div>
-                                <div class="pxp-candiadates-card-1-title">Software Developer</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>San Francisco, CA</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
+                    <div class="col-lg-7 col-xl-8 col-xxl-9">
+                        <div class="pxp-jobs-list-top mt-4 mt-lg-0">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-auto">
+                                    <h2><span class="pxp-text-light">Showing</span> 8,536 <span class="pxp-text-light">jobs</span></h2>
+                                </div>
+                                <div class="col-auto">
+                                    <select class="form-select">
+                                        <option value="0" selected>Most relevant</option>
+                                        <option value="1">Newest</option>
+                                        <option value="2">Oldest</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(images/avatar-3.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Rebecca Eason</div>
-                                <div class="pxp-candiadates-card-1-title">Marketing Expert</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>Los Angeles, CA</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(images/avatar-4.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Susanne Weil</div>
-                                <div class="pxp-candiadates-card-1-title">Architect</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>Paris, France</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(images/avatar-3.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Rebecca Eason</div>
-                                <div class="pxp-candiadates-card-1-title">UI Designer</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>London, UK</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(images/avatar-4.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Susanne Weil</div>
-                                <div class="pxp-candiadates-card-1-title">Software Developer</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>San Francisco, CA</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(images/avatar-1.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Scott Goodwin</div>
-                                <div class="pxp-candiadates-card-1-title">Marketing Expert</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>Los Angeles, CA</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(images/avatar-2.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Kenneth Spiers</div>
-                                <div class="pxp-candiadates-card-1-title">Architect</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>Paris, France</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row mt-4 mt-lg-5 justify-content-between align-items-center">
-                    <div class="col-auto">
-                        <nav class="mt-3 mt-sm-0" aria-label="Candidates pagination">
-                            <ul class="pagination pxp-pagination">
-                                <li class="page-item active" aria-current="page">
-                                    <span class="page-link">1</span>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-auto">
-                        <a href="#" class="btn rounded-pill pxp-section-cta mt-3 mt-sm-0">Show me more<span class="fa fa-angle-right"></span></a>
+
+                        <?php
+                                         $sql="SELECT * FROM tbl_job_details";
+                                        $result = $connect->query($sql);
+                                         if($result->num_rows > 0){ 
+                                        while($row = $result->fetch_assoc()) {
+                                            $user_id=$row['user_id'];
+                                            ?>
+                                           
+                                            
+
+                        <div>
+                            <div class="pxp-jobs-card-3 pxp-has-border">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 col-xxl-auto">
+                                        <a href="single-company-1.html" class="pxp-jobs-card-3-company-logo" style="background-image: url(../images/company-logo-1.png);"></a>
+                                    </div>
+                                    <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 col-xxl-4">
+                                        <a href="single-job-1.html" class="pxp-jobs-card-3-title mt-3 mt-sm-0"><?php echo $row['job_title'] ?></a>
+                                        <div class="pxp-jobs-card-3-details">
+                                            <a href="jobs-list-1.html" class="pxp-jobs-card-3-location">
+                                                <span class="fa fa-globe"></span><?php echo $row['city'] ?>, <?php echo $row['district'] ?>
+                                            </a>
+                                            <div class="pxp-jobs-card-3-type"><?php echo $row['job_type'] ?></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8 col-xl-6 col-xxl-4 mt-3 mt-xxl-0">
+                                        <!-- <a href="jobs-list-1.html" class="pxp-jobs-card-3-category">
+                                            <div class="pxp-jobs-card-3-category-label">Marketing & Communication</div>
+                                        </a> -->
+                                        <?php
+                                        // $now = time(); // or your date as well
+                                        //   $your_date = $row['job_created_at'];
+                                        // $datediff = $now - $your_date;
+                                        //     echo round($datediff / (60 * 60 * 24));
+                                            ?>
+                                        
+                                        <div class="pxp-jobs-card-3-date-company">
+                                            <span class="pxp-jobs-card-3-date pxp-text-light">hehe</span> <a href="#" class="pxp-jobs-card-3-company">Artistre Studio</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-xl-2 col-xxl-auto mt-3 mt-xxl-0 pxp-text-right">
+                                        <a href="single-job-1.html" class="btn rounded-pill pxp-card-btn">Apply</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <?php
+                                        }
+                                    }
+                                    ?>
+
+                        <div class="row mt-4 mt-lg-5 justify-content-between align-items-center">
+                            <div class="col-auto">
+                                <nav class="mt-3 mt-sm-0" aria-label="Jobs list pagination">
+                                    <ul class="pagination pxp-pagination">
+                                        <li class="page-item active" aria-current="page">
+                                            <span class="page-link">1</span>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="col-auto">
+                                <a href="#" class="btn rounded-pill pxp-section-cta mt-3 mt-sm-0">Show me more<span class="fa fa-angle-right"></span></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -849,7 +928,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-xl-5 col-xxl-4 mb-4">
                             <div class="pxp-footer-logo">
-                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                             </div>
                             <div class="pxp-footer-section mt-3 mt-md-4">
                                 <h3>Call us</h3>
@@ -920,7 +999,7 @@
                 <div class="pxp-container">
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-auto">
-                            <div class="pxp-footer-copyright pxp-text-light">© 2021 Jobster. All Right Reserved.</div>
+                            <div class="pxp-footer-copyright pxp-text-light">© 2022 We-Connect. All Right Reserved.</div>
                         </div>
                         <div class="col-lg-auto">
                             <div class="pxp-footer-social mt-3 mt-lg-0">
@@ -1004,12 +1083,15 @@
             </div>
         </div>
 
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/nav.js"></script>
-        <script src="js/main.js"></script>
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/owl.carousel.min.js"></script>
+        <script src="../js/nav.js"></script>
+        <script src="../js/main.js"></script>
     </body>
-
-<!-- Mirrored from pixelprime.co/themes/jobster/candidates-list-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:23:01 GMT -->
 </html>
+
+<?php
+}
+                                        
+?>

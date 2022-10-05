@@ -1,8 +1,8 @@
 <?php
-include('./config/connect.php');
+include('../config/connect.php');
 session_start();
 if (isset($_SESSION["wcSession"]) != session_id()) {
-    header("Location: ./login.php");
+    header("Location: ../login.php");
     die();
 } else {
     
@@ -17,16 +17,16 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com/">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&amp;display=swap" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="../css/animate.css">
+        <link rel="stylesheet" href="../css/style.css">
 
         <title>We-Connect</title>
     </head>
@@ -49,34 +49,19 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <li><a href="company-dashboard-subscriptions.html"><span class="fa fa-credit-card"></span>Subscriptions</a></li>
                     <li><a href="CustomerDashboard-changepassword.php"><span class="fa fa-lock"></span>Change Password</a></li>
                 </ul>
-                <!-- <div class="pxp-dashboard-side-label mt-3 mt-lg-4">Insights</div>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="company-dashboard-inbox.html" class="d-flex justify-content-between align-items-center">
-                            <div><span class="fa fa-envelope-o"></span>Inbox</div>
-                            <span class="badge rounded-pill">14</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="company-dashboard-notifications.html" class="d-flex justify-content-between align-items-center">
-                            <div><span class="fa fa-bell-o"></span>Notifications</div>
-                            <span class="badge rounded-pill">5</span>
-                        </a>
-                    </li>
-                </ul> -->
             </nav>
 
             <nav class="pxp-dashboard-side-user-nav-container">
                 <div class="pxp-dashboard-side-user-nav">
                     <div class="dropdown pxp-dashboard-side-user-nav-dropdown dropup">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <div class="pxp-dashboard-side-user-nav-avatar pxp-cover" style="background-image: url(images/company-logo-1.png);"></div>
+                            <div class="pxp-dashboard-side-user-nav-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
                             <div class="pxp-dashboard-side-user-nav-name"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
                             <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Edit profile</a></li>
-                            <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                            <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
                     </div>
                 </div>
@@ -108,19 +93,6 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <li class="nav-item"><a href="company-dashboard-candidates.html"><span class="fa fa-user-circle-o"></span>Candidates</a></li>
                                     <li class="nav-item"><a href="company-dashboard-subscriptions.html"><span class="fa fa-credit-card"></span>Subscriptions</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-changepassword.php"><span class="fa fa-lock"></span>Change Password</a></li>
-                                    <!-- <li class="pxp-dropdown-header mt-4">Insights</li>
-                                    <li class="nav-item">
-                                        <a href="company-dashboard-inbox.html" class="d-flex justify-content-between align-items-center">
-                                            <div><span class="fa fa-envelope-o"></span>Inbox</div>
-                                            <span class="badge rounded-pill">14</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="company-dashboard-notifications.html" class="d-flex justify-content-between align-items-center">
-                                            <div><span class="fa fa-bell-o"></span>Notifications</div>
-                                            <span class="badge rounded-pill">5</span>
-                                        </a>
-                                    </li> -->
                                 </ul>
                             </nav>
                         </div>
@@ -146,13 +118,13 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     </div> -->
                     <div class="dropdown pxp-user-nav-dropdown">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(images/company-logo-1.png);"></div>
+                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
                             <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
                             <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Edit profile</a></li>
-                            <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                            <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -162,49 +134,53 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <h1>New Job</h1>
                 <p class="pxp-text-light">Add a new job to your jobs list.</p>
 
-                <form>
+                <form action="add_new_job.php" method="POST">
                     <div class="row mt-4 mt-lg-5">
                         <div class="col-xxl-6">
                             <div class="mb-3">
                                 <label for="pxp-company-job-title" class="form-label">Job title</label>
-                                <input type="text" id="pxp-company-job-title" class="form-control" placeholder="Add title">
+                                <input type="text" id="jobtitle" name="jobtitle" class="form-control" placeholder="Add title">
                             </div>
-                        </div>
-                        <div class="col-md-6 col-xxl-3">
-                            <label for="pxp-company-job-location" class="form-label">Location</label>
-                            <input type="text" id="pxp-company-job-location" class="form-control" placeholder="E.g. San Francisco, CA">
                         </div>
                         <div class="col-md-6 col-xxl-3">
                             <div class="mb-3">
-                                <label for="pxp-company-job-category" class="form-label">Category</label>
-                                <select id="pxp-company-job-category" class="form-select">
-                                    <option>Select a category</option>
-                                    <option>Marketing & Communication</option>
-                                    <option>Software Engineering</option>
-                                    <option>Project Management</option>
-                                    <option>Finance</option>
-                                    <option>Retail</option>
-                                    <option>Sales</option>
-                                    <option>Manufacturing</option>
-                                    <option>IT</option>
-                                    <option>Business Development</option>
-                                    <option>Human Resources</option>
-                                    <option>Customer Service</option>
+                                <label for="pxp-company-job-category" class="form-label">District</label>
+                                <select id="district" name="district" class="form-select">
+                                    <option>Choose a District</option>
+                                    <option>Alappuzha</option>
+                                    <option>Ernakulam</option>
+                                    <option>Idukki</option>
+                                    <option>Kannur</option>
+                                    <option>Kasaragod</option>
+                                    <option>Kollam</option>
+                                    <option>Kottayam</option>
+                                    <option>Kozhikode</option>
+                                    <option>Malappuram</option>
+                                    <option>Palakkad</option>
+                                    <option>Pathanamthitta</option>
+                                    <option>Thiruvananthapuram</option>
+                                    <option>Thrissur</option>
+                                    <option>Wayanad</option>
                                 </select>
                             </div>
                         </div>
+                        <div class="col-md-6 col-xxl-3">
+                            <label for="pxp-company-job-location" class="form-label">City</label>
+                            <input type="text" id="city" name="city" class="form-control" placeholder="E.g. San Francisco, CA">
+                        </div>
+                        
                     </div>
 
                     <div class="mb-3">
                         <label for="pxp-company-job-description" class="form-label">Job description</label>
-                        <textarea class="form-control" id="pxp-company-job-description" placeholder="Type the description here..."></textarea>
+                        <textarea class="form-control" id="description" name="description" placeholder="Type the description here..."></textarea>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 col-xxl-3">
                             <div class="mb-3">
                                 <label for="pxp-company-job-experience" class="form-label">Experience</label>
-                                <input type="text" id="pxp-company-job-experience" class="form-control" placeholder="E.g. Minimum 3 years">
+                                <input type="text" id="experience" name="experience" class="form-control" placeholder="E.g. Minimum 3 years">
                             </div>
                         </div>
                         <div class="col-md-6 col-xxl-3">
@@ -215,41 +191,39 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <option>Entry-Level</option>
                                     <option>Mid-Level</option>
                                     <option>Senior-Level</option>
-                                    <option>Manager / Executive</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6 col-xxl-3">
                             <div class="mb-3">
                                 <label for="pxp-company-job-type" class="form-label">Employment type</label>
-                                <select id="pxp-company-job-type" class="form-select">
+                                <select id="jobtype" name="jobtype" class="form-select">
                                     <option>Full Time</option>
                                     <option>Part Time</option>
-                                    <option>Remote</option>
-                                    <option>Internship</option>
                                     <option>Contract</option>
-                                    <option>Training</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6 col-xxl-3">
                             <div class="mb-3">
                                 <label for="pxp-company-job-salary" class="form-label">Salary range</label>
-                                <select id="pxp-company-job-salary" class="form-select">
+                                <select id="salary" name="salary" class="form-select">
                                     <option>Select range</option>
-                                    <option>$700 - $1000</option>
-                                    <option>$1000 - $1200</option>
-                                    <option>$1200 - $1400</option>
-                                    <option>$1500 - $1800</option>
-                                    <option>$2000 - $3000</option>
+                                    <option>below ₹500</option>
+                                    <option>₹500 - ₹1000</option>
+                                    <option>₹1000 - ₹2000</option>
+                                    <option>above ₹2000</option>
                                 </select>
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                    
+                    </div>
 
                     <div class="mt-4 mt-lg-5">
-                        <button class="btn rounded-pill pxp-section-cta">Publish Job</button>
-                        <button class="btn rounded-pill pxp-section-cta-o ms-3">Save Draft</button>
+                        <button type="submit"  value ="<?=$_SESSION['userId']?>"  class="btn rounded-pill pxp-section-cta" name="publishjob" id="publishjob">Publish Job</button>
+                        <!-- <button class="btn rounded-pill pxp-section-cta-o ms-3">Save Draft</button> -->
                     </div>
                 </form>
             </div>
@@ -259,12 +233,12 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             </footer>
         </div>
 
-        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="../js/jquery-3.4.1.min.js"></script>
         <script src="../../../cdn.jsdelivr.net/npm/bootstrap%405.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/nav.js"></script>
-        <script src="js/Chart.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="../js/owl.carousel.min.js"></script>
+        <script src="../js/nav.js"></script>
+        <script src="../js/Chart.min.js"></script>
+        <script src="../js/main.js"></script>
     </body>
 
 
