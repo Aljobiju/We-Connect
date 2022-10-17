@@ -43,7 +43,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <li><a href="company-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
                     <li><a href="CustomerDashboard-Profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                     <li><a href="CustomerDashboard-new_job.php"><span class="fa fa-file-text-o"></span>New Job</a></li>
-                    <li><a href="company-dashboard-jobs.html"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
+                    <li><a href="CustomerDashboard-manage_jobs.php"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
                     <li><a href="company-dashboard-candidates.html"><span class="fa fa-user-circle-o"></span>Candidates</a></li>
                     <li><a href="company-dashboard-subscriptions.html"><span class="fa fa-credit-card"></span>Subscriptions</a></li>
                     <li class="pxp-active"><a href="company-dashboard-password.html"><span class="fa fa-lock"></span>Change Password</a></li>
@@ -103,7 +103,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <li class="nav-item"><a href="company-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-Profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-new_job.php"><span class="fa fa-file-text-o"></span>New Job</a></li>
-                                    <li class="nav-item"><a href="company-dashboard-jobs.html"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
+                                    <li class="nav-item"><a href="CustomerDashboard-manage_jobs.php"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
                                     <li class="nav-item"><a href="company-dashboard-candidates.html"><span class="fa fa-user-circle-o"></span>Candidates</a></li>
                                     <li class="nav-item"><a href="company-dashboard-subscriptions.html"><span class="fa fa-credit-card"></span>Subscriptions</a></li>
                                     <li class="nav-item"><a href="company-dashboard-password.html"><span class="fa fa-lock"></span>Change Password</a></li>

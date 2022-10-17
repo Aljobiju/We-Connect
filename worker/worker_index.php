@@ -78,7 +78,18 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     </nav>
                     <nav class="pxp-user-nav d-none d-sm-flex">
                         <!-- <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a> -->
-                        <a class="btn rounded-pill pxp-user-nav-trigger" data-bs-toggle="modal" href="../auth/logoutController.php" role="button"><img class="log-out-btn" src="./images/login_icons/power-off-ico.svg" alt="" /> Logout</a>
+                        <div class="dropdown pxp-user-nav-dropdown">
+                        <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
+                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
+                            <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Edit profile</a></li>
+                            <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
+                        </ul>
+                    </div>
+                        <!-- <a class="btn rounded-pill pxp-user-nav-trigger" data-bs-toggle="modal" href="../auth/logoutController.php" role="button"><img class="log-out-btn" src="./images/login_icons/power-off-ico.svg" alt="" /> Logout</a> -->
                     </nav>
                 </div>
             </div>
