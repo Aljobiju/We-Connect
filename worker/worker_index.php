@@ -84,8 +84,8 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
-                            <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Edit profile</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard.php">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Edit profile</a></li>
                             <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
                     </div>

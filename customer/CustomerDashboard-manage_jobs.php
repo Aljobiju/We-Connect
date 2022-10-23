@@ -149,6 +149,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             </thead>
                             
                             <tbody>
+                                
                             <?php
                                          $sql="SELECT * FROM tbl_job_details WHERE `user_id`= $_SESSION[userId]";
                                         $result = $connect->query($sql);
@@ -161,7 +162,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <td>
                                         <a href="#">
                                             <div class="pxp-company-dashboard-job-title"><?php echo $row['job_title'] ?></div>
-                                            <div class="pxp-company-dashboard-job-location"><span class="fa fa-globe me-1"></span><?php echo $row['city'] ?>, <?php echo $row['district'] ?></div>
+                                            <div class="pxp-co mpany-dashboard-job-location"><span class="fa fa-globe me-1"></span><?php echo $row['city'] ?>, <?php echo $row['district'] ?></div>
                                         </a>
                                     </td>
                                     <td><div class="pxp-company-dashboard-job-category"><?php echo $row['job_description'] ?></div></td>
@@ -171,20 +172,33 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                         <!-- <div class="pxp-company-dashboard-job-status"><span class="badge rounded-pill bg-success">Published</span></div> -->
                                         <div class="pxp-company-dashboard-job-date mt-1"><?php echo $row['job_created_at'] ?></div>
                                     </td>
+                                    
                                     <td>
+                                    <?php
+                                         $sql1="SELECT * FROM tbl_job_details";
+                                        $result1 = $connect->query($sql1);
+                                         if($result1->num_rows > 0){ 
+                                        /*while($row1 = $result1->fetch_assoc()) {*/
+                                          $id=trim($row['id']);
+                                            ?>
+                                    
                                         <div class="pxp-dashboard-table-options">
                                             <ul class="list-unstyled">
                                                 <!-- <li><button title="Edit"><span class="fa fa-pencil"></span></button></li>
                                                 <li><button title="Preview"><span class="fa fa-eye"></span></button></li> -->
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
+                                                <li><button onclick="location.href='deleteJob.php?jid= <?php echo $id ?>'" title="Delete"><span class="fa fa-trash-o"></span></button></li>
                                             </ul>
                                         </div>
-                                    </td>
-                                </tr>
-                                <?php
-                                        }
+                                        <?php
                                     }
-                                    ?>
+                                         }
+                                        }
+                                         ?>
+                                    </td>
+                                    
+                                </tr>
+                               
+                                    
                             </tbody>
                             
                         </table>

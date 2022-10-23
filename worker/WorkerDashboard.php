@@ -1,23 +1,22 @@
 <!doctype html>
 <html lang="en" class="pxp-root">
     
-<!-- Mirrored from pixelprime.co/themes/jobster/candidate-dashboard-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:23:09 GMT -->
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com/">
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&amp;display=swap" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+        <link rel="preconnect" href="../https://fonts.googleapis.com/">
+        <link rel="preconnect" href="../https://fonts.gstatic.com/" crossorigin>
+        <link href="../https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&amp;display=swap" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="../css/animate.css">
+        <link rel="stylesheet" href="../css/style.css">
 
-        <title>Jobster - Candidate dashboard - Edit profile</title>
+        <title>Jobster - Candidate dashboard</title>
     </head>
     <body style="background-color: var(--pxpSecondaryColorLight);">
         <div class="pxp-preloader"><span>Loading...</span></div>
@@ -30,11 +29,11 @@
             <nav class="mt-3 mt-lg-4 d-flex justify-content-between flex-column pb-100">
                 <div class="pxp-dashboard-side-label">Admin tools</div>
                 <ul class="list-unstyled">
-                    <li><a href="candidate-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
-                    <li class="pxp-active"><a href="candidate-dashboard-profile.html"><span class="fa fa-pencil"></span>Edit Profile</a></li>
-                    <li><a href="candidate-dashboard-applications.html"><span class="fa fa-file-text-o"></span>Apllications</a></li>
+                    <li class="pxp-active"><a href="WorkerDashboard.php"><span class="fa fa-home"></span>Dashboard</a></li>
+                    <li><a href="WorkerDashboard-profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
+                    <li><a href="WorkerDashboard-applications.php"><span class="fa fa-file-text-o"></span>Apllications</a></li>
                     <li><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li>
-                    <li><a href="candidate-dashboard-password.html"><span class="fa fa-lock"></span>Change Password</a></li>
+                    <li><a href="WorkerDashboard-change_password.php"><span class="fa fa-lock"></span>Change Password</a></li>
                 </ul>
                 <div class="pxp-dashboard-side-label mt-3 mt-lg-4">Insights</div>
                 <ul class="list-unstyled">
@@ -57,7 +56,7 @@
                 <div class="pxp-dashboard-side-user-nav">
                     <div class="dropdown pxp-dashboard-side-user-nav-dropdown dropup">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <div class="pxp-dashboard-side-user-nav-avatar pxp-cover" style="background-image: url(images/avatar-1.jpg);"></div>
+                            <div class="pxp-dashboard-side-user-nav-avatar pxp-cover" style="background-image: url(../images/avatar-1.jpg);"></div>
                             <div class="pxp-dashboard-side-user-nav-name">Derek Cotner</div>
                         </a>
                         <ul class="dropdown-menu">
@@ -92,7 +91,7 @@
                                     <li class="nav-item"><a href="candidate-dashboard-profile.html"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-applications.html"><span class="fa fa-file-text-o"></span>Apllications</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li>
-                                    <li class="nav-item"><a href="candidate-dashboard-password.html"><span class="fa fa-lock"></span>Change Password</a></li>
+                                    <li class="nav-item"><a href="WorkerDashboard-change_password.php"><span class="fa fa-lock"></span>Change Password</a></li>
                                     <li class="pxp-dropdown-header mt-4">Insights</li>
                                     <li class="nav-item">
                                         <a href="candidate-dashboard-inbox.html" class="d-flex justify-content-between align-items-center">
@@ -130,7 +129,7 @@
                     </div>
                     <div class="dropdown pxp-user-nav-dropdown">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(images/avatar-1.jpg);"></div>
+                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(../images/avatar-1.jpg);"></div>
                             <div class="pxp-user-nav-name d-none d-md-block">Derek Cotner</div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
@@ -143,234 +142,411 @@
             </div>
 
             <div class="pxp-dashboard-content-details">
-                <h1>Edit Profile</h1>
-                <p class="pxp-text-light">Edit your candidate profile page info.</p>
+                <h1>Dashboard</h1>
+                <p class="pxp-text-light">Welcome to Jobster!</p>
 
-                <form>
-                    <div class="row mt-4 mt-lg-5">
-                        <div class="col-xxl-8">
-                            <div class="mb-3">
-                                <label for="pxp-candidate-name" class="form-label">Name</label>
-                                <input type="text" id="pxp-candidate-name" class="form-control" placeholder="Add your name">
+                <div class="row mt-4 mt-lg-5 align-items-center">
+                    <div class="col-sm-6 col-xxl-3">
+                        <div class="pxp-dashboard-stats-card bg-primary bg-opacity-10 mb-3 mb-xxl-0">
+                            <div class="pxp-dashboard-stats-card-icon text-primary">
+                                <span class="fa fa-file-text-o"></span>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="mb-3">
-                                        <label for="pxp-candidate-title" class="form-label">Title</label>
-                                        <input type="text" id="pxp-candidate-title" class="form-control" placeholder="E.g. Web Designer">
+                            <div class="pxp-dashboard-stats-card-info">
+                                <div class="pxp-dashboard-stats-card-info-number">13</div>
+                                <div class="pxp-dashboard-stats-card-info-text pxp-text-light">Job applications</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xxl-3">
+                        <div class="pxp-dashboard-stats-card bg-success bg-opacity-10 mb-3 mb-xxl-0">
+                            <div class="pxp-dashboard-stats-card-icon text-success">
+                                <span class="fa fa-user-circle-o"></span>
+                            </div>
+                            <div class="pxp-dashboard-stats-card-info">
+                                <div class="pxp-dashboard-stats-card-info-number">312</div>
+                                <div class="pxp-dashboard-stats-card-info-text pxp-text-light">Profile visits</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xxl-3">
+                        <div class="pxp-dashboard-stats-card bg-warning bg-opacity-10 mb-3 mb-xxl-0">
+                            <div class="pxp-dashboard-stats-card-icon text-warning">
+                                <span class="fa fa-envelope-o"></span>
+                            </div>
+                            <div class="pxp-dashboard-stats-card-info">
+                                <div class="pxp-dashboard-stats-card-info-number">14</div>
+                                <div class="pxp-dashboard-stats-card-info-text pxp-text-light">Unread messages</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xxl-3">
+                        <div class="pxp-dashboard-stats-card bg-danger bg-opacity-10 mb-3 mb-xxl-0">
+                            <div class="pxp-dashboard-stats-card-icon text-danger">
+                                <span class="fa fa-bell-o"></span>
+                            </div>
+                            <div class="pxp-dashboard-stats-card-info">
+                                <div class="pxp-dashboard-stats-card-info-number">5</div>
+                                <div class="pxp-dashboard-stats-card-info-text pxp-text-light">Notifications</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4 mt-lg-5">
+                    <div class="col-xl-6">
+                        <h2>Profile Visits</h2>
+                        <div class="mt-3 mt-lg-4 pxp-dashboard-chart-container">
+                            <div class="row justify-content-between align-content-center mb-4">
+                                <div class="col-auto">
+                                    <span class="pxp-dashboard-chart-value">154</span><span class="pxp-dashboard-chart-percent text-success"><span class="fa fa-long-arrow-up"></span> 34%</span><span class="pxp-dashboard-chart-vs">vs last 7 days</span>
+                                </div>
+                                <div class="col-auto">
+                                    <select class="form-select">
+                                        <option value="-7 days">Last 7 days</option>
+                                        <option value="-30 days">Last 30 days</option>
+                                        <option value="-60 days">Last 60 days</option>
+                                        <option value="-90 days">Last 90 days</option>
+                                        <option value="-12 months">Last 12 months</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <canvas id="pxp-candidate-dashboard-visits-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <h2 class="mt-4 mt-lg-5 mt-xl-0">Applications</h2>
+                        <div class="mt-3 mt-lg-4 pxp-dashboard-chart-container">
+                            <div class="row justify-content-between align-content-center mb-4">
+                                <div class="col-auto">
+                                    <span class="pxp-dashboard-chart-value">280</span><span class="pxp-dashboard-chart-percent text-success"><span class="fa fa-long-arrow-up"></span> 56%</span><span class="pxp-dashboard-chart-vs">vs last 7 days</span>
+                                </div>
+                                <div class="col-auto">
+                                    <select class="form-select">
+                                        <option value="-7 days">Last 7 days</option>
+                                        <option value="-30 days">Last 30 days</option>
+                                        <option value="-60 days">Last 60 days</option>
+                                        <option value="-90 days">Last 90 days</option>
+                                        <option value="-12 months">Last 12 months</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <canvas id="pxp-candidate-dashboard-app-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4 mt-lg-5">
+                    <div class="col-xxl-6">
+                        <h2>Recent Notifications</h2>
+                        <div class="pxp-candidate-dashboard-notifications">
+                            <div class="pxp-candidate-dashboard-notifications-item mb-3">
+                                <div class="pxp-candidate-dashboard-notifications-item-left">
+                                    <div class="pxp-candidate-dashboard-notifications-item-type"><span class="fa fa-user-circle-o"></span></div>
+                                    <div class="pxp-candidate-dashboard-notifications-item-message">
+                                        <a href="#">Artistre Studio</a> viewed your profile.
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="mb-3">
-                                        <label for="pxp-candidate-location" class="form-label">Location</label>
-                                        <input type="tel" id="pxp-candidate-location" class="form-control" placeholder="E.g. San Francisco, CA">
+                                <div class="pxp-candidate-dashboard-notifications-item-right">20m ago</div>
+                            </div>
+                            <div class="pxp-candidate-dashboard-notifications-item mb-3">
+                                <div class="pxp-candidate-dashboard-notifications-item-left">
+                                    <div class="pxp-candidate-dashboard-notifications-item-type"><span class="fa fa-envelope-o"></span></div>
+                                    <div class="pxp-candidate-dashboard-notifications-item-message">
+                                        <a href="#">Craftgenics</a> sent you a message.
                                     </div>
                                 </div>
+                                <div class="pxp-candidate-dashboard-notifications-item-right">1h ago</div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="mb-3">
-                                        <label for="pxp-candidate-email" class="form-label">Email</label>
-                                        <input type="email" id="pxp-candidate-email" class="form-control" placeholder="candidate@email.com">
+                            <div class="pxp-candidate-dashboard-notifications-item mb-3">
+                                <div class="pxp-candidate-dashboard-notifications-item-left">
+                                    <div class="pxp-candidate-dashboard-notifications-item-type"><span class="fa fa-user-circle-o"></span></div>
+                                    <div class="pxp-candidate-dashboard-notifications-item-message">
+                                        <a href="#">Illuminate Studio</a> viewed your profile.
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="mb-3">
-                                        <label for="pxp-candidate-phone" class="form-label">Phone</label>
-                                        <input type="tel" id="pxp-candidate-phone" class="form-control" placeholder="(+12) 345 6789">
+                                <div class="pxp-candidate-dashboard-notifications-item-right">3h ago</div>
+                            </div>
+                            <div class="pxp-candidate-dashboard-notifications-item mb-3">
+                                <div class="pxp-candidate-dashboard-notifications-item-left">
+                                    <div class="pxp-candidate-dashboard-notifications-item-type"><span class="fa fa-envelope-o"></span></div>
+                                    <div class="pxp-candidate-dashboard-notifications-item-message">
+                                        <a href="#">Syspresoft</a> you sent a message.
                                     </div>
                                 </div>
+                                <div class="pxp-candidate-dashboard-notifications-item-right">1d ago</div>
                             </div>
-                        </div>
-                        <div class="col-xxl-4">
-                            <div class="form-label">&nbsp;</div>
-                            <div class="pxp-candidate-cover mb-3">
-                                <input type="file" id="pxp-candidate-cover-choose-file" accept="image/*">
-                                <label for="pxp-candidate-cover-choose-file" class="pxp-cover"><span>Upload Cover Image</span></label>
+                            <div class="pxp-candidate-dashboard-notifications-item mb-3">
+                                <div class="pxp-candidate-dashboard-notifications-item-left">
+                                    <div class="pxp-candidate-dashboard-notifications-item-type"><span class="fa fa-user-circle-o"></span></div>
+                                    <div class="pxp-candidate-dashboard-notifications-item-message">
+                                        <a href="#">Adobe Corporation</a> viewed your profile.
+                                    </div>
+                                </div>
+                                <div class="pxp-candidate-dashboard-notifications-item-right">20m ago</div>
                             </div>
-                            <div class="pxp-candidate-photo mb-3">
-                                <input type="file" id="pxp-candidate-photo-choose-file" accept="image/*">
-                                <label for="pxp-candidate-photo-choose-file" class="pxp-cover"><span>Upload<br>Photo</span></label>
+                            <div class="pxp-candidate-dashboard-notifications-item mb-3">
+                                <div class="pxp-candidate-dashboard-notifications-item-left">
+                                    <div class="pxp-candidate-dashboard-notifications-item-type"><span class="fa fa-envelope-o"></span></div>
+                                    <div class="pxp-candidate-dashboard-notifications-item-message">
+                                        <a href="#">Gramware</a> sent you a message.
+                                    </div>
+                                </div>
+                                <div class="pxp-candidate-dashboard-notifications-item-right">1h ago</div>
+                            </div>
+                            <div class="pxp-candidate-dashboard-notifications-item mb-3">
+                                <div class="pxp-candidate-dashboard-notifications-item-left">
+                                    <div class="pxp-candidate-dashboard-notifications-item-type"><span class="fa fa-user-circle-o"></span></div>
+                                    <div class="pxp-candidate-dashboard-notifications-item-message">
+                                        <a href="#">Bitbytech</a> viewed your profile.
+                                    </div>
+                                </div>
+                                <div class="pxp-candidate-dashboard-notifications-item-right">3h ago</div>
+                            </div>
+                            <div class="pxp-candidate-dashboard-notifications-item mb-3">
+                                <div class="pxp-candidate-dashboard-notifications-item-left">
+                                    <div class="pxp-candidate-dashboard-notifications-item-type"><span class="fa fa-envelope-o"></span></div>
+                                    <div class="pxp-candidate-dashboard-notifications-item-message">
+                                        <a href="#">CoderBotics</a> you sent a message.
+                                    </div>
+                                </div>
+                                <div class="pxp-candidate-dashboard-notifications-item-right">1d ago</div>
+                            </div>
+                            <div class="pxp-candidate-dashboard-notifications-item mb-3">
+                                <div class="pxp-candidate-dashboard-notifications-item-left">
+                                    <div class="pxp-candidate-dashboard-notifications-item-type"><span class="fa fa-user-circle-o"></span></div>
+                                    <div class="pxp-candidate-dashboard-notifications-item-message">
+                                        <a href="#">Artistre Studio</a> viewed your profile.
+                                    </div>
+                                </div>
+                                <div class="pxp-candidate-dashboard-notifications-item-right">20m ago</div>
+                            </div>
+                            <div class="pxp-candidate-dashboard-notifications-item mb-3">
+                                <div class="pxp-candidate-dashboard-notifications-item-left">
+                                    <div class="pxp-candidate-dashboard-notifications-item-type"><span class="fa fa-envelope-o"></span></div>
+                                    <div class="pxp-candidate-dashboard-notifications-item-message">
+                                        <a href="#">Gramware</a> sent you a message.
+                                    </div>
+                                </div>
+                                <div class="pxp-candidate-dashboard-notifications-item-right">1h ago</div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="mb-3">
-                        <label for="pxp-candidate-about" class="form-label">About you</label>
-                        <textarea class="form-control" id="pxp-candidate-about" placeholder="Type your info here..."></textarea>
+                    <div class="col-xxl-6">
+                        <h2 class="mt-4 mt-lg-5 mt-xxl-0">Recent Messages</h2>
+                        <div class="pxp-candidate-dashboard-messages">
+                            <div class="pxp-candidate-dashboard-messages-item mb-3">
+                                <div class="pxp-candidate-dashboard-messages-item-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
+                                <div class="pxp-candidate-dashboard-messages-item-details ms-3">
+                                    <div class="pxp-candidate-dashboard-messages-item-name">Artistre Studio</div>
+                                    <div class="pxp-candidate-dashboard-messages-item-date pxp-text-light">Oct 6, 2021 at 8:04 pm</div>
+                                    <p class="mt-1 mb-0">Lorem Ipsum is also known as: Greeked text, blind text, placeholder text, dummy content, filler text, lipsum, and mock-content.</p>
+                                </div>
+                            </div>
+                            <div class="pxp-candidate-dashboard-messages-item mb-3">
+                                <div class="pxp-candidate-dashboard-messages-item-avatar pxp-cover" style="background-image: url(../images/company-logo-2.png);"></div>
+                                <div class="pxp-candidate-dashboard-messages-item-details ms-3">
+                                    <div class="pxp-candidate-dashboard-messages-item-name">Craftgenics</div>
+                                    <div class="pxp-candidate-dashboard-messages-item-date pxp-text-light">Oct 6, 2021 at 8:04 pm</div>
+                                    <p class="mt-1 mb-0">In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation.</p>
+                                </div>
+                            </div>
+                            <div class="pxp-candidate-dashboard-messages-item mb-3">
+                                <div class="pxp-candidate-dashboard-messages-item-avatar pxp-cover" style="background-image: url(../images/company-logo-3.png);"></div>
+                                <div class="pxp-candidate-dashboard-messages-item-details ms-3">
+                                    <div class="pxp-candidate-dashboard-messages-item-name">Illuminate Studio</div>
+                                    <div class="pxp-candidate-dashboard-messages-item-date pxp-text-light">Oct 6, 2021 at 8:04 pm</div>
+                                    <p class="mt-1 mb-0">Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
+                                </div>
+                            </div>
+                            <div class="pxp-candidate-dashboard-messages-item mb-3">
+                                <div class="pxp-candidate-dashboard-messages-item-avatar pxp-cover" style="background-image: url(../images/company-logo-4.png);"></div>
+                                <div class="pxp-candidate-dashboard-messages-item-details ms-3">
+                                    <div class="pxp-candidate-dashboard-messages-item-name">Syspresoft</div>
+                                    <div class="pxp-candidate-dashboard-messages-item-date pxp-text-light">Oct 6, 2021 at 8:04 pm</div>
+                                    <p class="mt-1 mb-0">Lorem Ipsum is also known as: Greeked text, blind text, placeholder text, dummy content, filler text, lipsum, and mock-content.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="mt-4 mt-lg-5">
-                        <h2>Skills</h2>
-                        <div class="pxp-candidate-dashboard-skills mb-3">
-                            <ul class="list-unstyled">
-                                <li>Work from home<span class="fa fa-trash-o"></span></li>
-                                <li>Part-time<span class="fa fa-trash-o"></span></li>
-                                <li>Administration<span class="fa fa-trash-o"></span></li>
-                                <li>Finance<span class="fa fa-trash-o"></span></li>
-                                <li>Retail<span class="fa fa-trash-o"></span></li>
-                                <li>IT<span class="fa fa-trash-o"></span></li>
-                                <li>Engineering<span class="fa fa-trash-o"></span></li>
-                                <li>Sales<span class="fa fa-trash-o"></span></li>
-                                <li>Manufacturing<span class="fa fa-trash-o"></span></li>
-                            </ul>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Skill">
-                            <button class="btn">Add Skill</button>
-                        </div>
+                <div class="mt-4 mt-lg-5">
+                    <h2>Recent Job Apllications</h2>
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <tr>
+                                <td style="width: 3%;"><div class="pxp-candidate-dashboard-job-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div></td>
+                                <td style="width: 25%;">
+                                    <div class="pxp-candidate-dashboard-job-title">Senior Editor</div>
+                                    <div class="pxp-candidate-dashboard-job-company">Artistre Studio</div>
+                                </td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-category">Marketing & Communication</div></td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe"></span>London, UK</div></td>
+                                <td style="width: 10%;"><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
+                                <td>
+                                    <div class="pxp-dashboard-table-options">
+                                        <ul class="list-unstyled">
+                                            <li><button title="View job details"><span class="fa fa-eye"></span></button></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 3%;"><div class="pxp-candidate-dashboard-job-avatar pxp-cover" style="background-image: url(../images/company-logo-2.png);"></div></td>
+                                <td style="width: 25%;">
+                                    <div class="pxp-candidate-dashboard-job-title">Software Engineering Team Leader</div>
+                                    <div class="pxp-candidate-dashboard-job-company">Craftgenics</div>
+                                </td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-category">Project Management</div></td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe"></span>San Francisco, CA</div></td>
+                                <td style="width: 10%;"><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
+                                <td>
+                                    <div class="pxp-dashboard-table-options">
+                                        <ul class="list-unstyled">
+                                            <li><button title="View job details"><span class="fa fa-eye"></span></button></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 3%;"><div class="pxp-candidate-dashboard-job-avatar pxp-cover" style="background-image: url(../images/company-logo-3.png);"></div></td>
+                                <td style="width: 25%;">
+                                    <div class="pxp-candidate-dashboard-job-title">Techincal Support Engineer</div>
+                                    <div class="pxp-candidate-dashboard-job-company">Illuminate Studio</div>
+                                </td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-category">Customer Service</div></td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe"></span>London, UK</div></td>
+                                <td style="width: 10%;"><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
+                                <td>
+                                    <div class="pxp-dashboard-table-options">
+                                        <ul class="list-unstyled">
+                                            <li><button title="View job details"><span class="fa fa-eye"></span></button></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 3%;"><div class="pxp-candidate-dashboard-job-avatar pxp-cover" style="background-image: url(../images/company-logo-4.png);"></div></td>
+                                <td style="width: 25%;">
+                                    <div class="pxp-candidate-dashboard-job-title">Javascript Developer</div>
+                                    <div class="pxp-candidate-dashboard-job-company">Syspresoft</div>
+                                </td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-category">Software Engineering</div></td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe"></span>San Francisco, CA</div></td>
+                                <td style="width: 10%;"><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
+                                <td>
+                                    <div class="pxp-dashboard-table-options">
+                                        <ul class="list-unstyled">
+                                            <li><button title="View job details"><span class="fa fa-eye"></span></button></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 3%;"><div class="pxp-candidate-dashboard-job-avatar pxp-cover" style="background-image: url(../images/company-logo-5.png);"></div></td>
+                                <td style="width: 25%;">
+                                    <div class="pxp-candidate-dashboard-job-title">Technical Writer</div>
+                                    <div class="pxp-candidate-dashboard-job-company">Gramware</div>
+                                </td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-category">Business Development</div></td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe"></span>London, UK</div></td>
+                                <td style="width: 10%;"><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
+                                <td>
+                                    <div class="pxp-dashboard-table-options">
+                                        <ul class="list-unstyled">
+                                            <li><button title="View job details"><span class="fa fa-eye"></span></button></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 3%;"><div class="pxp-candidate-dashboard-job-avatar pxp-cover" style="background-image: url(../images/company-logo-6.png);"></div></td>
+                                <td style="width: 25%;">
+                                    <div class="pxp-candidate-dashboard-job-title">Human Resources Coordinator</div>
+                                    <div class="pxp-candidate-dashboard-job-company">Bitbytech</div>
+                                </td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-category">Human Resources</div></td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe"></span>San Francisco, CA</div></td>
+                                <td style="width: 10%;"><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
+                                <td>
+                                    <div class="pxp-dashboard-table-options">
+                                        <ul class="list-unstyled">
+                                            <li><button title="View job details"><span class="fa fa-eye"></span></button></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 3%;"><div class="pxp-candidate-dashboard-job-avatar pxp-cover" style="background-image: url(../images/company-logo-7.png);"></div></td>
+                                <td style="width: 25%;">
+                                    <div class="pxp-candidate-dashboard-job-title">Fullstack Web Developer</div>
+                                    <div class="pxp-candidate-dashboard-job-company">CoderBotics</div>
+                                </td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-category">Software Engineering</div></td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe"></span>London, UK</div></td>
+                                <td style="width: 10%;"><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
+                                <td>
+                                    <div class="pxp-dashboard-table-options">
+                                        <ul class="list-unstyled">
+                                            <li><button title="View job details"><span class="fa fa-eye"></span></button></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 3%;"><div class="pxp-candidate-dashboard-job-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div></td>
+                                <td style="width: 25%;">
+                                    <div class="pxp-candidate-dashboard-job-title">Senior Editor</div>
+                                    <div class="pxp-candidate-dashboard-job-company">Artistre Studio</div>
+                                </td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-category">Marketing & Communication</div></td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe"></span>London, UK</div></td>
+                                <td style="width: 10%;"><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
+                                <td>
+                                    <div class="pxp-dashboard-table-options">
+                                        <ul class="list-unstyled">
+                                            <li><button title="View job details"><span class="fa fa-eye"></span></button></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 3%;"><div class="pxp-candidate-dashboard-job-avatar pxp-cover" style="background-image: url(../images/company-logo-2.png);"></div></td>
+                                <td style="width: 25%;">
+                                    <div class="pxp-candidate-dashboard-job-title">Software Engineering Team Leader</div>
+                                    <div class="pxp-candidate-dashboard-job-company">Craftgenics</div>
+                                </td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-category">Project Management</div></td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe"></span>San Francisco, CA</div></td>
+                                <td style="width: 10%;"><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
+                                <td>
+                                    <div class="pxp-dashboard-table-options">
+                                        <ul class="list-unstyled">
+                                            <li><button title="View job details"><span class="fa fa-eye"></span></button></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 3%;"><div class="pxp-candidate-dashboard-job-avatar pxp-cover" style="background-image: url(../images/company-logo-3.png);"></div></td>
+                                <td style="width: 25%;">
+                                    <div class="pxp-candidate-dashboard-job-title">Techincal Support Engineer</div>
+                                    <div class="pxp-candidate-dashboard-job-company">Illuminate Studio</div>
+                                </td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-category">Customer Service</div></td>
+                                <td style="width: 25%;"><div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe"></span>London, UK</div></td>
+                                <td style="width: 10%;"><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
+                                <td>
+                                    <div class="pxp-dashboard-table-options">
+                                        <ul class="list-unstyled">
+                                            <li><button title="View job details"><span class="fa fa-eye"></span></button></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-
-                    <div class="mt-4 mt-lg-5">
-                        <h2>Work Experience</h2>
-                        <div class="table-responsive">
-                            <table class="table align-middle">
-                                <tr>
-                                    <td style="width: 30%;"><div class="pxp-candidate-dashboard-experience-title">Senior UI/UX Designer</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-company">Adobe Corporation</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-time">2005 - 2013</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Edit"><span class="fa fa-pencil"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 30%;"><div class="pxp-candidate-dashboard-experience-title">Senior UI/UX Designer</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-company">Adobe Corporation</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-time">2005 - 2013</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Edit"><span class="fa fa-pencil"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 30%;"><div class="pxp-candidate-dashboard-experience-title">Senior UI/UX Designer</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-company">Adobe Corporation</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-time">2005 - 2013</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Edit"><span class="fa fa-pencil"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <div class="row mt-3 mt-lg-4">
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="pxp-candidate-work-title" class="form-label">Job title</label>
-                                    <input type="text" id="pxp-candidate-work-title" class="form-control" placeholder="E.g. Web Designer">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="pxp-candidate-work-company" class="form-label">Company</label>
-                                    <input type="text" id="pxp-candidate-work-company" class="form-control" placeholder="Company name">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="pxp-candidate-work-time" class="form-label">Time period</label>
-                                    <input type="text" id="pxp-candidate-work-time" class="form-control" placeholder="E.g. 2005 - 2013">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="pxp-candidate-work-about" class="form-label">Description</label>
-                            <textarea class="form-control pxp-smaller" id="pxp-candidate-work-about" placeholder="Type a short description here..."></textarea>
-                        </div>
-                        <button class="btn rounded-pill pxp-subsection-cta">Add Experience</button>
-                    </div>
-
-                    <div class="mt-4 mt-lg-5">
-                        <h2>Education & Training</h2>
-                        <div class="table-responsive">
-                            <table class="table align-middle">
-                                <tr>
-                                    <td style="width: 30%;"><div class="pxp-candidate-dashboard-experience-title">Architecure</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-school">Politehnica University of Timisoara: Bachelor of Architecture</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-time">2011 - 2017</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Edit"><span class="fa fa-pencil"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 30%;"><div class="pxp-candidate-dashboard-experience-title">Front End Web Developer</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-school">Udacity Nanodegree Program</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-time">2020 - 2020</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Edit"><span class="fa fa-pencil"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 30%;"><div class="pxp-candidate-dashboard-experience-title">Build Responsive Real World Websites with HTML5 and CSS3</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-company">Udemy</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-time">2021 - 2021</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Edit"><span class="fa fa-pencil"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <div class="row mt-3 mt-lg-4">
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="pxp-candidate-edu-title" class="form-label">Title</label>
-                                    <input type="text" id="pxp-candidate-edu-title" class="form-control" placeholder="E.g. Architecure">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="pxp-candidate-edu-school" class="form-label">School</label>
-                                    <input type="text" id="pxp-candidate-edu-school" class="form-control" placeholder="School name">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="pxp-candidate-edu-time" class="form-label">Time period</label>
-                                    <input type="text" id="pxp-candidate-edu-time" class="form-control" placeholder="E.g. 2005 - 2013">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="pxp-candidate-edu-about" class="form-label">Description</label>
-                            <textarea class="form-control pxp-smaller" id="pxp-candidate-edu-about" placeholder="Type a short description here..."></textarea>
-                        </div>
-                        <button class="btn rounded-pill pxp-subsection-cta">Add Education</button>
-                    </div>
-
-                    <div class="mt-4 mt-lg-5">
-                        <button class="btn rounded-pill pxp-section-cta">Save Profile</button>
-                    </div>
-                </form>
+                </div>
             </div>
 
             <footer>
@@ -378,13 +554,12 @@
             </footer>
         </div>
 
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/nav.js"></script>
-        <script src="js/Chart.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/owl.carousel.min.js"></script>
+        <script src="../js/nav.js"></script>
+        <script src="../js/Chart.min.js"></script>
+        <script src="../js/main.js"></script>
     </body>
 
-<!-- Mirrored from pixelprime.co/themes/jobster/candidate-dashboard-profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:23:09 GMT -->
 </html>
