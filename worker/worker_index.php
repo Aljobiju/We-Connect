@@ -37,7 +37,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             <div class="pxp-container">
                 <div class="pxp-header-container">
                     <div class="pxp-logo">
-                        <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                        <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                     </div>
                     <nav class="pxp-nav dropdown-hover-all d-none d-xl-block">
                         <ul>
@@ -658,7 +658,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="row">
                         <div class="col-lg-6 col-xl-5 col-xxl-4 mb-4">
                             <div class="pxp-footer-logo">
-                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                             </div>
                             <div class="pxp-footer-section mt-3 mt-md-4">
                                 <h3>Call us</h3>

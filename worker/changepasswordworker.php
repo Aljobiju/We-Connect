@@ -47,7 +47,7 @@ if(isset($_POST['savepassword']))
             $_SESSION['status'] = "password changed";
        $_SESSION['status_code'] = "success";
        echo "<script> alert('password changed'); 
-       window.location.href='WorkerDashboard-change_password.php.php';
+       window.location.href='WorkerDashboard-change_password.php';
        </script>";
             
         }

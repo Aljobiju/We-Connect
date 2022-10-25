@@ -11,7 +11,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
 <!doctype html>
 <html lang="en" class="pxp-root">
     
-<!-- Mirrored from pixelprime.co/themes/jobster/candidate-dashboard-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:23:09 GMT -->
+
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,18 +27,18 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <link rel="stylesheet" href="../css/animate.css">
         <link rel="stylesheet" href="../css/style.css">
 
-        <title>Jobster - Candidate dashboard - Change password</title>
+        <title>We-Connect - Worker dashboard - Change password</title>
     </head>
     <body style="background-color: var(--pxpSecondaryColorLight);">
         <div class="pxp-preloader"><span>Loading...</span></div>
 
         <div class="pxp-dashboard-side-panel d-none d-lg-block">
             <div class="pxp-logo">
-                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
             </div>
 
             <nav class="mt-3 mt-lg-4 d-flex justify-content-between flex-column pb-100">
-                <div class="pxp-dashboard-side-label">Admin tools</div>
+                <div class="pxp-dashboard-side-label">Worker tools</div>
                 <ul class="list-unstyled">
                     <li><a href="WorkerDashboard.php"><span class="fa fa-home"></span>Dashboard</a></li>
                     <li><a href="WorkerDashboard-profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
@@ -67,12 +67,12 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <div class="pxp-dashboard-side-user-nav">
                     <div class="dropdown pxp-dashboard-side-user-nav-dropdown dropup">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <div class="pxp-dashboard-side-user-nav-avatar pxp-cover" style="background-image: url(../images/avatar-1.jpg);"></div>
-                            <div class="pxp-dashboard-side-user-nav-name">Derek Cotner</div>
+                            <div class="pxp-dashboard-side-user-nav-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
+                            <div class="pxp-dashboard-side-user-nav-name"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="candidate-dashboard.html">Dashboard</a></li>
-                            <li><a class="dropdown-item" href="candidate-dashboard-profile.html">Edit profile</a></li>
+                        <li><a class="dropdown-item" href="WorkerDashboard.php">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Edit profile</a></li>
                             <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
                     </div>
@@ -90,14 +90,14 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="offcanvas offcanvas-start pxp-nav-mobile-container pxp-is-dashboard pxp-is-candidate" tabindex="-1" id="pxpMobileNav">
                         <div class="offcanvas-header">
                             <div class="pxp-logo">
-                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                             </div>
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
                             <nav class="pxp-nav-mobile">
                                 <ul class="navbar-nav justify-content-end flex-grow-1">
-                                    <li class="pxp-dropdown-header">Admin tools</li>
+                                    <li class="pxp-dropdown-header">Worker tools</li>
                                     <li class="nav-item"><a href="candidate-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-profile.html"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-applications.html"><span class="fa fa-file-text-o"></span>Apllications</a></li>
@@ -122,7 +122,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     </div>
                 </div>
                 <nav class="pxp-user-nav pxp-on-light">
-                    <div class="dropdown pxp-user-nav-dropdown pxp-user-notifications">
+                    <!-- <div class="dropdown pxp-user-nav-dropdown pxp-user-notifications">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
                             <span class="fa fa-bell-o"></span>
                             <div class="pxp-user-notifications-counter">5</div>
@@ -137,15 +137,15 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item pxp-link" href="candidate-dashboard-notifications.html">Read All</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                     <div class="dropdown pxp-user-nav-dropdown">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(../images/avatar-1.jpg);"></div>
-                            <div class="pxp-user-nav-name d-none d-md-block">Derek Cotner</div>
+                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
+                            <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="candidate-dashboard.html">Dashboard</a></li>
-                            <li><a class="dropdown-item" href="candidate-dashboard-profile.html">Edit profile</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard.php">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Edit profile</a></li>
                             <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
                     </div>
@@ -194,7 +194,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             </div>
 
             <footer>
-                <div class="pxp-footer-copyright pxp-text-light">© 2021 Jobster. All Right Reserved.</div>
+                <div class="pxp-footer-copyright pxp-text-light">© 2022 We-Connect. All Right Reserved.</div>
             </footer>
         </div>
 
@@ -206,7 +206,6 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <script src="../js/main.js"></script>
     </body>
 
-<!-- Mirrored from pixelprime.co/themes/jobster/candidate-dashboard-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:23:09 GMT -->
 </html>
 <?php
  }

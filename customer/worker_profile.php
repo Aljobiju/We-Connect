@@ -1,17 +1,6 @@
-<?php
-include('../config/connect.php');
-session_start();
-if (isset($_SESSION["wcSession"]) != session_id()) {
-    header("Location: ../login.php");
-    die();
-} else {
-    
-?>
-
 <!doctype html>
 <html lang="en" class="pxp-root">
     
-<!-- Mirrored from pixelprime.co/themes/jobster/jobs-list-9.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:22:54 GMT -->
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,18 +10,18 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&amp;display=swap" rel="stylesheet">
         <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/font-awesome.min.css">
-        <link rel="stylesheet" href="../css/owl.carousel.min.css">
-        <link rel="stylesheet" href="../css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="../css/animate.css">
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/style.css">
 
-        <title>Jobster - Jobs list v9</title>
+        <title>Jobster - Single candidate v3</title>
     </head>
     <body>
         <div class="pxp-preloader"><span>Loading...</span></div>
 
-        <header class="pxp-header fixed-top pxp-no-bg">
+        <header class="pxp-header fixed-top pxp-no-bg pxp-bigger">
             <div class="pxp-container">
                 <div class="pxp-header-container">
                     <div class="pxp-logo-nav-container">
@@ -172,7 +161,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                                             <li>
                                                                 <a href="index.html" class="pxp-has-icon">
                                                                     <div class="pxp-dropdown-icon">
-                                                                        <img src="../images/index-1-nav-icon%402x.png" alt="Hero with Animated Cards">
+                                                                        <img src="images/index-1-nav-icon%402x.png" alt="Hero with Animated Cards">
                                                                     </div>
                                                                     <div class="pxp-dropdown-text">
                                                                         Hero with Animated Cards
@@ -183,7 +172,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                                             <li>
                                                                 <a href="index-2.html" class="pxp-has-icon">
                                                                     <div class="pxp-dropdown-icon">
-                                                                        <img src="../images/index-2-nav-icon%402x.png" alt="Center Image Rotator Hero">
+                                                                        <img src="images/index-2-nav-icon%402x.png" alt="Center Image Rotator Hero">
                                                                     </div>
                                                                     <div class="pxp-dropdown-text">
                                                                         Center Image Rotator Hero
@@ -194,7 +183,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                                             <li>
                                                                 <a href="index-3.html" class="pxp-has-icon">
                                                                     <div class="pxp-dropdown-icon">
-                                                                        <img src="../images/index-3-nav-icon%402x.png" alt="Hero with Illustration">
+                                                                        <img src="images/index-3-nav-icon%402x.png" alt="Hero with Illustration">
                                                                     </div>
                                                                     <div class="pxp-dropdown-text">
                                                                         Hero with Illustration
@@ -205,7 +194,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                                             <li>
                                                                 <a href="index-4.html" class="pxp-has-icon">
                                                                     <div class="pxp-dropdown-icon">
-                                                                        <img src="../images/index-4-nav-icon%402x.png" alt="Boxed Hero with Animation">
+                                                                        <img src="images/index-4-nav-icon%402x.png" alt="Boxed Hero with Animation">
                                                                     </div>
                                                                     <div class="pxp-dropdown-text">
                                                                         Boxed Hero with Animation
@@ -220,7 +209,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                                             <li>
                                                                 <a href="index-5.html" class="pxp-has-icon">
                                                                     <div class="pxp-dropdown-icon">
-                                                                        <img src="../images/index-5-nav-icon%402x.png" alt="Full Image Background Hero">
+                                                                        <img src="images/index-5-nav-icon%402x.png" alt="Full Image Background Hero">
                                                                     </div>
                                                                     <div class="pxp-dropdown-text">
                                                                         Full Image Background Hero
@@ -231,7 +220,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                                             <li>
                                                                 <a href="index-6.html" class="pxp-has-icon">
                                                                     <div class="pxp-dropdown-icon">
-                                                                        <img src="../images/index-6-nav-icon%402x.png" alt="Full Image with Top Search">
+                                                                        <img src="images/index-6-nav-icon%402x.png" alt="Full Image with Top Search">
                                                                     </div>
                                                                     <div class="pxp-dropdown-text">
                                                                         Full Image with Top Search
@@ -242,7 +231,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                                             <li>
                                                                 <a href="index-7.html" class="pxp-has-icon">
                                                                     <div class="pxp-dropdown-icon">
-                                                                        <img src="../images/index-7-nav-icon%402x.png" alt="Hero With Image Card">
+                                                                        <img src="images/index-7-nav-icon%402x.png" alt="Hero With Image Card">
                                                                     </div>
                                                                     <div class="pxp-dropdown-text">
                                                                         Hero With Image Card
@@ -637,7 +626,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                         <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
                         <div class="dropdown pxp-user-nav-dropdown">
                             <a href="index.html" class="dropdown-toggle" data-bs-toggle="dropdown">
-                                <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(../images/avatar-1.jpg);"></div>
+                                <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(images/avatar-1.jpg);"></div>
                                 <div class="pxp-user-nav-name d-none d-md-block">Derek Cotner</div>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
@@ -651,308 +640,152 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             </div>
         </header>
 
-        <section class="pxp-page-header-simple" style="background-color: var(--pxpMainColorLight);">
+        <section>
             <div class="pxp-container">
-                <h1>Search Jobs</h1>
-                <div class="pxp-hero-subtitle pxp-text-ligh">Search your career opportunity through <strong>12,800</strong> jobs</div>
-                <div class="pxp-hero-form pxp-hero-form-round pxp-large mt-3 mt-lg-4">
-                    <form class="row gx-3 align-items-center">
-                        <div class="col-12 col-lg">
-                            <div class="input-group mb-3 mb-lg-0">
-                                <span class="input-group-text"><span class="fa fa-search"></span></span>
-                                <input type="text" class="form-control" placeholder="Job Title or Keyword">
+                <div class="pxp-single-candidate-container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-9">
+                            <div class="pxp-single-candidate-hero pxp-cover pxp-boxed" style="background-image: url(images/candidate-cover-1.jpg);">
+                                <div class="pxp-hero-opacity"></div>
+                                <div class="pxp-single-candidate-hero-caption">
+                                    <div class="pxp-single-candidate-hero-content d-block text-center">
+                                        <div class="pxp-single-candidate-hero-avatar d-inline-block" style="background-image: url(images/avatar-3.jpg);"></div>
+                                        <div class="pxp-single-candidate-hero-name ms-0 mt-3">
+                                            <h1>Rebecca Eason</h1>
+                                            <div class="pxp-single-candidate-hero-title">UX/UI Designer</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 col-lg pxp-has-left-border">
-                            <div class="input-group mb-3 mb-lg-0">
-                                <span class="input-group-text"><span class="fa fa-globe"></span></span>
-                                <input type="text" class="form-control" placeholder="Location">
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg pxp-has-left-border">
-                            <div class="input-group mb-3 mb-lg-0">
-                                <span class="input-group-text"><span class="fa fa-folder-o"></span></span>
-                                <select class="form-select">
-                                    <option selected="">All categories</option>
-                                    <option>Business Development</option>
-                                    <option>Construction</option>
-                                    <option>Customer Service</option>
-                                    <option>Finance</option>
-                                    <option>Healthcare</option>
-                                    <option>Human Resources</option>
-                                    <option>Marketing &amp; Communication</option>
-                                    <option>Project Management</option>
-                                    <option>Software Engineering</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-auto">
-                            <button>Find Jobs</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
 
-        <section class="mt-100">
-            <div class="pxp-container">
-                <!-- <div class="pxp-hero-form-filter pxp-has-bg-color">
-                    <div class="row justify-content-start">
-                        <div class="col-12 col-sm-auto">
-                            <div class="mb-3 mb-lg-0">
-                                <select class="form-select">
-                                    <option selected>Type of employment</option>
-                                    <option value="1">Full Time</option>
-                                    <option value="2">Part Time</option>
-                                    <option value="3">Remote</option>
-                                    <option value="4">Internship</option>
-                                    <option value="5">Contract</option>
-                                    <option value="6">Training</option>
-                                </select>
+                            <div class="row mt-4 mt-lg-5">
+                                <div class="col-lg-7 col-xxl-8">
+                                    <div class="pxp-single-candidate-content">
+                                        <h2>About Rebecca</h2>
+                                        <p>Lorem Ipsum is also known as: Greeked text, blind text, placeholder text, dummy content, filler text, lipsum, and mock-content. In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation.</p>
+                                        <p>In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation. Lorem Ipsum is also known as: Greeked text. </p>
+            
+                                        <div class="mt-4 mt-lg-5">
+                                            <h2>Skills</h2>
+                                            <div class="pxp-single-candidate-skills">
+                                                <ul class="list-unstyled">
+                                                    <li>Work from home</li>
+                                                    <li>Part-time</li>
+                                                    <li>Administration</li>
+                                                    <li>Finance</li>
+                                                    <li>Retail</li>
+                                                    <li>IT</li>
+                                                    <li>Engineering</li>
+                                                    <li>Sales</li>
+                                                    <li>Manufacturing</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-4 mt-lg-5">
+                                            <h2>Work Experience</h2>
+                                            <div class="pxp-single-candidate-timeline">
+                                                <div class="pxp-single-candidate-timeline-item">
+                                                    <div class="pxp-single-candidate-timeline-dot"></div>
+                                                    <div class="pxp-single-candidate-timeline-info ms-3">
+                                                        <div class="pxp-single-candidate-timeline-time"><span class="me-3">2005 - 2013</span></div>
+                                                        <div class="pxp-single-candidate-timeline-position mt-2">Senior UI/UX Designer</div>
+                                                        <div class="pxp-single-candidate-timeline-company pxp-text-light">Adobe Corporation</div>
+                                                        <div class="pxp-single-candidate-timeline-about mt-2 pb-4">In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation. Lorem Ipsum is also known as: Greeked text.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="pxp-single-candidate-timeline-item">
+                                                    <div class="pxp-single-candidate-timeline-dot"></div>
+                                                    <div class="pxp-single-candidate-timeline-info ms-3">
+                                                        <div class="pxp-single-candidate-timeline-time"><span class="me-3">2013 - 2018</span></div>
+                                                        <div class="pxp-single-candidate-timeline-position mt-2">Senior UI/UX Designer</div>
+                                                        <div class="pxp-single-candidate-timeline-company pxp-text-light">Adobe Corporation</div>
+                                                        <div class="pxp-single-candidate-timeline-about mt-2 pb-4">In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation. Lorem Ipsum is also known as: Greeked text.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="pxp-single-candidate-timeline-item">
+                                                    <div class="pxp-single-candidate-timeline-dot"></div>
+                                                    <div class="pxp-single-candidate-timeline-info ms-3">
+                                                        <div class="pxp-single-candidate-timeline-time"><span class="me-3">2018 - 2021</span></div>
+                                                        <div class="pxp-single-candidate-timeline-position mt-2">Senior UI/UX Designer</div>
+                                                        <div class="pxp-single-candidate-timeline-company pxp-text-light">Adobe Corporation</div>
+                                                        <div class="pxp-single-candidate-timeline-about mt-2 pb-4">In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation. Lorem Ipsum is also known as: Greeked text.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-4 mt-lg-5">
+                                            <h2>Education & Training</h2>
+                                            <div class="pxp-single-candidate-timeline">
+                                                <div class="pxp-single-candidate-timeline-item">
+                                                    <div class="pxp-single-candidate-timeline-dot"></div>
+                                                    <div class="pxp-single-candidate-timeline-info ms-3">
+                                                        <div class="pxp-single-candidate-timeline-time"><span class="me-3">2011 - 2017</span></div>
+                                                        <div class="pxp-single-candidate-timeline-position mt-2">Architecure</div>
+                                                        <div class="pxp-single-candidate-timeline-company pxp-text-light">Politehnica University of Timisoara: Bachelor of Architecture</div>
+                                                        <div class="pxp-single-candidate-timeline-about mt-2 pb-4">In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation. Lorem Ipsum is also known as: Greeked text.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="pxp-single-candidate-timeline-item">
+                                                    <div class="pxp-single-candidate-timeline-dot"></div>
+                                                    <div class="pxp-single-candidate-timeline-info ms-3">
+                                                        <div class="pxp-single-candidate-timeline-time"><span class="me-3">2020 - 2020</span></div>
+                                                        <div class="pxp-single-candidate-timeline-position mt-2">Front End Web Developer</div>
+                                                        <div class="pxp-single-candidate-timeline-company pxp-text-light">Udacity Nanodegree Program</div>
+                                                        <div class="pxp-single-candidate-timeline-about mt-2 pb-4">In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation. Lorem Ipsum is also known as: Greeked text.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="pxp-single-candidate-timeline-item">
+                                                    <div class="pxp-single-candidate-timeline-dot"></div>
+                                                    <div class="pxp-single-candidate-timeline-info ms-3">
+                                                        <div class="pxp-single-candidate-timeline-time"><span class="me-3">2021 - 2021</span></div>
+                                                        <div class="pxp-single-candidate-timeline-position mt-2">Build Responsive Real World Websites with HTML5 and CSS3</div>
+                                                        <div class="pxp-single-candidate-timeline-company pxp-text-light">Udemy</div>
+                                                        <div class="pxp-single-candidate-timeline-about mt-2 pb-4">In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation. Lorem Ipsum is also known as: Greeked text.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-xxl-4">
+                                    <div class="pxp-single-candidate-side-panel mt-5 mt-lg-0">
+                                        <div>
+                                            <div class="pxp-single-candidate-side-info-label pxp-text-light">Email</div>
+                                            <div class="pxp-single-candidate-side-info-data">rebecca@pixelprime.co</div>
+                                        </div>
+                                        <div class="mt-4">
+                                            <div class="pxp-single-candidate-side-info-label pxp-text-light">Location</div>
+                                            <div class="pxp-single-candidate-side-info-data">San Francisco, CA</div>
+                                        </div>
+                                        <div class="mt-4">
+                                            <div class="pxp-single-candidate-side-info-label pxp-text-light">Phone</div>
+                                            <div class="pxp-single-candidate-side-info-data">(+123) 456 7890</div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="pxp-single-candidate-side-panel mt-4 mt-lg-5">
+                                        <h3>Contact Rebecca</h3>
+                                        <form class="mt-4">
+                                            <div class="mb-3">
+                                                <label for="contact-candidate-name" class="form-label">Name</label>
+                                                <input type="text" class="form-control" id="contact-candidate-name" placeholder="Enter your name">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="contact-candidate-email" class="form-label">Email</label>
+                                                <input type="text" class="form-control" id="contact-candidate-email" placeholder="Enter your email address">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="contact-candidate-message" class="form-label">Message</label>
+                                                <textarea class="form-control" id="contact-candidate-message" placeholder="Type your message here..."></textarea>
+                                            </div>
+                                            <a href="#" class="btn rounded-pill pxp-section-cta d-block">Send Message</a>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-auto">
-                            <div class="mb-3 mb-lg-0">
-                                <select class="form-select">
-                                    <option selected>Experience level</option>
-                                    <option value="1">No Experience</option>
-                                    <option value="2">Entry-Level</option>
-                                    <option value="3">Mid-Level</option>
-                                    <option value="4">Senior-Level</option>
-                                    <option value="5">Manager / Executive</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-auto">
-                            <div class="mb-3 mb-lg-0">
-                                <select class="form-select">
-                                    <option selected>Salary range</option>
-                                    <option value="1">$700 - $1000</option>
-                                    <option value="2">$1000 - $1200</option>
-                                    <option value="3">$1200 - $1400</option>
-                                    <option value="4">$1500 - $1800</option>
-                                    <option value="5">$2000 - $3000</option>
-                                    <option value="5">More than $3000</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <div class="pxp-jobs-list-top mt-3 mt-lg-4">
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-auto">
-                            <h2><span class="pxp-text-light">Showing</span> 8,536 <span class="pxp-text-light">jobs</span></h2>
-                        </div>
-                        <div class="col-auto">
-                            <select class="form-select">
-                                <option value="0" selected>Most relevant</option>
-                                <option value="1">Newest</option>
-                                <option value="2">Oldest</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-
-                <?php
-                                         $sql="SELECT * FROM tbl_job_details";
-                                        $result = $connect->query($sql);
-                                         if($result->num_rows > 0){ 
-                                        while($row = $result->fetch_assoc()) {
-                                            $user_id=$row['user_id'];
-                                            ?>
-                                           
-                    <div class="pxp-jobs-card-3 pxp-has-border">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-sm-3 col-md-2 col-xxl-auto">
-                                <a href="single-company-1.html" class="pxp-jobs-card-3-company-logo" style="background-image: url(../images/company-logo-1.png);"></a>
-                            </div>
-                            <div class="col-sm-9 col-md-10 col-xxl-4">
-                                <a href="single-job-1.html" class="pxp-jobs-card-3-title mt-3 mt-sm-0"><?php echo $row['job_title'] ?></a>
-                                <div class="pxp-jobs-card-3-details">
-                                    <a href="jobs-list-1.html" class="pxp-jobs-card-3-location">
-                                        <span class="fa fa-globe"></span><?php echo $row['city'] ?>, <?php echo $row['district'] ?>
-                                    </a>
-                                    <div class="pxp-jobs-card-3-type"><?php echo $row['job_type'] ?></div>
-                                </div>
-                            </div>
-                            <div class="col-sm-8 col-xxl-4 mt-3 mt-xxl-0">
-                                <a href="jobs-list-1.html" class="pxp-jobs-card-3-category">
-                                    <div class="pxp-jobs-card-3-category-label">Experience : <?php echo $row['experience'] ?> Year</div>
-                                </a>
-                                <div class="pxp-jobs-card-3-date-company">
-                                    <span class="pxp-jobs-card-3-date pxp-text-light"><?php echo $row['job_created_at'] ?></span>    
-                                    <a href="#" class="pxp-jobs-card-3-company"><?php echo $row['user_name'] ?></a>
-                                </div>
-                            </div>
-                            
-                            <div class="col-sm-4 col-xxl-auto mt-3 mt-xxl-0 pxp-text-right">
-                                <a href="single-job-1.html" class="btn rounded-pill pxp-card-btn">Apply</a>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-                                        }
-                                    }
-                                      
-                                    ?>
-
-                    <!-- <div class="pxp-jobs-card-3 pxp-has-border">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-sm-3 col-md-2 col-xxl-auto">
-                                <a href="single-company-1.html" class="pxp-jobs-card-3-company-logo" style="background-image: url(../images/company-logo-2.png);"></a>
-                            </div>
-                            <div class="col-sm-9 col-md-10 col-xxl-4">
-                                <a href="single-job-1.html" class="pxp-jobs-card-3-title mt-3 mt-sm-0">Software Engineering Team Leader</a>
-                                <div class="pxp-jobs-card-3-details">
-                                    <a href="jobs-list-1.html" class="pxp-jobs-card-3-location">
-                                        <span class="fa fa-globe"></span>Los Angeles, CA
-                                    </a>
-                                    <div class="pxp-jobs-card-3-type">Full-time</div>
-                                </div>
-                            </div>
-                            <div class="col-sm-8 col-xxl-4 mt-3 mt-xxl-0">
-                                <a href="jobs-list-1.html" class="pxp-jobs-card-3-category">
-                                    <div class="pxp-jobs-card-3-category-label">Project Management</div>
-                                </a>
-                                <div class="pxp-jobs-card-3-date-company">
-                                    <span class="pxp-jobs-card-3-date pxp-text-light">3 days ago by</span> <a href="#" class="pxp-jobs-card-3-company">Craftgenics</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xxl-auto mt-3 mt-xxl-0 pxp-text-right">
-                                <a href="single-job-1.html" class="btn rounded-pill pxp-card-btn">Apply</a>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- <div class="pxp-jobs-card-3 pxp-has-border">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-sm-3 col-md-2 col-xxl-auto">
-                                <a href="single-company-1.html" class="pxp-jobs-card-3-company-logo" style="background-image: url(../images/company-logo-3.png);"></a>
-                            </div>
-                            <div class="col-sm-9 col-md-10 col-xxl-4">
-                                <a href="single-job-1.html" class="pxp-jobs-card-3-title mt-3 mt-sm-0">Techincal Support Engineer</a>
-                                <div class="pxp-jobs-card-3-details">
-                                    <a href="jobs-list-1.html" class="pxp-jobs-card-3-location">
-                                        <span class="fa fa-globe"></span>Paris, France
-                                    </a>
-                                    <div class="pxp-jobs-card-3-type">Full-time</div>
-                                </div>
-                            </div>
-                            <div class="col-sm-8 col-xxl-4 mt-3 mt-xxl-0">
-                                <a href="jobs-list-1.html" class="pxp-jobs-card-3-category">
-                                    <div class="pxp-jobs-card-3-category-label">Customer Service</div>
-                                </a>
-                                <div class="pxp-jobs-card-3-date-company">
-                                    <span class="pxp-jobs-card-3-date pxp-text-light">3 days ago by</span> <a href="#" class="pxp-jobs-card-3-company">Illuminate Studio</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xxl-auto mt-3 mt-xxl-0 pxp-text-right">
-                                <a href="single-job-1.html" class="btn rounded-pill pxp-card-btn">Apply</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pxp-jobs-card-3 pxp-has-border">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-sm-3 col-md-2 col-xxl-auto">
-                                <a href="single-company-1.html" class="pxp-jobs-card-3-company-logo" style="background-image: url(../images/company-logo-4.png);"></a>
-                            </div>
-                            <div class="col-sm-9 col-md-10 col-xxl-4">
-                                <a href="single-job-1.html" class="pxp-jobs-card-3-title mt-3 mt-sm-0">Javascript Developer</a>
-                                <div class="pxp-jobs-card-3-details">
-                                    <a href="jobs-list-1.html" class="pxp-jobs-card-3-location">
-                                        <span class="fa fa-globe"></span>London, UK
-                                    </a>
-                                    <div class="pxp-jobs-card-3-type">Full-time</div>
-                                </div>
-                            </div>
-                            <div class="col-sm-8 col-xxl-4 mt-3 mt-xxl-0">
-                                <a href="jobs-list-1.html" class="pxp-jobs-card-3-category">
-                                    <div class="pxp-jobs-card-3-category-label">Software Engineering</div>
-                                </a>
-                                <div class="pxp-jobs-card-3-date-company">
-                                    <span class="pxp-jobs-card-3-date pxp-text-light">3 days ago by</span> <a href="#" class="pxp-jobs-card-3-company">Syspresoft</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xxl-auto mt-3 mt-xxl-0 pxp-text-right">
-                                <a href="single-job-1.html" class="btn rounded-pill pxp-card-btn">Apply</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pxp-jobs-card-3 pxp-has-border">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-sm-3 col-md-2 col-xxl-auto">
-                                <a href="single-company-1.html" class="pxp-jobs-card-3-company-logo" style="background-image: url(../images/company-logo-5.png);"></a>
-                            </div>
-                            <div class="col-sm-9 col-md-10 col-xxl-4">
-                                <a href="single-job-1.html" class="pxp-jobs-card-3-title mt-3 mt-sm-0">Technical Writer</a>
-                                <div class="pxp-jobs-card-3-details">
-                                    <a href="jobs-list-1.html" class="pxp-jobs-card-3-location">
-                                        <span class="fa fa-globe"></span>London, UK
-                                    </a>
-                                    <div class="pxp-jobs-card-3-type">Full-time</div>
-                                </div>
-                            </div>
-                            <div class="col-sm-8 col-xxl-4 mt-3 mt-xxl-0">
-                                <a href="jobs-list-1.html" class="pxp-jobs-card-3-category">
-                                    <div class="pxp-jobs-card-3-category-label">Business Development</div>
-                                </a>
-                                <div class="pxp-jobs-card-3-date-company">
-                                    <span class="pxp-jobs-card-3-date pxp-text-light">3 days ago by</span> <a href="#" class="pxp-jobs-card-3-company">Gramware</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xxl-auto mt-3 mt-xxl-0 pxp-text-right">
-                                <a href="single-job-1.html" class="btn rounded-pill pxp-card-btn">Apply</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pxp-jobs-card-3 pxp-has-border">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-sm-3 col-md-2 col-xxl-auto">
-                                <a href="single-company-1.html" class="pxp-jobs-card-3-company-logo" style="background-image: url(../images/company-logo-6.png);"></a>
-                            </div>
-                            <div class="col-sm-9 col-md-10 col-xxl-4">
-                                <a href="single-job-1.html" class="pxp-jobs-card-3-title mt-3 mt-sm-0">Human Resources Coordinator</a>
-                                <div class="pxp-jobs-card-3-details">
-                                    <a href="jobs-list-1.html" class="pxp-jobs-card-3-location">
-                                        <span class="fa fa-globe"></span>San Francisco, CA
-                                    </a>
-                                    <div class="pxp-jobs-card-3-type">Full-time</div>
-                                </div>
-                            </div>
-                            <div class="col-sm-8 col-xxl-4 mt-3 mt-xxl-0">
-                                <a href="jobs-list-1.html" class="pxp-jobs-card-3-category">
-                                    <div class="pxp-jobs-card-3-category-label">Human Resources</div>
-                                </a>
-                                <div class="pxp-jobs-card-3-date-company">
-                                    <span class="pxp-jobs-card-3-date pxp-text-light">3 days ago by</span> <a href="#" class="pxp-jobs-card-3-company">Bitbytech</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-xxl-auto mt-3 mt-xxl-0 pxp-text-right">
-                                <a href="single-job-1.html" class="btn rounded-pill pxp-card-btn">Apply</a>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-
-                <div class="row mt-4 mt-lg-5 justify-content-between align-items-center">
-                    <div class="col-auto">
-                        <nav class="mt-3 mt-sm-0" aria-label="Jobs list pagination">
-                            <ul class="pagination pxp-pagination">
-                                <li class="page-item active" aria-current="page">
-                                    <span class="page-link">1</span>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-auto">
-                        <a href="#" class="btn rounded-pill pxp-section-cta mt-3 mt-sm-0">Show me more<span class="fa fa-angle-right"></span></a>
                     </div>
                 </div>
             </div>
@@ -1060,7 +893,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     </div>
                     <div class="modal-body">
                         <div class="pxp-user-modal-fig text-center">
-                            <img src="../images/signin-fig.png" alt="Sign in">
+                            <img src="images/signin-fig.png" alt="Sign in">
                         </div>
                         <h5 class="modal-title text-center mt-4" id="signinModal">Welcome back!</h5>
                         <form class="mt-4">
@@ -1095,7 +928,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     </div>
                     <div class="modal-body">
                         <div class="pxp-user-modal-fig text-center">
-                            <img src="../images/signup-fig.png" alt="Sign up">
+                            <img src="images/signup-fig.png" alt="Sign up">
                         </div>
                         <h5 class="modal-title text-center mt-4" id="signupModal">Create an account</h5>
                         <form class="mt-4">
@@ -1119,16 +952,12 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             </div>
         </div>
 
-        <script src="../js/jquery-3.4.1.min.js"></script>
-        <script src="../js/bootstrap.bundle.min.js"></script>
-        <script src="../js/owl.carousel.min.js"></script>
-        <script src="../js/nav.js"></script>
-        <script src="../js/main.js"></script>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/main.js"></script>
     </body>
 
-<!-- Mirrored from pixelprime.co/themes/jobster/jobs-list-9.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:22:54 GMT -->
+<!-- Mirrored from pixelprime.co/themes/jobster/single-candidate-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Aug 2022 04:23:02 GMT -->
 </html>
-<?php
-}
-
-?>

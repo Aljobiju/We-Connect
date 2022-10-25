@@ -1,3 +1,12 @@
+<?php
+include('../config/connect.php');
+session_start();
+if (isset($_SESSION["wcSession"]) != session_id()) {
+    header("Location: ../login.php");
+    die();
+} else {
+    
+?>
 <!doctype html>
 <html lang="en" class="pxp-root">
     
@@ -16,18 +25,18 @@
         <link rel="stylesheet" href="../css/animate.css">
         <link rel="stylesheet" href="../css/style.css">
 
-        <title>Jobster - Candidate dashboard</title>
+        <title>We-Connect - Candidate dashboard</title>
     </head>
     <body style="background-color: var(--pxpSecondaryColorLight);">
         <div class="pxp-preloader"><span>Loading...</span></div>
 
         <div class="pxp-dashboard-side-panel d-none d-lg-block">
             <div class="pxp-logo">
-                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
             </div>
 
             <nav class="mt-3 mt-lg-4 d-flex justify-content-between flex-column pb-100">
-                <div class="pxp-dashboard-side-label">Admin tools</div>
+                <div class="pxp-dashboard-side-label">Worker tools</div>
                 <ul class="list-unstyled">
                     <li class="pxp-active"><a href="WorkerDashboard.php"><span class="fa fa-home"></span>Dashboard</a></li>
                     <li><a href="WorkerDashboard-profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
@@ -35,7 +44,7 @@
                     <li><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li>
                     <li><a href="WorkerDashboard-change_password.php"><span class="fa fa-lock"></span>Change Password</a></li>
                 </ul>
-                <div class="pxp-dashboard-side-label mt-3 mt-lg-4">Insights</div>
+                <!-- <div class="pxp-dashboard-side-label mt-3 mt-lg-4">Insights</div>
                 <ul class="list-unstyled">
                     <li>
                         <a href="candidate-dashboard-inbox.html" class="d-flex justify-content-between align-items-center">
@@ -49,20 +58,20 @@
                             <span class="badge rounded-pill">5</span>
                         </a>
                     </li>
-                </ul>
+                </ul> -->
             </nav>
 
             <nav class="pxp-dashboard-side-user-nav-container pxp-is-candidate">
                 <div class="pxp-dashboard-side-user-nav">
                     <div class="dropdown pxp-dashboard-side-user-nav-dropdown dropup">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <div class="pxp-dashboard-side-user-nav-avatar pxp-cover" style="background-image: url(../images/avatar-1.jpg);"></div>
-                            <div class="pxp-dashboard-side-user-nav-name">Derek Cotner</div>
+                            <div class="pxp-dashboard-side-user-nav-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
+                            <div class="pxp-dashboard-side-user-nav-name"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="candidate-dashboard.html">Dashboard</a></li>
-                            <li><a class="dropdown-item" href="candidate-dashboard-profile.html">Edit profile</a></li>
-                            <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                        <li><a class="dropdown-item" href="WorkerDashboard.php">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Edit profile</a></li>
+                            <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
                     </div>
                 </div>
@@ -79,20 +88,20 @@
                     <div class="offcanvas offcanvas-start pxp-nav-mobile-container pxp-is-dashboard pxp-is-candidate" tabindex="-1" id="pxpMobileNav">
                         <div class="offcanvas-header">
                             <div class="pxp-logo">
-                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                             </div>
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
                             <nav class="pxp-nav-mobile">
                                 <ul class="navbar-nav justify-content-end flex-grow-1">
-                                    <li class="pxp-dropdown-header">Admin tools</li>
+                                    <li class="pxp-dropdown-header">Worker tools</li>
                                     <li class="nav-item"><a href="candidate-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-profile.html"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-applications.html"><span class="fa fa-file-text-o"></span>Apllications</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li>
                                     <li class="nav-item"><a href="WorkerDashboard-change_password.php"><span class="fa fa-lock"></span>Change Password</a></li>
-                                    <li class="pxp-dropdown-header mt-4">Insights</li>
+                                    <!-- <li class="pxp-dropdown-header mt-4">Insights</li>
                                     <li class="nav-item">
                                         <a href="candidate-dashboard-inbox.html" class="d-flex justify-content-between align-items-center">
                                             <div><span class="fa fa-envelope-o"></span>Inbox</div>
@@ -104,14 +113,14 @@
                                             <div><span class="fa fa-bell-o"></span>Notifications</div>
                                             <span class="badge rounded-pill">5</span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </nav>
                         </div>
                     </div>
                 </div>
                 <nav class="pxp-user-nav pxp-on-light">
-                    <div class="dropdown pxp-user-nav-dropdown pxp-user-notifications">
+                    <!-- <div class="dropdown pxp-user-nav-dropdown pxp-user-notifications">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
                             <span class="fa fa-bell-o"></span>
                             <div class="pxp-user-notifications-counter">5</div>
@@ -126,24 +135,25 @@
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item pxp-link" href="candidate-dashboard-notifications.html">Read All</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                     <div class="dropdown pxp-user-nav-dropdown">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(../images/avatar-1.jpg);"></div>
-                            <div class="pxp-user-nav-name d-none d-md-block">Derek Cotner</div>
+                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
+                            <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="candidate-dashboard.html">Dashboard</a></li>
-                            <li><a class="dropdown-item" href="candidate-dashboard-profile.html">Edit profile</a></li>
-                            <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                        <li><a class="dropdown-item" href="WorkerDashboard.php">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Edit profile</a></li>
+                            <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
                     </div>
+                    
                 </nav>
             </div>
 
             <div class="pxp-dashboard-content-details">
                 <h1>Dashboard</h1>
-                <p class="pxp-text-light">Welcome to Jobster!</p>
+                <p class="pxp-text-light">Welcome to We-Connect!</p>
 
                 <div class="row mt-4 mt-lg-5 align-items-center">
                     <div class="col-sm-6 col-xxl-3">
@@ -550,7 +560,7 @@
             </div>
 
             <footer>
-                <div class="pxp-footer-copyright pxp-text-light">© 2021 Jobster. All Right Reserved.</div>
+                <div class="pxp-footer-copyright pxp-text-light">© 2022 We-Connect. All Right Reserved.</div>
             </footer>
         </div>
 
@@ -563,3 +573,6 @@
     </body>
 
 </html>
+<?php
+}
+?>

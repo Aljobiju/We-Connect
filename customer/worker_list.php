@@ -151,13 +151,20 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 </div>
 
                 <div class="row">
+                <?php
+                                         $sql="SELECT * FROM tbl_worker";
+                                        $result = $connect->query($sql);
+                                         if($result->num_rows > 0){ 
+                                        while($row = $result->fetch_assoc()) {
+                                            $user_id=$row['user_id'];
+                                            ?>
                     <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
                         <div class="pxp-candiadates-card-1 pxp-has-border text-center">
                             <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-1.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Scott Goodwin</div>
-                                <div class="pxp-candiadates-card-1-title">UI Designer</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>London, UK</div>
+                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
+                                <div class="pxp-candiadates-card-1-name"><?php echo $row['wor_name'] ?></div>
+                                <div class="pxp-candiadates-card-1-title">Rating : </div>
+                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span><?php echo $row['address'] ?></div>
                             </div>
                             <div class="pxp-candiadates-card-1-bottom">
                                 <div class="pxp-candiadates-card-1-cta">
@@ -166,7 +173,11 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
+                    <?php
+                                        }
+                                    }
+                                    ?>
+                    <!-- <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
                         <div class="pxp-candiadates-card-1 pxp-has-border text-center">
                             <div class="pxp-candiadates-card-1-top">
                                 <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-2.jpg);"></div>
@@ -270,7 +281,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="row mt-4 mt-lg-5 justify-content-between align-items-center">
