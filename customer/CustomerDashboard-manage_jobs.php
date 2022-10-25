@@ -152,10 +152,13 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 
                             <?php
                                          $sql="SELECT * FROM tbl_job_details WHERE `user_id`= $_SESSION[userId]";
+                                        
                                         $result = $connect->query($sql);
                                          if($result->num_rows > 0){ 
                                         while($row = $result->fetch_assoc()) {
-                                            $user_id=$row['user_id'];
+                                             //$user_id=$row['user_id'];
+                                             $id=trim($row['id']);
+                                             
                                             ?>
                                 <tr>
                                     <!-- <td><input type="checkbox" class="form-check-input"></td> -->
@@ -167,7 +170,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     </td>
                                     <td><div class="pxp-company-dashboard-job-category"><?php echo $row['job_description'] ?></div></td>
                                     <td><div class="pxp-company-dashboard-job-type"><?php echo $row['job_type'] ?></div></td>
-                                    <td><a href="#" class="pxp-company-dashboard-job-applications">3 Candidates</a></td>
+                                    <td><a href="applied_workers_list.php?jid= <?php echo $id ?>" class="pxp-company-dashboard-job-applications">3 Candidates</a></td>
                                     <td>
                                         <!-- <div class="pxp-company-dashboard-job-status"><span class="badge rounded-pill bg-success">Published</span></div> -->
                                         <div class="pxp-company-dashboard-job-date mt-1"><?php echo $row['job_created_at'] ?></div>
@@ -179,7 +182,8 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                         $result1 = $connect->query($sql1);
                                          if($result1->num_rows > 0){ 
                                         /*while($row1 = $result1->fetch_assoc()) {*/
-                                          $id=trim($row['id']);
+                                          $id=$row['id'];
+                                         
                                             ?>
                                     
                                         <div class="pxp-dashboard-table-options">

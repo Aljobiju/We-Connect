@@ -760,7 +760,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                         $result = $connect->query($sql);
                                          if($result->num_rows > 0){ 
                                         while($row = $result->fetch_assoc()) {
-                                            $user_id=$row['user_id'];
+                                            $job_id=$row['id'];
                                             ?>
                                            
                     <div class="pxp-jobs-card-3 pxp-has-border">
@@ -788,7 +788,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             </div>
                             
                             <div class="col-sm-4 col-xxl-auto mt-3 mt-xxl-0 pxp-text-right">
-                                <a href="single-job-1.html" class="btn rounded-pill pxp-card-btn">Apply</a>
+                                <a href="apply_job.php?jobid= <?php echo $job_id ?>" class="btn rounded-pill pxp-card-btn">Apply</a>
                             </div>
                         </div>
                     </div>

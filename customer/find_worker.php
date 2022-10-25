@@ -1,6 +1,7 @@
 <?php
 include('../config/connect.php');
 session_start();
+
 if (isset($_SESSION["wcSession"]) != session_id()) {
     header("Location: ../login.php");
     die();
@@ -47,7 +48,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             </a>
                         </div>
                         <nav class="pxp-nav dropdown-hover-all d-none d-xl-block">
-                            <ul>
+                            <!-- <ul>
                                 <li class="dropdown">
                                     <a href="customer_index.php">Home</a>
                                 </li>
@@ -62,15 +63,15 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 </li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
-                                    <!-- <ul class="dropdown-menu">
+                                    <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="blog-list-1.html">Articles Cards</a></li>
                                         <li><a class="dropdown-item" href="blog-list-2.html">Articles List</a></li>
                                         <li><a class="dropdown-item" href="blog-list-3.html">Articles Boxed</a></li>
                                         <li><a class="dropdown-item" href="single-blog-post.html">Single Article</a></li>
-                                    </ul> -->
+                                    </ul>
                                 </li>
                             </ul>
-                        </nav>
+                        </nav> -->
                     </div>
                     <nav class="pxp-user-nav pxp-on-light">
                         <a href="CustomerDashboard-new_job.php" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
@@ -90,48 +91,6 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             </div>
         </header>
 
-        <section class="pxp-page-header-simple" style="background-color: var(--pxpSecondaryColor);">
-            <div class="pxp-container">
-                <h1>Search Workers</h1>
-                <div class="pxp-hero-subtitle pxp-text-light">Work with the most talented candidates in the world</div>
-                <div class="pxp-hero-form pxp-hero-form-round pxp-large mt-3 mt-lg-4">
-                    <form class="row gx-3 align-items-center">
-                        <div class="col-12 col-lg">
-                            <div class="input-group mb-3 mb-lg-0">
-                                <span class="input-group-text"><span class="fa fa-search"></span></span>
-                                <input type="text" class="form-control" placeholder="Candidate Name or Keyword">
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg pxp-has-left-border">
-                            <div class="input-group mb-3 mb-lg-0">
-                                <span class="input-group-text"><span class="fa fa-globe"></span></span>
-                                <input type="text" class="form-control" placeholder="Location">
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg pxp-has-left-border">
-                            <div class="input-group mb-3 mb-lg-0">
-                                <span class="input-group-text"><span class="fa fa-folder-o"></span></span>
-                                <select class="form-select">
-                                    <option selected>All Industries</option>
-                                    <option>Business Development</option>
-                                    <option>Construction</option>
-                                    <option>Customer Service</option>
-                                    <option>Finance</option>
-                                    <option>Healthcare</option>
-                                    <option>Human Resources</option>
-                                    <option>Marketing & Communication</option>
-                                    <option>Project Management</option>
-                                    <option>Software Engineering</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-auto">
-                            <button>Find Candidates</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
 
         <section class="mt-100">
             <div class="pxp-container">
@@ -140,30 +99,42 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                         <div class="col-auto">
                             <h2><span class="pxp-text-light">Showing</span> 8,536 <span class="pxp-text-light">candidates</span></h2>
                         </div>
-                        <div class="col-auto">
+                        <!-- <div class="col-auto">
                             <select class="form-select">
                                 <option value="0" selected>Most relevant</option>
                                 <option value="1">Name Asc</option>
                                 <option value="2">Name Desc</option>
                             </select>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
-
-                <div class="row">
                 <?php
-                                         $sql="SELECT * FROM tbl_worker";
-                                        $result = $connect->query($sql);
-                                         if($result->num_rows > 0){ 
-                                        while($row = $result->fetch_assoc()) {
-                                            $user_id=$row['user_id'];
+                
+            //     $sql="SELECT user_id FROM tbl_applied_jobs WHERE 'job_id'='$jId'";
+            //    $result = $connect->query($sql);
+            //     if($result->num_rows > 0){ 
+            //      while($row = $result->fetch_assoc()) {
+            //        $user_id=$row['user_id'];
+                   ?>
+                <div class="row">  
+                                            <?php
+                                            $jId = $_GET['jid'];
+                                            $sql1="SELECT * FROM tbl_worker WHERE user_id IN (SELECT user_id FROM tbl_applied_jobs WHERE job_id='$jId')";
+                                            $result1 = $connect->query($sql1);
+                                             if($result1->num_rows > 0){ 
+                                            while($row = $result1->fetch_assoc()) {
+                                                 $user_id=$row['user_id'];
+ 
                                             ?>
+                                        
+                                            
                     <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
                         <div class="pxp-candiadates-card-1 pxp-has-border text-center">
                             <div class="pxp-candiadates-card-1-top">
                                 <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
                                 <div class="pxp-candiadates-card-1-name"><?php echo $row['wor_name'] ?></div>
                                 <div class="pxp-candiadates-card-1-title">Rating : </div>
+                                
                                 <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span><?php echo $row['address'] ?></div>
                             </div>
                             <div class="pxp-candiadates-card-1-bottom">
@@ -172,118 +143,19 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 </div>
                             </div>
                         </div>
+                      
                     </div>
+                    
+                    
                     <?php
                                         }
-                                    }
+                                    }  
                                     ?>
-                    <!-- <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-2.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Kenneth Spiers</div>
-                                <div class="pxp-candiadates-card-1-title">Software Developer</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>San Francisco, CA</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-3.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Rebecca Eason</div>
-                                <div class="pxp-candiadates-card-1-title">Marketing Expert</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>Los Angeles, CA</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-4.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Susanne Weil</div>
-                                <div class="pxp-candiadates-card-1-title">Architect</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>Paris, France</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-3.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Rebecca Eason</div>
-                                <div class="pxp-candiadates-card-1-title">UI Designer</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>London, UK</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-4.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Susanne Weil</div>
-                                <div class="pxp-candiadates-card-1-title">Software Developer</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>San Francisco, CA</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-1.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Scott Goodwin</div>
-                                <div class="pxp-candiadates-card-1-title">Marketing Expert</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>Los Angeles, CA</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-2.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Kenneth Spiers</div>
-                                <div class="pxp-candiadates-card-1-title">Architect</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>Paris, France</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
-
+                <?php
+                //  }
+                // }
+                ?>
                 <div class="row mt-4 mt-lg-5 justify-content-between align-items-center">
                     <div class="col-auto">
                         <nav class="mt-3 mt-sm-0" aria-label="Candidates pagination">
