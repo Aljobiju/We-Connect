@@ -55,13 +55,13 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <a href="worker_list.php" >Find Workers</a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="#" >Plans</a>
+                                    <a href="CustomerDashboard-Profile.php" >Dashboard</a>
                                 </li>
-                                <li class="dropdown">
+                                <!-- <li class="dropdown">
                                     <a href="#">Contact us</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
+                                </li> -->
+                                <!-- <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Blog</a> -->
                                     <!-- <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="blog-list-1.html">Articles Cards</a></li>
                                         <li><a class="dropdown-item" href="blog-list-2.html">Articles List</a></li>
@@ -80,7 +80,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Dashboard</a></li>
                             <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Edit profile</a></li>
                             <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
@@ -177,111 +177,6 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                         }
                                     }
                                     ?>
-                    <!-- <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-2.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Kenneth Spiers</div>
-                                <div class="pxp-candiadates-card-1-title">Software Developer</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>San Francisco, CA</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-3.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Rebecca Eason</div>
-                                <div class="pxp-candiadates-card-1-title">Marketing Expert</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>Los Angeles, CA</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-4.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Susanne Weil</div>
-                                <div class="pxp-candiadates-card-1-title">Architect</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>Paris, France</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-3.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Rebecca Eason</div>
-                                <div class="pxp-candiadates-card-1-title">UI Designer</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>London, UK</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-4.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Susanne Weil</div>
-                                <div class="pxp-candiadates-card-1-title">Software Developer</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>San Francisco, CA</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-1.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Scott Goodwin</div>
-                                <div class="pxp-candiadates-card-1-title">Marketing Expert</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>Los Angeles, CA</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
-                        <div class="pxp-candiadates-card-1 pxp-has-border text-center">
-                            <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-2.jpg);"></div>
-                                <div class="pxp-candiadates-card-1-name">Kenneth Spiers</div>
-                                <div class="pxp-candiadates-card-1-title">Architect</div>
-                                <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span>Paris, France</div>
-                            </div>
-                            <div class="pxp-candiadates-card-1-bottom">
-                                <div class="pxp-candiadates-card-1-cta">
-                                    <a href="single-candidate-1.html">View profile<span class="fa fa-angle-right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
 
                 <div class="row mt-4 mt-lg-5 justify-content-between align-items-center">
@@ -309,70 +204,21 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="row">
                         <div class="col-lg-6 col-xl-5 col-xxl-4 mb-4">
                             <div class="pxp-footer-logo">
-                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                             </div>
                             <div class="pxp-footer-section mt-3 mt-md-4">
                                 <h3>Call us</h3>
-                                <div class="pxp-footer-phone">(123) 456-7890</div>
+                                <div class="pxp-footer-phone">+91 9061673186</div>
                             </div>
                             <div class="mt-3 mt-md-4 pxp-footer-section">
                                 <div class="pxp-footer-text">
-                                    90 Fifth Avenue, 3rd Floor<br>
-                                    San Francisco, CA 1980<br>
-                                    office@We-connect.com
+                                Amal Jyothi College<br>
+                                    Kottayam<br>
+                                    office@weconnect.com
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xl-7 col-xxl-8">
-                            <div class="row">
-                                <div class="col-md-6 col-xl-4 col-xxl-3 mb-4">
-                                    <div class="pxp-footer-section">
-                                        <h3>For Candidates</h3>
-                                        <ul class="pxp-footer-list">
-                                            <li><a href="jobs-list-1.html">Find Jobs</a></li>
-                                            <li><a href="candidate-dashboard.html">Candidate Dashboard</a></li>
-                                            <li><a href="candidate-dashboard-applications.html">My Applications</a></li>
-                                            <li><a href="candidate-dashboard-fav-jobs.html">Favourite Jobs</a></li>
-                                            <li><a href="candidate-dashboard-inbox.html">My inbox</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-4 col-xxl-3 mb-4">
-                                    <div class="pxp-footer-section">
-                                        <h3>For Employers</h3>
-                                        <ul class="pxp-footer-list">
-                                            <li><a href="candidates-list-1.html">Find Candidates</a></li>
-                                            <li><a href="company-dashboard.html">Company Dashboard</a></li>
-                                            <li><a href="company-dashboard-new-job.html">Post a Job</a></li>
-                                            <li><a href="company-dashboard-jobs.html">Manage Jobs</a></li>
-                                            <li><a href="company-dashboard-candidates.html">Candidates</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-4 col-xxl-3 mb-4">
-                                    <div class="pxp-footer-section">
-                                        <h3>About Us</h3>
-                                        <ul class="pxp-footer-list">
-                                            <li><a href="about-us.html">About Us</a></li>
-                                            <li><a href="pricing.html">Pricing</a></li>
-                                            <li><a href="blog-list-1.html">Blog</a></li>
-                                            <li><a href="blog-list-1.html">Contact Us</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-4 col-xxl-3 mb-4">
-                                    <div class="pxp-footer-section">
-                                        <h3>Helpful Resources</h3>
-                                        <ul class="pxp-footer-list">
-                                            <li><a href="faqs.html">FAQs</a></li>
-                                            <li><a href="sign-in.html">Sign In</a></li>
-                                            <li><a href="sign-up.html">Sign Up</a></li>
-                                            <li><a href="404.html">404 Page</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -396,73 +242,6 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 </div>
             </div>
         </footer>
-
-        <div class="modal fade pxp-user-modal" id="pxp-signin-modal" aria-hidden="true" aria-labelledby="signinModal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="pxp-user-modal-fig text-center">
-                            <img src="images/signin-fig.png" alt="Sign in">
-                        </div>
-                        <h5 class="modal-title text-center mt-4" id="signinModal">Welcome back!</h5>
-                        <form class="mt-4">
-                            <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="pxp-signin-email" placeholder="Email address">
-                                <label for="pxp-signin-email">Email address</label>
-                                <span class="fa fa-envelope-o"></span>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="pxp-signin-password" placeholder="Password">
-                                <label for="pxp-signin-password">Password</label>
-                                <span class="fa fa-lock"></span>
-                            </div>
-                            <a href="#" class="btn rounded-pill pxp-modal-cta">Continue</a>
-                            <div class="mt-4 text-center pxp-modal-small">
-                                <a href="#" class="pxp-modal-link">Forgot password</a>
-                            </div>
-                            <div class="mt-4 text-center pxp-modal-small">
-                                New to Jobster? <a role="button" class="" data-bs-target="#pxp-signup-modal" data-bs-toggle="modal" data-bs-dismiss="modal">Create an account</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade pxp-user-modal" id="pxp-signup-modal" aria-hidden="true" aria-labelledby="signupModal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="pxp-user-modal-fig text-center">
-                            <img src="images/signup-fig.png" alt="Sign up">
-                        </div>
-                        <h5 class="modal-title text-center mt-4" id="signupModal">Create an account</h5>
-                        <form class="mt-4">
-                            <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="pxp-signup-email" placeholder="Email address">
-                                <label for="pxp-signup-email">Email address</label>
-                                <span class="fa fa-envelope-o"></span>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="pxp-signup-password" placeholder="Create password">
-                                <label for="pxp-signup-password">Create password</label>
-                                <span class="fa fa-lock"></span>
-                            </div>
-                            <a href="#" class="btn rounded-pill pxp-modal-cta">Continue</a>
-                            <div class="mt-4 text-center pxp-modal-small">
-                                Already have an account? <a role="button" class="" data-bs-target="#pxp-signin-modal" data-bs-toggle="modal">Sign in</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <script src="../js/jquery-3.4.1.min.js"></script>
         <script src="../js/bootstrap.bundle.min.js"></script>

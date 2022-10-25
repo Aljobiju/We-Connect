@@ -1,6 +1,7 @@
 <?php
 include('../config/connect.php');
 $uId = $_GET['uid'];
+$jId = $_GET['jid'];
 session_start();
 if (isset($_SESSION["wcSession"]) != session_id()) {
     header("Location: ../login.php");
@@ -29,7 +30,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <link rel="stylesheet" href="../css/animate.css">
         <link rel="stylesheet" href="../css/style.css">
 
-        <title>Jobster - Single candidate v3</title>
+        <title>We-Connect - Worker_Profile</title>
     </head>
     <body>
         <div class="pxp-preloader"><span>Loading...</span></div>
@@ -39,7 +40,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <div class="pxp-header-container">
                     <div class="pxp-logo-nav-container">
                         <div class="pxp-logo">
-                            <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                            <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                         </div>
                         <div class="pxp-nav-trigger navbar d-xl-none flex-fill">
                             <a role="button" data-bs-toggle="offcanvas" data-bs-target="#pxpMobileNav" aria-controls="pxpMobileNav">
@@ -50,7 +51,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <div class="offcanvas offcanvas-start pxp-nav-mobile-container" tabindex="-1" id="pxpMobileNav">
                                 <div class="offcanvas-header">
                                     <div class="pxp-logo">
-                                        <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                                        <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                                     </div>
                                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                 </div>
@@ -59,54 +60,56 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                         <nav class="pxp-nav dropdown-hover-all d-none d-xl-block">
                             <ul>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Home</a>
+                                    <a href="customer_index.php" >Home</a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Find Jobs</a>
+                                    <a href="worker_list.php" >Find Workers</a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Companies</a>
+                                    <a href="CustomerDashboard-Profile.php" >Dashboard</a>
                                 </li>
-                                <li class="dropdown">
+                                <!-- <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Candidates</a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
+                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Blog</a> -->
                                     <!-- <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="blog-list-1.html">Articles Cards</a></li>
                                         <li><a class="dropdown-item" href="blog-list-2.html">Articles List</a></li>
                                         <li><a class="dropdown-item" href="blog-list-3.html">Articles Boxed</a></li>
                                         <li><a class="dropdown-item" href="single-blog-post.html">Single Article</a></li>
                                     </ul> -->
-                                </li>
-                                <li class="dropdown">
+                                <!-- </li> -->
+                                <!-- <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                                </li>
+                                </li> -->
                             </ul>
                         </nav>
                     </div>
                     <nav class="pxp-user-nav pxp-on-light">
-                        <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
+                        <a href="CustomerDashboard-new_job.php" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
                         <div class="dropdown pxp-user-nav-dropdown">
-                            <a href="index.html" class="dropdown-toggle" data-bs-toggle="dropdown">
-                                <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(../images/avatar-1.jpg);"></div>
-                                <div class="pxp-user-nav-name d-none d-md-block">Derek Cotner</div>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="candidate-dashboard.html">Dashboard</a></li>
-                                <li><a class="dropdown-item" href="candidate-dashboard-profile.html">Edit profile</a></li>
-                                <li><a class="dropdown-item" href="index.html">Logout</a></li>
-                            </ul>
-                        </div>
+                        <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
+                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
+                            <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Edit profile</a></li>
+                            <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
+                        </ul>
+                    </div>
                     </nav>
                 </div>
             </div>
         </header>
         <?php
-                                         $sql="SELECT * FROM tbl_worker WHERE `user_id`= $uId";
+        // echo $jId;
+                                         $sql="SELECT * FROM tbl_worker WHERE user_id= '$uId'";
                                         $result = $connect->query($sql);
                                          if($result->num_rows > 0){ 
                                         while($row = $result->fetch_assoc()) {
+                                            $user_id=$row['user_id'];
                                             ?>
         <section>
             <div class="pxp-container">
@@ -198,7 +201,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                         </div>
                                     </div>
                                     <div class="col-sm-4 col-xxl-auto mt-3 mt-xxl-0 pxp-text-right">
-                                <a href="single-job-1.html" class="btn rounded-pill pxp-card-btn">Appoint</a>
+                                <a href="appoint_worker.php?uid= <?php echo $user_id ?>&jid= <?php echo $jId ?>" class="btn rounded-pill pxp-card-btn">Appoint</a>
                             </div>
             
                                     <!-- <div class="pxp-single-candidate-side-panel mt-4 mt-lg-5">
@@ -237,7 +240,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="row">
                         <div class="col-lg-6 col-xl-5 col-xxl-4 mb-4">
                             <div class="pxp-footer-logo">
-                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                             </div>
                             <div class="pxp-footer-section mt-3 mt-md-4">
                                 <h3>Call us</h3>
@@ -245,9 +248,9 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             </div>
                             <div class="mt-3 mt-md-4 pxp-footer-section">
                                 <div class="pxp-footer-text">
-                                    90 Fifth Avenue, 3rd Floor<br>
-                                    San Francisco, CA 1980<br>
-                                    office@jobster.com
+                                Amal Jyothi College<br>
+                                    Kottayam<br>
+                                    office@weconnect.com
                                 </div>
                             </div>
                         </div>
@@ -308,7 +311,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <div class="pxp-container">
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-auto">
-                            <div class="pxp-footer-copyright pxp-text-light">© 2021 Jobster. All Right Reserved.</div>
+                            <div class="pxp-footer-copyright pxp-text-light">© 2022 We-Connect. All Right Reserved.</div>
                         </div>
                         <div class="col-lg-auto">
                             <div class="pxp-footer-social mt-3 mt-lg-0">

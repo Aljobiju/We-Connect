@@ -40,7 +40,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             <nav class="mt-3 mt-lg-4 d-flex justify-content-between flex-column pb-100">
                 <div class="pxp-dashboard-side-label">Worker tools</div>
                 <ul class="list-unstyled">
-                    <li><a href="WorkerDashboard.php"><span class="fa fa-home"></span>Dashboard</a></li>
+                    <li><a href="worker_index.php"><span class="fa fa-home"></span>Home</a></li>
                     <li class="pxp-active"><a href="WorkerDashboard-profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                     <li><a href="WorkerDashboard-applications.php"><span class="fa fa-file-text-o"></span>Apllications</a></li>
                     <li><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li>
@@ -71,7 +71,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <div class="pxp-dashboard-side-user-nav-name"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="WorkerDashboard.php">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Dashboard</a></li>
                             <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Edit profile</a></li>
                             <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
@@ -98,7 +98,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <nav class="pxp-nav-mobile">
                                 <ul class="navbar-nav justify-content-end flex-grow-1">
                                     <li class="pxp-dropdown-header">Worker tools</li>
-                                    <li class="nav-item"><a href="candidate-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
+                                    <li class="nav-item"><a href="worker_index.php"><span class="fa fa-home"></span>Home</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-profile.html"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-applications.html"><span class="fa fa-file-text-o"></span>Apllications</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li>
@@ -144,7 +144,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="WorkerDashboard.php">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Dashboard</a></li>
                             <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Edit profile</a></li>
                             <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
@@ -239,152 +239,6 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <!-- <button class="btn">Add Skill</button> -->
                         </div>
                     </div>
-
-                    <!-- <div class="mt-4 mt-lg-5">
-                        <h2>Work Experience</h2>
-                        <div class="table-responsive">
-                            <table class="table align-middle">
-                                <tr>
-                                    <td style="width: 30%;"><div class="pxp-candidate-dashboard-experience-title">Senior UI/UX Designer</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-company">Adobe Corporation</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-time">2005 - 2013</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Edit"><span class="fa fa-pencil"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 30%;"><div class="pxp-candidate-dashboard-experience-title">Senior UI/UX Designer</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-company">Adobe Corporation</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-time">2005 - 2013</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Edit"><span class="fa fa-pencil"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 30%;"><div class="pxp-candidate-dashboard-experience-title">Senior UI/UX Designer</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-company">Adobe Corporation</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-time">2005 - 2013</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Edit"><span class="fa fa-pencil"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <div class="row mt-3 mt-lg-4">
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="pxp-candidate-work-title" class="form-label">Job title</label>
-                                    <input type="text" id="pxp-candidate-work-title" class="form-control" placeholder="E.g. Web Designer">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="pxp-candidate-work-company" class="form-label">Company</label>
-                                    <input type="text" id="pxp-candidate-work-company" class="form-control" placeholder="Company name">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="pxp-candidate-work-time" class="form-label">Time period</label>
-                                    <input type="text" id="pxp-candidate-work-time" class="form-control" placeholder="E.g. 2005 - 2013">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="pxp-candidate-work-about" class="form-label">Description</label>
-                            <textarea class="form-control pxp-smaller" id="pxp-candidate-work-about" placeholder="Type a short description here..."></textarea>
-                        </div>
-                        <button class="btn rounded-pill pxp-subsection-cta">Add Experience</button>
-                    </div> -->
-
-                    <!-- <div class="mt-4 mt-lg-5">
-                        <h2>Education & Training</h2>
-                        <div class="table-responsive">
-                            <table class="table align-middle">
-                                <tr>
-                                    <td style="width: 30%;"><div class="pxp-candidate-dashboard-experience-title">Architecure</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-school">Politehnica University of Timisoara: Bachelor of Architecture</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-time">2011 - 2017</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Edit"><span class="fa fa-pencil"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 30%;"><div class="pxp-candidate-dashboard-experience-title">Front End Web Developer</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-school">Udacity Nanodegree Program</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-time">2020 - 2020</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Edit"><span class="fa fa-pencil"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 30%;"><div class="pxp-candidate-dashboard-experience-title">Build Responsive Real World Websites with HTML5 and CSS3</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-company">Udemy</div></td>
-                                    <td style="width: 25%;"><div class="pxp-candidate-dashboard-experience-time">2021 - 2021</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Edit"><span class="fa fa-pencil"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <div class="row mt-3 mt-lg-4">
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="pxp-candidate-edu-title" class="form-label">Title</label>
-                                    <input type="text" id="pxp-candidate-edu-title" class="form-control" placeholder="E.g. Architecure">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="pxp-candidate-edu-school" class="form-label">School</label>
-                                    <input type="text" id="pxp-candidate-edu-school" class="form-control" placeholder="School name">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label for="pxp-candidate-edu-time" class="form-label">Time period</label>
-                                    <input type="text" id="pxp-candidate-edu-time" class="form-control" placeholder="E.g. 2005 - 2013">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="pxp-candidate-edu-about" class="form-label">Description</label>
-                            <textarea class="form-control pxp-smaller" id="pxp-candidate-edu-about" placeholder="Type a short description here..."></textarea>
-                        </div>
-                        <button class="btn rounded-pill pxp-subsection-cta">Add Education</button>
-                    </div> -->
 
                     <div class="mt-4 mt-lg-5">
                     <button type="submit" value ="<?=$row['user_id']?>" class="btn rounded-pill pxp-section-cta" name="updatebtn" id="updatebtn">Save Profile</button>

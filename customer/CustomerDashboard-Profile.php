@@ -39,7 +39,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             <nav class="mt-3 mt-lg-4 d-flex justify-content-between flex-column pb-100">
                 <div class="pxp-dashboard-side-label">Customer tools</div>
                 <ul class="list-unstyled">
-                    <li><a href="company-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
+                    <li><a href="customer_index.php"><span class="fa fa-home"></span>Home</a></li>
                     <li class="pxp-active"><a href="CustomerDashboard-Profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                     <li><a href="CustomerDashboard-new_job.php"><span class="fa fa-file-text-o"></span>New Job</a></li>
                     <li><a href="CustomerDashboard-manage_jobs.php"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
@@ -57,7 +57,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <div class="pxp-dashboard-side-user-nav-name"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Dashboard</a></li>
                             <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Edit profile</a></li>
                             <li><a class="dropdown-item" href="./auth/logoutController.php">Logout</a></li>
                         </ul>
@@ -76,7 +76,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="offcanvas offcanvas-start pxp-nav-mobile-container pxp-is-dashboard" tabindex="-1" id="pxpMobileNav">
                         <div class="offcanvas-header">
                             <div class="pxp-logo">
-                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                             </div>
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
@@ -84,7 +84,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <nav class="pxp-nav-mobile">
                                 <ul class="navbar-nav justify-content-end flex-grow-1">
                                     <li class="pxp-dropdown-header">Admin tools</li>
-                                    <li class="nav-item"><a href="company-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
+                                    <li class="nav-item"><a href="customer_index.php"><span class="fa fa-home"></span>Home</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-Profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-new_job.php"><span class="fa fa-file-text-o"></span>New Job</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-manage_jobs.php"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
@@ -104,7 +104,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?> </div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Dashboard</a></li>
                             <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Edit profile</a></li>
                             <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>

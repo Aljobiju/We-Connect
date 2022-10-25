@@ -40,7 +40,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             <nav class="mt-3 mt-lg-4 d-flex justify-content-between flex-column pb-100">
                 <div class="pxp-dashboard-side-label">Customer tools</div>
                 <ul class="list-unstyled">
-                    <li><a href="company-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
+                    <li><a href="customer_index.php"><span class="fa fa-home"></span>Home</a></li>
                     <li><a href="CustomerDashboard-Profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                     <li><a href="CustomerDashboard-new_job.php"><span class="fa fa-file-text-o"></span>New Job</a></li>
                     <li><a href="CustomerDashboard-manage_jobs.php"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
@@ -92,7 +92,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="offcanvas offcanvas-start pxp-nav-mobile-container pxp-is-dashboard" tabindex="-1" id="pxpMobileNav">
                         <div class="offcanvas-header">
                             <div class="pxp-logo">
-                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                             </div>
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
@@ -100,13 +100,13 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <nav class="pxp-nav-mobile">
                                 <ul class="navbar-nav justify-content-end flex-grow-1">
                                     <li class="pxp-dropdown-header">Customer tools</li>
-                                    <li class="nav-item"><a href="company-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
+                                    <li class="nav-item"><a href="customer_index.php"><span class="fa fa-home"></span>Home</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-Profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-new_job.php"><span class="fa fa-file-text-o"></span>New Job</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-manage_jobs.php"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
                                     <li class="nav-item"><a href="company-dashboard-candidates.html"><span class="fa fa-user-circle-o"></span>Candidates</a></li>
                                     <li class="nav-item"><a href="company-dashboard-subscriptions.html"><span class="fa fa-credit-card"></span>Subscriptions</a></li>
-                                    <li class="nav-item"><a href="company-dashboard-password.html"><span class="fa fa-lock"></span>Change Password</a></li>
+                                    <li class="nav-item"><a href="CustomerDashboard-changepassword.php"><span class="fa fa-lock"></span>Change Password</a></li>
                                     <!-- <li class="pxp-dropdown-header mt-4">Insights</li>
                                     <li class="nav-item">
                                         <a href="company-dashboard-inbox.html" class="d-flex justify-content-between align-items-center">
@@ -126,7 +126,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     </div>
                 </div>
                 <nav class="pxp-user-nav pxp-on-light">
-                    <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
+                    <a href="CustomerDashboard-new_job.php" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
                     <!-- <div class="dropdown pxp-user-nav-dropdown pxp-user-notifications">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
                             <span class="fa fa-bell-o"></span>
@@ -149,7 +149,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Dashboard</a></li>
                             <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Edit profile</a></li>
                             <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>

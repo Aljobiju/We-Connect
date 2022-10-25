@@ -40,7 +40,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             <nav class="mt-3 mt-lg-4 d-flex justify-content-between flex-column pb-100">
                 <div class="pxp-dashboard-side-label">Worker tools</div>
                 <ul class="list-unstyled">
-                    <li><a href="WorkerDashboard.php"><span class="fa fa-home"></span>Dashboard</a></li>
+                    <li><a href="worker_index.php"><span class="fa fa-home"></span>Home</a></li>
                     <li><a href="WorkerDashboard-profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                     <li><a href="WorkerDashboard-applications.php"><span class="fa fa-file-text-o"></span>Apllications</a></li>
                     <li><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li>
@@ -71,7 +71,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <div class="pxp-dashboard-side-user-nav-name"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="WorkerDashboard.php">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Dashboard</a></li>
                             <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Edit profile</a></li>
                             <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
@@ -98,7 +98,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <nav class="pxp-nav-mobile">
                                 <ul class="navbar-nav justify-content-end flex-grow-1">
                                     <li class="pxp-dropdown-header">Worker tools</li>
-                                    <li class="nav-item"><a href="candidate-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
+                                    <li class="nav-item"><a href="worker_index.php"><span class="fa fa-home"></span>Home</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-profile.html"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-applications.html"><span class="fa fa-file-text-o"></span>Apllications</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li>
@@ -144,7 +144,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="WorkerDashboard.php">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Dashboard</a></li>
                             <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Edit profile</a></li>
                             <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>

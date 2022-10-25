@@ -1,3 +1,13 @@
+<?php
+include('../config/connect.php');
+session_start();
+if (isset($_SESSION["wcSession"]) != session_id()) {
+    header("Location: ../login.php");
+    die();
+} else {
+    
+?>
+
 <!doctype html>
 <html lang="en" class="pxp-root">
     
@@ -30,13 +40,13 @@
             <nav class="mt-3 mt-lg-4 d-flex justify-content-between flex-column pb-100">
                 <div class="pxp-dashboard-side-label">Worker tools</div>
                 <ul class="list-unstyled">
-                    <li><a href="WorkerDashboard.php"><span class="fa fa-home"></span>Dashboard</a></li>
+                    <li><a href="worker_index.php"><span class="fa fa-home"></span>Home</a></li>
                     <li><a href="WorkerDashboard-profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                     <li class="pxp-active"><a href="WorkerDashboard-applications.php"><span class="fa fa-file-text-o"></span>Apllications</a></li>
                     <li><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li>
                     <li><a href="WorkerDashboard-change_password.php"><span class="fa fa-lock"></span>Change Password</a></li>
                 </ul>
-                <div class="pxp-dashboard-side-label mt-3 mt-lg-4">Insights</div>
+                <!-- <div class="pxp-dashboard-side-label mt-3 mt-lg-4">Insights</div>
                 <ul class="list-unstyled">
                     <li>
                         <a href="candidate-dashboard-inbox.html" class="d-flex justify-content-between align-items-center">
@@ -50,20 +60,20 @@
                             <span class="badge rounded-pill">5</span>
                         </a>
                     </li>
-                </ul>
+                </ul> -->
             </nav>
 
             <nav class="pxp-dashboard-side-user-nav-container pxp-is-candidate">
                 <div class="pxp-dashboard-side-user-nav">
                     <div class="dropdown pxp-dashboard-side-user-nav-dropdown dropup">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <div class="pxp-dashboard-side-user-nav-avatar pxp-cover" style="background-image: url(images/avatar-1.jpg);"></div>
-                            <div class="pxp-dashboard-side-user-nav-name">Derek Cotner</div>
+                            <div class="pxp-dashboard-side-user-nav-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
+                            <div class="pxp-dashboard-side-user-nav-name"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="candidate-dashboard.html">Dashboard</a></li>
-                            <li><a class="dropdown-item" href="candidate-dashboard-profile.html">Edit profile</a></li>
-                            <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                        <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Edit profile</a></li>
+                            <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
                     </div>
                 </div>
@@ -88,12 +98,12 @@
                             <nav class="pxp-nav-mobile">
                                 <ul class="navbar-nav justify-content-end flex-grow-1">
                                     <li class="pxp-dropdown-header">Worker tools</li>
-                                    <li class="nav-item"><a href="candidate-dashboard.html"><span class="fa fa-home"></span>Dashboard</a></li>
+                                    <li class="nav-item"><a href="worker_index.php"><span class="fa fa-home"></span>Home</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-profile.html"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-applications.html"><span class="fa fa-file-text-o"></span>Apllications</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-password.html"><span class="fa fa-lock"></span>Change Password</a></li>
-                                    <li class="pxp-dropdown-header mt-4">Insights</li>
+                                    <!-- <li class="pxp-dropdown-header mt-4">Insights</li>
                                     <li class="nav-item">
                                         <a href="candidate-dashboard-inbox.html" class="d-flex justify-content-between align-items-center">
                                             <div><span class="fa fa-envelope-o"></span>Inbox</div>
@@ -105,14 +115,14 @@
                                             <div><span class="fa fa-bell-o"></span>Notifications</div>
                                             <span class="badge rounded-pill">5</span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </nav>
                         </div>
                     </div>
                 </div>
                 <nav class="pxp-user-nav pxp-on-light">
-                    <div class="dropdown pxp-user-nav-dropdown pxp-user-notifications">
+                    <!-- <div class="dropdown pxp-user-nav-dropdown pxp-user-notifications">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
                             <span class="fa fa-bell-o"></span>
                             <div class="pxp-user-notifications-counter">5</div>
@@ -127,16 +137,16 @@
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item pxp-link" href="candidate-dashboard-notifications.html">Read All</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                     <div class="dropdown pxp-user-nav-dropdown">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
-                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(images/avatar-1.jpg);"></div>
-                            <div class="pxp-user-nav-name d-none d-md-block">Derek Cotner</div>
+                            <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
+                            <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="candidate-dashboard.html">Dashboard</a></li>
-                            <li><a class="dropdown-item" href="candidate-dashboard-profile.html">Edit profile</a></li>
-                            <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Edit profile</a></li>
+                            <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -148,7 +158,7 @@
 
                 <div class="mt-4 mt-lg-5">
                     <div class="row justify-content-between align-content-center">
-                        <div class="col-auto order-2 order-sm-1">
+                        <!-- <div class="col-auto order-2 order-sm-1">
                             <div class="pxp-candidate-dashboard-jobs-bulk-actions mb-3">
                                 <select class="form-select">
                                     <option>Bulk actions</option>
@@ -156,8 +166,8 @@
                                 </select>
                                 <button class="btn ms-2">Apply</button>
                             </div>
-                        </div>
-                        <div class="col-auto order-1 order-sm-2">
+                        </div> -->
+                        <!-- <div class="col-auto order-1 order-sm-2">
                             <div class="pxp-candidate-dashboard-jobs-search mb-3">
                                 <div class="pxp-candidate-dashboard-jobs-search-results me-3">16 job applications</div>
                                 <div class="pxp-candidate-dashboard-jobs-search-search-form">
@@ -167,236 +177,89 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="table-responsive">
+
+                   
                         <table class="table table-hover align-middle">
                             <thead>
                                 <tr>
-                                    <th class="pxp-is-checkbox" style="width: 1%;"><input type="checkbox" class="form-check-input"></th>
                                     <th style="width: 25%;">Job</th>
-                                    <th style="width: 15%;">Company</th>
-                                    <th style="width: 20%;">Category</th>
+                                    <th style="width: 15%;">Recruiter</th>
+                                    <!-- <th style="width: 20%;">Category</th> -->
                                     <th style="width: 12%;">Type</th>
                                     <th>Date<span class="fa fa-angle-up ms-3"></span></th>
+                                    <th style="width: 25%;">Status</th>
                                     <th>&nbsp;</th>
                                 </tr>
                             </thead>
                             <tbody>
+                            <?php
+                                         $sql="SELECT * FROM tbl_job_details WHERE id IN (SELECT job_id FROM tbl_applied_jobs WHERE user_id='$_SESSION[userId]')";
+                                        //  $sql1="SELECT * FROM tbl_worker WHERE user_id IN (SELECT user_id FROM tbl_applied_jobs WHERE job_id='$jId')";
+                                        $result = $connect->query($sql);
+                                         if($result->num_rows > 0){ 
+                                        while($row = $result->fetch_assoc()) {
+                                            $job_id=$row['id'];
+                                            ?>
                                 <tr>
-                                    <td><input type="checkbox" class="form-check-input"></td>
                                     <td>
                                         <a href="#">
-                                            <div class="pxp-candidate-dashboard-job-title">Senior Editor</div>
-                                            <div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe me-1"></span>San Francisco, CA</div>
+                                            <div class="pxp-candidate-dashboard-job-title"><?php echo $row['job_title'] ?></div>
+                                            <div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe me-1"></span><?php echo $row['city'] ?>,<?php echo $row['district'] ?></div>
                                         </a>
                                     </td>
-                                    <td><a href="#" class="pxp-candidate-dashboard-job-company">Artistre Studio</a></td>
-                                    <td><div class="pxp-candidate-dashboard-job-category">Marketing & Communication</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-date mt-1">2020/08/24 at 11:56 am</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Preview"><span class="fa fa-eye"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
+                                    <td><a href="#" class="pxp-candidate-dashboard-job-company"><?php echo $row['user_name'] ?></a></td>
+                                    <!-- <td><div class="pxp-candidate-dashboard-job-category">Marketing & Communication</div></td> -->
+                                    <td><div class="pxp-candidate-dashboard-job-type"><?php echo $row['job_type'] ?></div></td>
+                                    <td><div class="pxp-candidate-dashboard-job-date mt-1"><?php echo $row['job_created_at'] ?></div></td>
+                                    
+                                    <?php
+                                          $sql1="SELECT 'status' FROM tbl_applied_jobs WHERE job_id='$job_id'";
+                                         $result1 = $connect->query($sql1);
+                                        //   if($result1->num_rows > 0){ 
+                                        //   while($row = $result1->fetch_assoc()) {
+                                             //$job_id=$row['id'];
+                                            
+                                                            // if ($row['status'] == 0) {
+                                                        ?>
+														 <!-- <td><div class="pxp-candidate-dashboard-job-date mt-1">Pending</div></td> -->
+                                                       
+                                                    <?php
+                                                       //     } 
+                                                        // else
+                                                        //{
+                                                            ?>
+                                                            
+                                                          
+                                                            <!-- <td><div class="pxp-candidate-dashboard-job-date mt-1">Pending</div></td> -->
+                                                            <?php
+                                                        }?>
+
+                                                
+
+
+                                    <td><div class="pxp-company-dashboard-job-status"><span class="badge rounded-pill bg-danger">Pending</span></div></td>
+                                    
+                                   <?php
+                                          }
+                                        
+                                        }
+                                          ?>
+        
                                 </tr>
-                                <tr>
-                                    <td><input type="checkbox" class="form-check-input"></td>
-                                    <td>
-                                        <a href="#">
-                                            <div class="pxp-candidate-dashboard-job-title">Software Engineering Team Leader</div>
-                                            <div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe me-1"></span>Paris, France</div>
-                                        </a>
-                                    </td>
-                                    <td><a href="#" class="pxp-candidate-dashboard-job-company">Craftgenics</a></td>
-                                    <td><div class="pxp-candidate-dashboard-job-category">Project Management</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-date mt-1">2020/08/24 at 11:56 am</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Preview"><span class="fa fa-eye"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" class="form-check-input"></td>
-                                    <td>
-                                        <a href="#">
-                                            <div class="pxp-candidate-dashboard-job-title">Techincal Support Engineer</div>
-                                            <div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe me-1"></span>Los Angeles, CA</div>
-                                        </a>
-                                    </td>
-                                    <td><a href="#" class="pxp-candidate-dashboard-job-company">Illuminate Studio</a></td>
-                                    <td><div class="pxp-candidate-dashboard-job-category">Customer Service</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-date mt-1">2020/08/24 at 11:56 am</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Preview"><span class="fa fa-eye"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" class="form-check-input"></td>
-                                    <td>
-                                        <a href="#">
-                                            <div class="pxp-candidate-dashboard-job-title">Javascript Developer</div>
-                                            <div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe me-1"></span>San Francisco, CA</div>
-                                        </a>
-                                    </td>
-                                    <td><a href="#" class="pxp-candidate-dashboard-job-company">Syspresoft</a></td>
-                                    <td><div class="pxp-candidate-dashboard-job-category">Software Engineering</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-date mt-1">2020/08/24 at 11:56 am</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Preview"><span class="fa fa-eye"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" class="form-check-input"></td>
-                                    <td>
-                                        <a href="#">
-                                            <div class="pxp-candidate-dashboard-job-title">Technical Writer</div>
-                                            <div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe me-1"></span>Paris, France</div>
-                                        </a>
-                                    </td>
-                                    <td><a href="#" class="pxp-candidate-dashboard-job-company">Gramware</a></td>
-                                    <td><div class="pxp-candidate-dashboard-job-category">Business Development</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-date mt-1">2020/08/24 at 11:56 am</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Preview"><span class="fa fa-eye"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" class="form-check-input"></td>
-                                    <td>
-                                        <a href="#">
-                                            <div class="pxp-candidate-dashboard-job-title">Human Resources Coordinator</div>
-                                            <div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe me-1"></span>Los Angeles, CA</div>
-                                        </a>
-                                    </td>
-                                    <td><a href="#" class="pxp-candidate-dashboard-job-company">Bitbytech</a></td>
-                                    <td><div class="pxp-candidate-dashboard-job-category">Human Resources</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-date mt-1">2020/08/24 at 11:56 am</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Preview"><span class="fa fa-eye"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" class="form-check-input"></td>
-                                    <td>
-                                        <a href="#">
-                                            <div class="pxp-candidate-dashboard-job-title">Fullstack Web Developer</div>
-                                            <div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe me-1"></span>San Francisco, CA</div>
-                                        </a>
-                                    </td>
-                                    <td><a href="#" class="pxp-candidate-dashboard-job-company">CoderBotics</a></td>
-                                    <td><div class="pxp-candidate-dashboard-job-category">Software Engineering</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-date mt-1">2020/08/24 at 11:56 am</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Preview"><span class="fa fa-eye"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" class="form-check-input"></td>
-                                    <td>
-                                        <a href="#">
-                                            <div class="pxp-candidate-dashboard-job-title">Senior Editor</div>
-                                            <div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe me-1"></span>San Francisco, CA</div>
-                                        </a>
-                                    </td>
-                                    <td><a href="#" class="pxp-candidate-dashboard-job-company">Artistre Studio</a></td>
-                                    <td><div class="pxp-candidate-dashboard-job-category">Marketing & Communication</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-date mt-1">2020/08/24 at 11:56 am</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Preview"><span class="fa fa-eye"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" class="form-check-input"></td>
-                                    <td>
-                                        <a href="#">
-                                            <div class="pxp-candidate-dashboard-job-title">Software Engineering Team Leader</div>
-                                            <div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe me-1"></span>Paris, France</div>
-                                        </a>
-                                    </td>
-                                    <td><a href="#" class="pxp-candidate-dashboard-job-company">Craftgenics</a></td>
-                                    <td><div class="pxp-candidate-dashboard-job-category">Project Management</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-date mt-1">2020/08/24 at 11:56 am</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Preview"><span class="fa fa-eye"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input type="checkbox" class="form-check-input"></td>
-                                    <td>
-                                        <a href="#">
-                                            <div class="pxp-candidate-dashboard-job-title">Techincal Support Engineer</div>
-                                            <div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe me-1"></span>Los Angeles, CA</div>
-                                        </a>
-                                    </td>
-                                    <td><a href="#" class="pxp-candidate-dashboard-job-company">Illuminate Studio</a></td>
-                                    <td><div class="pxp-candidate-dashboard-job-category">Customer Service</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-type">Full-time</div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-date mt-1">2020/08/24 at 11:56 am</div></td>
-                                    <td>
-                                        <div class="pxp-dashboard-table-options">
-                                            <ul class="list-unstyled">
-                                                <li><button title="Preview"><span class="fa fa-eye"></span></button></li>
-                                                <li><button title="Delete"><span class="fa fa-trash-o"></span></button></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
+                                <?php
+                                        //  }
+                                        // }
+                                
+                                        ?>
+                                
                             </tbody>
+                          
                         </table>
 
-                        <div class="row mt-4 mt-lg-5 justify-content-between align-items-center">
+                        <!-- <div class="row mt-4 mt-lg-5 justify-content-between align-items-center">
                             <div class="col-auto">
                                 <nav class="mt-3 mt-sm-0" aria-label="Applications list pagination">
                                     <ul class="pagination pxp-pagination">
@@ -411,7 +274,7 @@
                             <div class="col-auto">
                                 <a href="#" class="btn rounded-pill pxp-section-cta mt-3 mt-sm-0">Show me more<span class="fa fa-angle-right"></span></a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -430,3 +293,7 @@
     </body>
 
 </html>
+<?php
+
+
+?>

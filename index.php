@@ -48,23 +48,23 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Home</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Find Jobs</a>
+                            <li>
+                                <a href="login.php">Find Jobs</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Candidates</a>
+                            <li>
+                                <a href="login.php">Find Workers</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
+                            <!-- <li class="dropdown">
+                                <a href="login.php" class="dropdown-toggle" data-bs-toggle="dropdown">Blog</a> -->
                                 <!-- <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="blog-list-1.html">Articles Cards</a></li>
                                     <li><a class="dropdown-item" href="blog-list-2.html">Articles List</a></li>
                                     <li><a class="dropdown-item" href="blog-list-3.html">Articles Boxed</a></li>
                                     <li><a class="dropdown-item" href="single-blog-post.html">Single Article</a></li>
                                 </ul> -->
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <!-- </li> -->
+                            <!-- <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Pages</a> -->
                                 <!-- <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
                                     <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
@@ -74,11 +74,11 @@
                                     <li><a class="dropdown-item" href="sign-up.html">Sign Up</a></li>
                                     <li><a class="dropdown-item" href="404.html">404 Page</a></li>
                                 </ul> -->
-                            </li>
+                            <!-- </li> -->
                         </ul>
                     </nav>
                     <nav class="pxp-user-nav d-none d-sm-flex">
-                        <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
+                        <a href="login.php" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
                         <a href="login.php" class="btn rounded-pill pxp-nav-btn" role="button">Sign in</a>
                          
                     </nav>
@@ -116,15 +116,15 @@
                                 <div class="pxp-hero-searches-label">Popular Searches</div>
                                 <div class="pxp-hero-searches">
                                     <div class="pxp-hero-searches-items">
-                                        <a href="jobs-list-1.html">Carpenter</a>
-                                        <a href="jobs-list-1.html">Electrician</a>
-                                        <a href="jobs-list-1.html">Cleaner</a>
-                                        <a href="jobs-list-1.html">Plumber</a>
-                                        <a href="jobs-list-1.html">Cook</a>
-                                        <a href="jobs-list-1.html">Driver</a>
-                                        <a href="jobs-list-1.html">Farm Workers</a>
-                                        <a href="jobs-list-1.html">Mechanic</a>
-                                        <a href="jobs-list-1.html">Painter</a>
+                                        <a href="login.php">Carpenter</a>
+                                        <a href="login.php">Electrician</a>
+                                        <a href="login.php">Cleaner</a>
+                                        <a href="login.php">Plumber</a>
+                                        <a href="login.php">Cook</a>
+                                        <a href="login.php">Driver</a>
+                                        <a href="login.php">Farm Workers</a>
+                                        <a href="login.php">Mechanic</a>
+                                        <a href="login.php">Painter</a>
                                     </div>
                                 </div>
                             </div>
@@ -156,7 +156,7 @@
                 </div>
 
                 <div class="pxp-categories-carousel owl-carousel mt-4 mt-md-5 pxp-animate-in pxp-animate-in-top">
-                    <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                    <a href="login.php" class="pxp-categories-card-2">
                         <div class="pxp-categories-card-2-icon-container">
                             <div class="pxp-categories-card-2-icon">
                                 <span class="fa fa-pie-chart"></span>
@@ -165,7 +165,7 @@
                         <div class="pxp-categories-card-2-title">Carpenter</div>
                         <div class="pxp-categories-card-2-subtitle">139 open positions</div>
                     </a>
-                    <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                    <a href="login.php" class="pxp-categories-card-2">
                         <div class="pxp-categories-card-2-icon-container">
                             <div class="pxp-categories-card-2-icon">
                                 <span class="fa fa-bullhorn"></span>
@@ -174,7 +174,7 @@
                         <div class="pxp-categories-card-2-title">Electrician</div>
                         <div class="pxp-categories-card-2-subtitle">366 open positions</div>
                     </a>
-                    <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                    <a href="login.php" class="pxp-categories-card-2">
                         <div class="pxp-categories-card-2-icon-container">
                             <div class="pxp-categories-card-2-icon">
                                 <span class="fa fa-address-card-o"></span>
@@ -183,7 +183,7 @@
                         <div class="pxp-categories-card-2-title">Plumber</div>
                         <div class="pxp-categories-card-2-subtitle">435 open positions</div>
                     </a>
-                    <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                    <a href="login.php" class="pxp-categories-card-2">
                         <div class="pxp-categories-card-2-icon-container">
                             <div class="pxp-categories-card-2-icon">
                                 <span class="fa fa-calendar-o"></span>
@@ -192,7 +192,7 @@
                         <div class="pxp-categories-card-2-title">Cleaner</div>
                         <div class="pxp-categories-card-2-subtitle">324 open positions</div>
                     </a>
-                    <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                    <a href="login.php" class="pxp-categories-card-2">
                         <div class="pxp-categories-card-2-icon-container">
                             <div class="pxp-categories-card-2-icon">
                                 <span class="fa fa-comments-o"></span>
@@ -201,7 +201,7 @@
                         <div class="pxp-categories-card-2-title">Driver</div>
                         <div class="pxp-categories-card-2-subtitle">39 open positions</div>
                     </a>
-                    <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                    <a href="login.php" class="pxp-categories-card-2">
                         <div class="pxp-categories-card-2-icon-container">
                             <div class="pxp-categories-card-2-icon">
                                 <span class="fa fa-terminal"></span>
@@ -210,7 +210,7 @@
                         <div class="pxp-categories-card-2-title">Cook</div>
                         <div class="pxp-categories-card-2-subtitle">439 open positions</div>
                     </a>
-                    <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                    <a href="login.php" class="pxp-categories-card-2">
                         <div class="pxp-categories-card-2-icon-container">
                             <div class="pxp-categories-card-2-icon">
                                 <span class="fa fa-bank"></span>
@@ -219,7 +219,7 @@
                         <div class="pxp-categories-card-2-title">Farm Worker</div>
                         <div class="pxp-categories-card-2-subtitle">139 open positions</div>
                     </a>
-                    <a href="jobs-list-1.html" class="pxp-categories-card-2">
+                    <a href="login.php" class="pxp-categories-card-2">
                         <div class="pxp-categories-card-2-icon-container">
                             <div class="pxp-categories-card-2-icon">
                                 <span class="fa fa-building-o"></span>
@@ -240,7 +240,7 @@
                             <h2 class="pxp-section-h2">See right away whether candidates are the right fit</h2>
                             <p class="pxp-text-light">We help candidates know whether they’re qualified for a job – and allow you to see their match potential – giving you a better pool of qualified candidates to choose from.</p>
                             <div class="mt-4 mt-md-5">
-                                <a href="jobs-list-1.html" class="btn rounded-pill pxp-section-cta">All Job Offers<span class="fa fa-angle-right"></span></a>
+                                <a href="login.php" class="btn rounded-pill pxp-section-cta">All Job Offers<span class="fa fa-angle-right"></span></a>
                             </div>
                         </div>
                     </div>
@@ -248,7 +248,7 @@
             </div>
         </section>
 
-        <section class="mt-100">
+        <!-- <section class="mt-100">
             <div class="pxp-container">
                 <h2 class="pxp-section-h2">Popular Cities</h2>
                 <p class="pxp-text-light">Start your next carrer in a beautiful city</p>
@@ -392,7 +392,7 @@
                     <a href="jobs-list-1.html" class="btn rounded-pill pxp-section-cta">All Cities<span class="fa fa-angle-right"></span></a>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <footer class="pxp-main-footer mt-100">
             <div class="pxp-main-footer-top pt-100 pb-100" style="background-color: var(--pxpMainColorLight);">
@@ -414,7 +414,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xl-7 col-xxl-8">
+                        <!-- <div class="col-lg-6 col-xl-7 col-xxl-8">
                             <div class="row">
                  
                                 <div class="col-md-6 col-xl-4 col-xxl-3 mb-4">
@@ -438,7 +438,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

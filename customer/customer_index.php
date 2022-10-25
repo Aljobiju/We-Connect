@@ -50,14 +50,14 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 <li class="dropdown">
                                 <a href="worker_list.php">Find workers</a>
                                 </li>
-                                <li class="dropdown">
+                                <!-- <li class="dropdown">
                                     <a>Plans</a>
-                                </li>
-                                <li class="dropdown">
+                                </li> -->
+                                <!-- <li class="dropdown">
                                     <a>Contact us</a>
-                                </li>
+                                </li> -->
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
+                                    <a href="CustomerDashboard-Profile.php">Dashboard</a>
                                     <!-- <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="blog-list-1.html">Articles Cards</a></li>
                                         <li><a class="dropdown-item" href="blog-list-2.html">Articles List</a></li>
@@ -87,7 +87,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="company-dashboard.html">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Dashboard</a></li>
                             <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Edit profile</a></li>
                             <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
@@ -132,15 +132,15 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 <div class="pxp-hero-searches-label">Popular Searches</div>
                                 <div class="pxp-hero-searches">
                                     <div class="pxp-hero-searches-items">
-                                        <a href="jobs-list-1.html">Electrician</a>
-                                        <a href="jobs-list-1.html">Plumber</a>
-                                        <a href="jobs-list-1.html">Administration</a>
-                                        <a href="jobs-list-1.html">Finance</a>
-                                        <a href="jobs-list-1.html">Retail</a>
-                                        <a href="jobs-list-1.html">IT</a>
-                                        <a href="jobs-list-1.html">Engineering</a>
-                                        <a href="jobs-list-1.html">Sales</a>
-                                        <a href="jobs-list-1.html">Manufacturing</a>
+                                    <a href="joblist.php">Carpenter</a>
+                                        <a >Electrician</a>
+                                        <a >Cleaner</a>
+                                        <a >Plumber</a>
+                                        <a >Cook</a>
+                                        <a >Driver</a>
+                                        <a >Farm Workers</a>
+                                        <a >Mechanic</a>
+                                        <a >Painter</a>
                                     </div>
                                 </div>
                             </div>
@@ -191,15 +191,15 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <div class="pxp-hero-boxed-info-list">
                                         <div class="pxp-hero-boxed-info-list-item">
                                             <div class="pxp-hero-boxed-info-list-item-number">286<span>job offers</span></div>
-                                            <div class="pxp-hero-boxed-info-list-item-description">in Business Development</div>
+                                            <div class="pxp-hero-boxed-info-list-item-description">in Electrician</div>
                                         </div>
                                         <div class="pxp-hero-boxed-info-list-item">
                                             <div class="pxp-hero-boxed-info-list-item-number">154<span>job offers</span></div>
-                                            <div class="pxp-hero-boxed-info-list-item-description">in Marketing & Communication</div>
+                                            <div class="pxp-hero-boxed-info-list-item-description">in Drivers</div>
                                         </div>
                                         <div class="pxp-hero-boxed-info-list-item">
                                             <div class="pxp-hero-boxed-info-list-item-number">319<span>job offers</span></div>
-                                            <div class="pxp-hero-boxed-info-list-item-description">in Human Resources</div>
+                                            <div class="pxp-hero-boxed-info-list-item-description">in Mechanic</div>
                                         </div>
                                     </div>
                                 </div>
@@ -210,7 +210,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             </div>
         </section>
 
-         <section class="mt-100 pt-100 pb-100" style="background-color: var(--pxpMainColorLight);">
+         <!-- <section class="mt-100 pt-100 pb-100" style="background-color: var(--pxpMainColorLight);">
             <div class="pxp-container">
                 <h2 class="pxp-section-h2">Featured Candidates</h2>
                 <p class="pxp-text-light">We can help you find and engage with candidates</p>
@@ -282,7 +282,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <a href="candidates-list-1.html" class="btn rounded-pill pxp-section-cta">All Candidates<span class="fa fa-angle-right"></span></a>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
         <footer class="pxp-main-footer mt-100">
@@ -299,59 +299,9 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             </div>
                             <div class="mt-3 mt-md-4 pxp-footer-section">
                                 <div class="pxp-footer-text">
-                                    90 Fifth Avenue, 3rd Floor<br>
-                                    San Francisco, CA 1980<br>
-                                    office@jobster.com
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-xl-7 col-xxl-8">
-                            <div class="row">
-                                <div class="col-md-6 col-xl-4 col-xxl-3 mb-4">
-                                    <div class="pxp-footer-section">
-                                        <h3>For Candidates</h3>
-                                        <ul class="pxp-footer-list">
-                                            <li><a href="jobs-list-1.html">Find Jobs</a></li>
-                                            <li><a href="candidate-dashboard.html">Candidate Dashboard</a></li>
-                                            <li><a href="candidate-dashboard-applications.html">My Applications</a></li>
-                                            <li><a href="candidate-dashboard-fav-jobs.html">Favourite Jobs</a></li>
-                                            <li><a href="candidate-dashboard-inbox.html">My inbox</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-4 col-xxl-3 mb-4">
-                                    <div class="pxp-footer-section">
-                                        <h3>For Employers</h3>
-                                        <ul class="pxp-footer-list">
-                                            <li><a href="candidates-list-1.html">Find Candidates</a></li>
-                                            <li><a href="company-dashboard.html">Company Dashboard</a></li>
-                                            <li><a href="CustomerDashboard-new_job.php">Post a Job</a></li>
-                                            <li><a href="company-dashboard-jobs.html">Manage Jobs</a></li>
-                                            <li><a href="company-dashboard-candidates.html">Candidates</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-4 col-xxl-3 mb-4">
-                                    <div class="pxp-footer-section">
-                                        <h3>About Us</h3>
-                                        <ul class="pxp-footer-list">
-                                            <li><a href="about-us.html">About Us</a></li>
-                                            <li><a href="pricing.html">Pricing</a></li>
-                                            <li><a href="blog-list-1.html">Blog</a></li>
-                                            <li><a href="blog-list-1.html">Contact Us</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-4 col-xxl-3 mb-4">
-                                    <div class="pxp-footer-section">
-                                        <h3>Helpful Resources</h3>
-                                        <ul class="pxp-footer-list">
-                                            <li><a href="faqs.html">FAQs</a></li>
-                                            <li><a href="sign-in.html">Sign In</a></li>
-                                            <li><a href="sign-up.html">Sign Up</a></li>
-                                            <li><a href="404.html">404 Page</a></li>
-                                        </ul>
-                                    </div>
+                                Amal Jyothi College<br>
+                                    Kottayam<br>
+                                    office@weconnect.com
                                 </div>
                             </div>
                         </div>

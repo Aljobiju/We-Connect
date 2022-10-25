@@ -97,7 +97,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <div class="pxp-candidates-list-top">
                     <div class="row justify-content-between align-items-center">
                         <div class="col-auto">
-                            <h2><span class="pxp-text-light">Showing</span> 8,536 <span class="pxp-text-light">candidates</span></h2>
+                            <h2><span class="pxp-text-light">Showing</span> 3 <span class="pxp-text-light">candidates</span></h2>
                         </div>
                         <!-- <div class="col-auto">
                             <select class="form-select">
@@ -139,7 +139,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             </div>
                             <div class="pxp-candiadates-card-1-bottom">
                                 <div class="pxp-candiadates-card-1-cta">
-                                    <a href="worker_profile.php?uid= <?php echo $user_id ?>">View profile<span class="fa fa-angle-right"></span></a>
+                                    <a href="worker_profile.php?uid= <?php echo $user_id?> &jid=<?php echo $jId?>">View profile<span class="fa fa-angle-right"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +181,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="row">
                         <div class="col-lg-6 col-xl-5 col-xxl-4 mb-4">
                             <div class="pxp-footer-logo">
-                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">j</span>obster</a>
+                                <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
                             </div>
                             <div class="pxp-footer-section mt-3 mt-md-4">
                                 <h3>Call us</h3>
@@ -269,72 +269,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             </div>
         </footer>
 
-        <div class="modal fade pxp-user-modal" id="pxp-signin-modal" aria-hidden="true" aria-labelledby="signinModal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="pxp-user-modal-fig text-center">
-                            <img src="images/signin-fig.png" alt="Sign in">
-                        </div>
-                        <h5 class="modal-title text-center mt-4" id="signinModal">Welcome back!</h5>
-                        <form class="mt-4">
-                            <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="pxp-signin-email" placeholder="Email address">
-                                <label for="pxp-signin-email">Email address</label>
-                                <span class="fa fa-envelope-o"></span>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="pxp-signin-password" placeholder="Password">
-                                <label for="pxp-signin-password">Password</label>
-                                <span class="fa fa-lock"></span>
-                            </div>
-                            <a href="#" class="btn rounded-pill pxp-modal-cta">Continue</a>
-                            <div class="mt-4 text-center pxp-modal-small">
-                                <a href="#" class="pxp-modal-link">Forgot password</a>
-                            </div>
-                            <div class="mt-4 text-center pxp-modal-small">
-                                New to Jobster? <a role="button" class="" data-bs-target="#pxp-signup-modal" data-bs-toggle="modal" data-bs-dismiss="modal">Create an account</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="modal fade pxp-user-modal" id="pxp-signup-modal" aria-hidden="true" aria-labelledby="signupModal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="pxp-user-modal-fig text-center">
-                            <img src="images/signup-fig.png" alt="Sign up">
-                        </div>
-                        <h5 class="modal-title text-center mt-4" id="signupModal">Create an account</h5>
-                        <form class="mt-4">
-                            <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="pxp-signup-email" placeholder="Email address">
-                                <label for="pxp-signup-email">Email address</label>
-                                <span class="fa fa-envelope-o"></span>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="pxp-signup-password" placeholder="Create password">
-                                <label for="pxp-signup-password">Create password</label>
-                                <span class="fa fa-lock"></span>
-                            </div>
-                            <a href="#" class="btn rounded-pill pxp-modal-cta">Continue</a>
-                            <div class="mt-4 text-center pxp-modal-small">
-                                Already have an account? <a role="button" class="" data-bs-target="#pxp-signin-modal" data-bs-toggle="modal">Sign in</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <script src="../js/jquery-3.4.1.min.js"></script>
         <script src="../js/bootstrap.bundle.min.js"></script>
