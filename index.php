@@ -28,6 +28,20 @@
                     <div class="pxp-logo">
                         <a href="index.php" class="pxp-animate"><span style="color: var(--pxpMainColor)">We-</span>Connect</a>
                     </div>
+
+                    
+                    <!-- Translation Code here -->
+					<span>
+					    <div class="translate" id="google_translate_element"></div>
+
+                            <script type="text/javascript">
+                                function googleTranslateElementInit() {  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');}
+                            </script>
+                            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+					</span>
+					<!-- Translation Code End here -->
+
+
                     <div class="pxp-nav-trigger navbar d-xl-none flex-fill">
                         <a role="button" data-bs-toggle="offcanvas" data-bs-target="#pxpMobileNav" aria-controls="pxpMobileNav">
                             <div class="pxp-line-1"></div>

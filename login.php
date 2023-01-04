@@ -72,7 +72,7 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                             <a class="forgot-pass" href="#">Forgot Password ?</a>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn-primary" name="LoginSubmit">Sign in</button>
+                            <button type="submit" id="submit" class="btn-primary" name="LoginSubmit">Sign in</button>
                         </div>
                         <div class="form-group">
                             <p class="sign-up-link">Don't have an account ? <a href="auth/signup.php">Sign up</a></p>

@@ -1,7 +1,7 @@
 <?php
 include('../config/connect.php');
 $uId = $_GET['uid'];
-$jId = $_GET['jid'];
+// $jId = $_GET['jid'];
 session_start();
 if (isset($_SESSION["wcSession"]) != session_id()) {
     header("Location: ../login.php");
@@ -201,11 +201,11 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                         </div>
                                     </div>
                                     <div class="col-sm-4 col-xxl-auto mt-3 mt-xxl-0 pxp-text-right">
-                                <a href="appoint_worker.php?uid= <?php echo $user_id ?>&jid= <?php echo $jId ?>" class="btn rounded-pill pxp-card-btn">Approve Worker</a>
+                                <!-- <a href="appoint_worker.php?uid= <?php /*echo $user_id ?>&jid= <?php echo $jId*/ ?>" class="btn rounded-pill pxp-card-btn">Appoint</a> -->
                             </div>
             
-                                    <!-- <div class="pxp-single-candidate-side-panel mt-4 mt-lg-5">
-                                        <h3>Contact Rebecca</h3>
+                                    <div class="pxp-single-candidate-side-panel mt-4 mt-lg-5">
+                                        <h3>Contact <?php echo $row['wor_name'] ?></h3>
                                         <form class="mt-4">
                                             <div class="mb-3">
                                                 <label for="contact-candidate-name" class="form-label">Name</label>
@@ -221,7 +221,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                             </div>
                                             <a href="#" class="btn rounded-pill pxp-section-cta d-block">Send Message</a>
                                         </form>
-                                    </div> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -123,8 +123,8 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                                 <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
                                     <img src="images/profile/17.jpg" width="20" alt=""/>
 									<div class="header-info">
-										<span class="text-black">John Doe</span>
-										<p class="fs-12 mb-0">Super Admin</p>
+										<span class="text-black">Admin</span>
+										<!-- <p class="fs-12 mb-0">Super Admin</p> -->
 									</div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">

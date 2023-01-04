@@ -42,7 +42,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <ul class="list-unstyled">
                     <li><a href="worker_index.php"><span class="fa fa-home"></span>Home</a></li>
                     <li class="pxp-active"><a href="WorkerDashboard-profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
-                    <li><a href="WorkerDashboard-applications.php"><span class="fa fa-file-text-o"></span>Apllications</a></li>
+                    <li><a href="WorkerDashboard-applications.php"><span class="fa fa-file-text-o"></span>Applications</a></li>
                     <li><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li>
                     <li><a href="WorkerDashboard-change_password.php"><span class="fa fa-lock"></span>Change Password</a></li>
                 </ul>
@@ -100,7 +100,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <li class="pxp-dropdown-header">Worker tools</li>
                                     <li class="nav-item"><a href="worker_index.php"><span class="fa fa-home"></span>Home</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-profile.html"><span class="fa fa-pencil"></span>Edit Profile</a></li>
-                                    <li class="nav-item"><a href="candidate-dashboard-applications.html"><span class="fa fa-file-text-o"></span>Apllications</a></li>
+                                    <li class="nav-item"><a href="candidate-dashboard-applications.html"><span class="fa fa-file-text-o"></span>Applications</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li>
                                     <li class="nav-item"><a href="WorkerDashboard-change_password.php"><span class="fa fa-lock"></span>Change Password</a></li>
                                     <!-- <li class="pxp-dropdown-header mt-4">Insights</li>

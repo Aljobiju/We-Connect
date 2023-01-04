@@ -31,7 +31,10 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <link rel="stylesheet" href="../css/style.css">
 
         <title>We-Connect - Home </title>
+        <script>(function(w, d) { w.CollectId = "63994d018dff64e01fe762e0"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
     </head>
+
+    
     <body>
         <div class="pxp-preloader"><span>Loading...</span></div>
 

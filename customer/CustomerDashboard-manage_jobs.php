@@ -170,7 +170,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     </td>
                                     <td><div class="pxp-company-dashboard-job-category"><?php echo $row['job_description'] ?></div></td>
                                     <td><div class="pxp-company-dashboard-job-type"><?php echo $row['job_type'] ?></div></td>
-                                    <td><a href="applied_workers_list.php?jid= <?php echo $id ?>" class="pxp-company-dashboard-job-applications">3 Candidates</a></td>
+                                    <td><a href="applied_workers_list.php?jid= <?php echo $id ?>" class="pxp-company-dashboard-job-applications">Candidates</a></td>
                                     <td>
                                         <!-- <div class="pxp-company-dashboard-job-status"><span class="badge rounded-pill bg-success">Published</span></div> -->
                                         <div class="pxp-company-dashboard-job-date mt-1"><?php echo $row['job_created_at'] ?></div>

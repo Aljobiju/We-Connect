@@ -138,7 +138,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <div class="pxp-candidates-list-top">
                     <div class="row justify-content-between align-items-center">
                         <div class="col-auto">
-                            <h2><span class="pxp-text-light">Showing</span> 8,536 <span class="pxp-text-light">candidates</span></h2>
+                            <h2><span class="pxp-text-light">Showing </span> <span class="pxp-text-light">candidates</span></h2>
                         </div>
                         <div class="col-auto">
                             <select class="form-select">
@@ -161,14 +161,14 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
                         <div class="pxp-candiadates-card-1 pxp-has-border text-center">
                             <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
+                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-1.jpg);"></div>
                                 <div class="pxp-candiadates-card-1-name"><?php echo $row['wor_name'] ?></div>
-                                <div class="pxp-candiadates-card-1-title">Rating : </div>
+                                <div class="pxp-candiadates-card-1-title"><?php echo $row['skills'] ?> </div>
                                 <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span><?php echo $row['address'] ?></div>
                             </div>
                             <div class="pxp-candiadates-card-1-bottom">
                                 <div class="pxp-candiadates-card-1-cta">
-                                    <a href="worker_profile.php?uid= <?php echo $user_id ?>">View profile<span class="fa fa-angle-right"></span></a>
+                                    <a href="w_profile.php?uid= <?php echo $user_id?>">View profile<span class="fa fa-angle-right"></span></a>
                                 </div>
                             </div>
                         </div>
