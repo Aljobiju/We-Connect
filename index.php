@@ -30,7 +30,7 @@
                     </div>
 
                     
-                    <!-- Translation Code here -->
+                    <!-- Translation Code here-->
 					<span>
 					    <div class="translate" id="google_translate_element"></div>
 
