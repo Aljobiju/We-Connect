@@ -121,7 +121,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
  while($row = $result->fetch_assoc()) {
     // $user_id=trim($row['user_id']);
      ?>
-                <form action="updateprofile.php" method="POST">
+                <form action="updateprofile.php" method="POST" enctype="multipart/form-data">
                     <div class="row mt-4 mt-lg-5">
                         <div class="col-xxl-8">
                             <div class="mb-3">
@@ -146,6 +146,17 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 <label for="pxp-company-website" class="form-label">Address</label>
                                 <input type="text" name="cus_address" id="cus_address" class="form-control" value="<?php echo $row["address"]?>" placeholder="Address">
                             </div>
+                        </div>
+                        <div class="col-xxl-4">
+                            <div class="form-label">&nbsp;</div>
+                            <div class="pxp-company-cover mb-3">
+                                <input type="file" name="uploadfile" id="pxp-company-cover-choose-file" accept="image/*">
+                                <label for="pxp-company-cover-choose-file" class="pxp-cover"><span>Upload Profile Image</span></label>
+                            </div>
+                            <!-- <div class="pxp-company-logo mb-3">
+                                <input type="file" id="pxp-company-logo-choose-file" accept="image/*">
+                                <label for="pxp-company-logo-choose-file" class="pxp-cover"><span>Upload<br>Logo</span></label>
+                            </div> -->
                         </div>
                     </div>
 
