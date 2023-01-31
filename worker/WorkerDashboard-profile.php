@@ -200,18 +200,19 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
-                        <!-- <div class="col-xxl-4">
+                        <div class="col-xxl-4">
                             <div class="form-label">&nbsp;</div>
-                            <div class="pxp-candidate-cover mb-3">
-                                <input type="file" id="pxp-candidate-cover-choose-file" accept="image/*">
-                                <label for="pxp-candidate-cover-choose-file" class="pxp-cover"><span>Upload Cover Image</span></label>
+                            <div class="pxp-company-cover mb-3">
+                                <input type="file" name="uploadfile" id="pxp-company-cover-choose-file" accept="image/*">
+                                <label for="pxp-company-cover-choose-file" class="pxp-cover"><span>Upload Profile Image</span></label>
                             </div>
-                            <div class="pxp-candidate-photo mb-3">
-                                <input type="file" id="pxp-candidate-photo-choose-file" accept="image/*">
-                                <label for="pxp-candidate-photo-choose-file" class="pxp-cover"><span>Upload<br>Photo</span></label>
-                            </div>
-                        </div> -->
+                            <!-- <div class="pxp-company-logo mb-3">
+                                <input type="file" id="pxp-company-logo-choose-file" accept="image/*">
+                                <label for="pxp-company-logo-choose-file" class="pxp-cover"><span>Upload<br>Logo</span></label>
+                            </div> -->
+                        </div>
                     </div>
 
                     <div class="mb-3">

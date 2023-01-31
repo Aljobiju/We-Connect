@@ -13,6 +13,7 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
 <html>
 
 <head>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Login</title>
@@ -68,6 +69,7 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                                 placeholder="**********" />
                                 <small id="errMsgPassword" class="errMsg"></small>
                         </div>
+                        <div class="g-recaptcha" data-sitekey="6LdvmT0kAAAAANxyKYtAwYhuXLpCi-JurZUce5HO"></div>
                         <div class="form-group">
                             <a class="forgot-pass" href="#">Forgot Password ?</a>
                         </div>

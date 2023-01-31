@@ -92,6 +92,17 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                     $_SESSION['userName'] = $userData['username'];
                     $_SESSION['userId'] = $userData['user_id'];
                     $_SESSION['currentUserTypeId'] = $userData['type_id'];
+                    $secret = "6LdvmT0kAAAAAGbjRSAO6VUY02HblU7SSiaHlb3c";
+                    $response = $_POST["g-recaptcha-response"];
+                    $verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret}&response={$response}");
+                    $captcha_success=json_decode($verify);
+                    if ($captcha_success->success==false) {
+                        $_SESSION['loginMessage'] = "reCAPTCHA Verification Failed";
+                        header("Location: ../login.php");
+                        die();
+                    } else if ($captcha_success->success==true) {
+                        // reCAPTCHA verification succeeded, continue with form processing
+                   
                     if ($userData['type_id'] == 1) {
                         $_SESSION['wcSessionAdmin'] = session_id();
                         header("Location: ../admin/adminDashboard.php");
@@ -112,6 +123,7 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
                         header("Location: ../login.php");
                         die();
                     }
+                }
                 }
             } else {
                 $_SESSION['loginMessage'] = "User Login Failed";
