@@ -270,7 +270,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 														<rect width="32" height="23" rx="11.5" fill="#FF9B52"/>
 													</svg>
 													<span class="fs-18 text-black me-3 font-w600">46%</span>
-													<span class="fs-14">Appllication Answered</span>
+													<span class="fs-14">Application Answered</span>
 												</div>
 												<div class="d-flex mb-3 align-items-center">
 													<svg class="me-3 min-w32" width="32" height="23" viewBox="0 0 32 23" fill="none" xmlns="http://www.w3.org/2000/svg">
