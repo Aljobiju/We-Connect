@@ -31,6 +31,23 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <title>We-Connect</title>
     </head>
     <body style="background-color: var(--pxpMainColorLight);">
+
+    <script> 
+function validateForm(name)
+{
+   var regEx = /^[a-z][a-z\s]*$/;
+   if(name.value.match(regEx))
+     {
+      return true;
+     }
+   else
+     {
+     alert("Please enter letters and space only.");
+     return false;
+     }
+}    
+</script>
+
         <div class="pxp-preloader"><span>Loading...</span></div>
 
         <div class="pxp-dashboard-side-panel d-none d-lg-block">
@@ -45,7 +62,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <li><a href="CustomerDashboard-Profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                     <li class="pxp-active"><a href="CustomerDashboard-new_job.php"><span class="fa fa-file-text-o"></span>New Job</a></li>
                     <li><a href="CustomerDashboard-manage_jobs.php"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
-                    <li><a href="company-dashboard-candidates.html"><span class="fa fa-user-circle-o"></span>Candidates</a></li>
+                    <!-- <li><a href="company-dashboard-candidates.html"><span class="fa fa-user-circle-o"></span>Candidates</a></li> -->
                     <li><a href="company-dashboard-subscriptions.html"><span class="fa fa-credit-card"></span>Subscriptions</a></li>
                     <li><a href="CustomerDashboard-changepassword.php"><span class="fa fa-lock"></span>Change Password</a></li>
                 </ul>
@@ -90,7 +107,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <li class="nav-item"><a href="CustomerDashboard-Profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-new_job.php"><span class="fa fa-file-text-o"></span>New Job</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-manage_jobs.php"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
-                                    <li class="nav-item"><a href="company-dashboard-candidates.html"><span class="fa fa-user-circle-o"></span>Candidates</a></li>
+                                    <!-- <li class="nav-item"><a href="company-dashboard-candidates.html"><span class="fa fa-user-circle-o"></span>Candidates</a></li> -->
                                     <li class="nav-item"><a href="company-dashboard-subscriptions.html"><span class="fa fa-credit-card"></span>Subscriptions</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-changepassword.php"><span class="fa fa-lock"></span>Change Password</a></li>
                                 </ul>
@@ -118,7 +135,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <h1>New Job</h1>
                 <p class="pxp-text-light">Add a new job to your jobs list.</p>
 
-                <form action="add_new_job.php" method="POST">
+                <form action="add_new_job.php" method="POST"  onsubmit="return validateForm(document.form1.jobtitle)" name="form1">
                     <div class="row mt-4 mt-lg-5">
                         <div class="col-xxl-6">
                             <div class="mb-3">

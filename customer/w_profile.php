@@ -133,9 +133,9 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 <div class="col-lg-7 col-xxl-8">
                                     <div class="pxp-single-candidate-content">
                                         <h2>About <?php echo $row['wor_name'] ?></h2>
-                                        <p>Lorem Ipsum is also known as: Greeked text, blind text, placeholder text, dummy content, filler text, lipsum, and mock-content. In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation.<?php echo $row['about'] ?></p>
-                                        <p>In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation. Lorem Ipsum is also known as: Greeked text. </p>
-            
+                                        <!-- <p>Lorem Ipsum is also known as: Greeked text, blind text, placeholder text, dummy content, filler text, lipsum, and mock-content. In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation.<?php echo $row['about'] ?></p>
+                                        <p>In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation. Lorem Ipsum is also known as: Greeked text. </p> -->
+                                        <?php echo $row['about'] ?>
                                         <div class="mt-4 mt-lg-5">
                                             <h2>Skills</h2>
                                             <div class="pxp-single-candidate-skills">
@@ -207,7 +207,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <div class="pxp-single-candidate-side-panel mt-4 mt-lg-5">
                                         <h3>Contact <?php echo $row['wor_name'] ?></h3>
                                         <form class="mt-4">
-                                            <div class="mb-3">
+                                            <!-- <div class="mb-3">
                                                 <label for="contact-candidate-name" class="form-label">Name</label>
                                                 <input type="text" class="form-control" id="contact-candidate-name" placeholder="Enter your name">
                                             </div>
@@ -218,7 +218,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                             <div class="mb-3">
                                                 <label for="contact-candidate-message" class="form-label">Message</label>
                                                 <textarea class="form-control" id="contact-candidate-message" placeholder="Type your message here..."></textarea>
-                                            </div>
+                                            </div> -->
                                             <a href="#" class="btn rounded-pill pxp-section-cta d-block">Send Message</a>
                                         </form>
                                     </div>
@@ -254,7 +254,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xl-7 col-xxl-8">
+                        <!-- <div class="col-lg-6 col-xl-7 col-xxl-8">
                             <div class="row">
                                 <div class="col-md-6 col-xl-4 col-xxl-3 mb-4">
                                     <div class="pxp-footer-section">
@@ -303,11 +303,11 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
-            <div class="pxp-main-footer-bottom" style="background-color: var(--pxpSecondaryColor);">
+            <!-- <div class="pxp-main-footer-bottom" style="background-color: var(--pxpSecondaryColor);">
                 <div class="pxp-container">
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-auto">
@@ -325,7 +325,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </footer>
 
         <script src="../js/jquery-3.4.1.min.js"></script>

@@ -23,8 +23,8 @@
         <div class="pxp-preloader"><span>Loading...</span></div>
 
         <header class="pxp-header fixed-top">
-            <div class="pxp-container">
-                <div class="pxp-header-container">
+            <div class="pxp-container" >
+                <div class="pxp-header-container" >
                     <div class="pxp-logo">
                         <a href="index.php" class="pxp-animate"><span style="color: var(--pxpMainColor)">We-</span>Connect</a>
                     </div>
@@ -32,12 +32,14 @@
                     
                     <!--google Translation Code here-->
 					<span>
-					    <div class="translate" id="google_translate_element"></div>
+					    <div class="translate" id="google_translate_element" ></div>
 
-                            <script type="text/javascript">
-                                function googleTranslateElementInit() {  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');}
+                        <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                            <script >
+                                function loadGoogleTranslate(){
+                                   new google.translate.TranslateElement("google_translate_element");
+                                }
                             </script>
-                            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 					</span>
 					<!-- Translation Code End here -->
 

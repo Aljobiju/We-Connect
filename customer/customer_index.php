@@ -112,8 +112,9 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <div class="pxp-hero-boxed-content" style="background-color: var(--pxpMainColorLight);">
                     <div class="row align-items-center justify-content-between">
                         <div class="col-12 col-xl-6 col-xxl-5">
-                            <h1>Find the perfect<br><span style="color: var(--pxpMainColor);">job</span> for you</h1>
-                            <div class="pxp-hero-subtitle mt-3 mt-lg-4">Search your career opportunity through <strong>12,800</strong> jobs</div>
+                        <h1>Welcome<br><span style="color: var(--pxpMainColor);">Customer,</span> </h1>
+                            <h1>Find the perfect<br><span style="color: var(--pxpMainColor);">worker</span> for you</h1>
+                            <div class="pxp-hero-subtitle mt-3 mt-lg-4">Search your worker from <strong>12,800</strong> workers</div>
 
                             <div class="pxp-hero-form pxp-hero-form-round pxp-bigger mt-3 mt-lg-4">
                                 <form class="row gx-3 align-items-center" action="https://pixelprime.co/themes/jobster/jobs-list-1.html">
@@ -125,12 +126,12 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     </div>
                                     <div class="col-12 col-md pxp-has-left-border">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="pxpHeroFormLocation" placeholder="Job location" value="Job location">
+                                            <input type="text" class="form-control" id="pxpHeroFormLocation" placeholder="Job location" value="worker location">
                                             <label for="pxpHeroFormLocation">Where</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-auto">
-                                        <button>Find Jobs</button>
+                                        <button onclick="window.location.href='http://localhost/We-Connect/customer/worker_list.php';">Find Worker </button>
                                     </div>
                                 </form>
                             </div>
@@ -139,7 +140,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 <div class="pxp-hero-searches-label">Popular Searches</div>
                                 <div class="pxp-hero-searches">
                                     <div class="pxp-hero-searches-items">
-                                    <a href="joblist.php">Carpenter</a>
+                                    <a>Carpenter</a>
                                         <a >Electrician</a>
                                         <a >Cleaner</a>
                                         <a >Plumber</a>
@@ -315,7 +316,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     </div>
                 </div>
             </div>
-            <div class="pxp-main-footer-bottom" style="background-color: var(--pxpSecondaryColor);">
+            <!-- <div class="pxp-main-footer-bottom" style="background-color: var(--pxpSecondaryColor);">
                 <div class="pxp-container">
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-auto">
@@ -333,7 +334,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </footer>
 
         <script src="../js/jquery-3.4.1.min.js"></script>
