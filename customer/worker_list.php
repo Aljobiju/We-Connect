@@ -31,6 +31,14 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <title>We-Connect - Workers List</title>
     </head>
     <body>
+         <!-- Google translate start -->
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                            <script >
+                                function loadGoogleTranslate(){
+                                   new google.translate.TranslateElement("google_translate_element");
+                                }
+                            </script>
+     <!-- Google translate end -->
         <div class="pxp-preloader"><span>Loading...</span></div>
 
         <header class="pxp-header fixed-top pxp-no-bg">
@@ -162,7 +170,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <div class="col-md-6 col-xl-4 col-xxl-3 pxp-candiadates-card-1-container">
                         <div class="pxp-candiadates-card-1 pxp-has-border text-center">
                             <div class="pxp-candiadates-card-1-top">
-                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-1.jpg);"></div>
+                                <div class="pxp-candiadates-card-1-avatar pxp-cover" style="background-image: url(../images/avatar-1.png);"></div>
                                 <div class="pxp-candiadates-card-1-name"><?php echo $row['wor_name'] ?></div>
                                 <div class="pxp-candiadates-card-1-title"><?php echo $row['skills'] ?> </div>
                                 <div class="pxp-candiadates-card-1-location"><span class="fa fa-globe"></span><?php echo $row['address'] ?></div>

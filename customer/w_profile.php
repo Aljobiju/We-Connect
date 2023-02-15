@@ -33,6 +33,14 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <title>We-Connect - Worker_Profile</title>
     </head>
     <body>
+         <!-- Google translate start -->
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                            <script >
+                                function loadGoogleTranslate(){
+                                   new google.translate.TranslateElement("google_translate_element");
+                                }
+                            </script>
+     <!-- Google translate end -->
         <div class="pxp-preloader"><span>Loading...</span></div>
 
         <header class="pxp-header fixed-top pxp-no-bg pxp-bigger">
@@ -120,7 +128,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 <div class="pxp-hero-opacity"></div>
                                 <div class="pxp-single-candidate-hero-caption">
                                     <div class="pxp-single-candidate-hero-content d-block text-center">
-                                        <div class="pxp-single-candidate-hero-avatar d-inline-block" style="background-image: url(../images/avatar-1.jpg);"></div>
+                                        <div class="pxp-single-candidate-hero-avatar d-inline-block" style="background-image: url(../images/avatar-1.png);"></div>
                                         <div class="pxp-single-candidate-hero-name ms-0 mt-3">
                                             <h1><?php echo $row['wor_name'] ?></h1>
                                             <!-- <div class="pxp-single-candidate-hero-title">UX/UI Designer</div> -->

@@ -31,6 +31,14 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <title>We-Connect</title>
     </head>
     <body>
+         <!-- Google translate start -->
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                            <script >
+                                function loadGoogleTranslate(){
+                                   new google.translate.TranslateElement("google_translate_element");
+                                }
+                            </script>
+     <!-- Google translate end -->
         <div class="pxp-preloader"><span>Loading...</span></div>
 
         <header class="pxp-header fixed-top">
