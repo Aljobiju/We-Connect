@@ -31,18 +31,18 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <link rel="stylesheet" href="../css/style.css">
 
         <title>We-Connect - Home </title>
-        <script>(function(w, d) { w.CollectId = "63994d018dff64e01fe762e0"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+        <!-- <script>(function(w, d) { w.CollectId = "63994d018dff64e01fe762e0"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script> -->
     </head>
 
     
     <body>
          <!-- Google translate start -->
-<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+<!-- <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
                             <script >
                                 function loadGoogleTranslate(){
                                    new google.translate.TranslateElement("google_translate_element");
                                 }
-                            </script>
+                            </script> -->
      <!-- Google translate end -->
         <div class="pxp-preloader"><span>Loading...</span></div>
 
@@ -350,6 +350,18 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <script src="../js/owl.carousel.min.js"></script>
         <script src="../js/nav.js"></script>
         <script src="../js/main.js"></script>
+
+        <script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"2be4d39bc57799e2359e3308fc052543f","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
     </body>
 
 </html>

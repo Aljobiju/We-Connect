@@ -224,23 +224,24 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <td><div class="pxp-candidate-dashboard-job-date mt-1"><?php echo $row['job_created_at'] ?></div></td>
                                     
                                     <?php
-                                          $sql1="SELECT 'status' FROM tbl_applied_jobs WHERE job_id='$job_id'";
+                                        
+                                          $sql1="SELECT * FROM tbl_applied_jobs WHERE job_id='$job_id' && user_id='$_SESSION[userId]'";
                                          $result1 = $connect->query($sql1);
-                                        //   if($result1->num_rows > 0){ 
-                                        //   while($row = $result1->fetch_assoc()) {
-                                             //$job_id=$row['id'];
+                                          if($result1->num_rows > 0){ 
+                                          while($row = $result1->fetch_assoc()) {
+                                            //  $job_id=$row['id'];
                                             
-                                                            // if ($row['status'] == 0) {
+                                                            if ($row['status'] == 1) {
                                                         ?>
-														 <!-- <td><div class="pxp-candidate-dashboard-job-date mt-1">Pending</div></td> -->
-                                                       
+														 <!-- <td><div class="pxp-candidate-dashboard-job-date mt-1">Approved</div></td> -->
+                                                         <td><div class="pxp-company-dashboard-job-status"><span class="badge rounded-pill bg-success">Approved</span></div></td>
                                                     <?php
-                                                       //     } 
-                                                        // else
-                                                        //{
+                                                           } 
+                                                        else
+                                                        {
                                                             ?>
                                                             
-                                                          
+                                                            <td><div class="pxp-company-dashboard-job-status"><span class="badge rounded-pill bg-danger">Pending</span></div></td>
                                                             <!-- <td><div class="pxp-candidate-dashboard-job-date mt-1">Pending</div></td> -->
                                                             <?php
                                                         }?>
@@ -248,11 +249,12 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                                 
 
 
-                                    <td><div class="pxp-company-dashboard-job-status"><span class="badge rounded-pill bg-success">Approved</span></div></td>
+                                    <!-- <td><div class="pxp-company-dashboard-job-status"><span class="badge rounded-pill bg-success">Approved</span></div></td> -->
                                     
                                    <?php
-                                          }
-                                        
+                                          
+                                                    }}
+                                                }
                                         }
                                           ?>
         
@@ -302,6 +304,6 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
 
 </html>
 <?php
-
+                                         }
 
 ?>

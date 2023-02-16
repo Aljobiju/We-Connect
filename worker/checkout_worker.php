@@ -5,10 +5,10 @@ header("Cache-Control: no-cache");
 header("Expires: 0");
 
 
-include('config/connect.php');
+include('../config/connect.php');
 session_start();
 if (isset($_SESSION["wcSession"]) != session_id()) {
-    header("Location: login.php");
+    header("Location:../login.php");
     die();
 } else {
     
@@ -25,12 +25,12 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <link rel="preconnect" href="https://fonts.googleapis.com/">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&amp;display=swap" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="../css/animate.css">
+        <link rel="stylesheet" href="../css/style.css">
 
         <title>We-Connect - Checkout</title>
     </head>
@@ -58,43 +58,43 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 <div class="pxp-line-2"></div>
                                 <div class="pxp-line-3"></div>
                             </a>
+                            <div class="offcanvas offcanvas-start pxp-nav-mobile-container" tabindex="-1" id="pxpMobileNav">
+                                <div class="offcanvas-header">
+                                    <div class="pxp-logo">
+                                        <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
+                                    </div>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                            </div>
                         </div>
                         <nav class="pxp-nav dropdown-hover-all d-none d-xl-block">
                             <ul>
                                 <li class="dropdown">
-                                    <a href="customer_index.php">Home</a>
+                                    <a href="worker_index.php" >Home</a>
+                                  
                                 </li>
                                 <li class="dropdown">
-                                    <a href="worker_list.php" >Find Workers</a>
+                                    <a href="joblist.php">Find Jobs</a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="CustomerDashboard-Profile.php" >Dashboard</a>
+                                    <a href="WorkerDashboard-profile.php">Dashboard</a>
                                 </li>
                                 <!-- <li class="dropdown">
-                                    <a href="#">Contact us</a>
+                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Candidates</a>
                                 </li> -->
-                                <!-- <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Blog</a> -->
-                                    <!-- <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="blog-list-1.html">Articles Cards</a></li>
-                                        <li><a class="dropdown-item" href="blog-list-2.html">Articles List</a></li>
-                                        <li><a class="dropdown-item" href="blog-list-3.html">Articles Boxed</a></li>
-                                        <li><a class="dropdown-item" href="single-blog-post.html">Single Article</a></li>
-                                    </ul> -->
-                                </li>
                             </ul>
                         </nav>
                     </div>
                     <nav class="pxp-user-nav pxp-on-light">
-                        <a href="CustomerDashboard-new_job.php" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
+                        <!-- <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a> -->
                         <div class="dropdown pxp-user-nav-dropdown">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
                             <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
                             <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Dashboard</a></li>
-                            <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Edit profile</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Edit profile</a></li>
                             <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
                     </div>
@@ -102,11 +102,10 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 </div>
             </div>
         </header>
-
          <section class="mt-100 pxp-no-hero">
            
        
-		<form method="post" action="pgRedirect.php" style="padding: 2%;">
+		<form method="post" action="../pgRedirect.php" style="padding: 2%;">
 		<table border="1">
 			<tbody>
 				<tr>
@@ -252,11 +251,11 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             </div> -->
         </footer>
 
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/nav.js"></script>
-        <script src="js/main.js"></script>
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/owl.carousel.min.js"></script>
+        <script src="../js/nav.js"></script>
+        <script src="../js/main.js"></script>
     </body>
 
 </html>

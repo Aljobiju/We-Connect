@@ -13,7 +13,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
 <html lang="en" class="pxp-root">
     
 <head>
-<script>(function(w, d) { w.CollectId = "63994d018dff64e01fe762e0"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+<!-- <script>(function(w, d) { w.CollectId = "63994d018dff64e01fe762e0"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script> -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 

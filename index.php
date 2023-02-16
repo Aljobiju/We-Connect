@@ -111,7 +111,7 @@
                             <div class="pxp-hero-subtitle mt-3 mt-lg-4">Search your career opportunity through <strong>12,800</strong> jobs</div>
 
                             <div class="pxp-hero-form pxp-hero-form-round mt-3 mt-lg-4">
-                                <form class="row gx-3 align-items-center" action="https://pixelprime.co/themes/jobster/jobs-list-1.html">
+                                <form class="row gx-3 align-items-center" action="login.php">
                                     <div class="col-12 col-sm">
                                         <div class="mb-3 mb-sm-0">
                                             <input type="text" class="form-control" placeholder="Job Title or Keyword">
@@ -465,6 +465,17 @@
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/nav.js"></script>
         <script src="js/main.js"></script>
+        <script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"2be4d39bc57799e2359e3308fc052543f","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
     </body>
 
 

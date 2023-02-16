@@ -48,6 +48,7 @@ else {
 
 ?>
 	<br><button type="button" onclick="window.location.href='http://localhost/We-Connect/customer/customer_index.php';">Home</button>
+	<button onClick="window.print()">Print this page</button>
 	<!-- <button type="button" onclick="window.location.href='http://localhost/We-Connect/customer/customer_index.php';">Print</button> -->
 </body>
 </html>
