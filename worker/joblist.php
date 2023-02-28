@@ -161,7 +161,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <div>
 
                 <?php
-                                         $sql="SELECT * FROM tbl_job_details";
+                                         $sql="SELECT * FROM tbl_job_details WHERE `status`=1";
                                         $result = $connect->query($sql);
                                          if($result->num_rows > 0){ 
                                         while($row = $result->fetch_assoc()) {

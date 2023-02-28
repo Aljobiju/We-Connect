@@ -143,7 +143,9 @@ function validateForm(name)
                 <h1>New Job</h1>
                 <p class="pxp-text-light">Add a new job to your jobs list.</p>
 
-                <form action="add_new_job.php" method="POST"  onsubmit="return validateForm(document.form1.jobtitle)" name="form1">
+                <form action="add_new_job.php" method="POST"  
+                
+                >
                     <div class="row mt-4 mt-lg-5">
                         <div class="col-xxl-6">
                             <div class="mb-3">

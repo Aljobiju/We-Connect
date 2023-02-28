@@ -51,7 +51,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <div class="pxp-header-container">
                     <div class="pxp-logo">
                         <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
-                    </div>
+                    </div> 
                     <div class="pxp-header-right">
                         <nav class="pxp-nav dropdown-hover-all d-none d-xl-block">
                             <ul>

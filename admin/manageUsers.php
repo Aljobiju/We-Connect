@@ -184,6 +184,15 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 							<li><a href="manageWorkers.php">Manage Workers</a></li>
                         </ul>
                     </li>
+                    <li class="has-menu"><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-network"></i>
+							<span class="nav-text">Job Details</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <!-- <li><a href="table-bootstrap-basic.html">Bootstrap</a></li> -->
+							<li><a href="jobDetails.php">Applied jobs</a></li>
+                        </ul>
+                    </li>
                 </ul>
 				
 				<!-- <div class="copyright">

@@ -227,8 +227,8 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
             <div class="container-fluid">
                 <div class="page-titles">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="javascript:void(0)">Workers</a></li>
-						<li class="breadcrumb-item active"><a href="javascript:void(0)">Manage Workers</a></li>
+						<li class="breadcrumb-item"><a href="javascript:void(0)">Job Details</a></li>
+						<li class="breadcrumb-item active"><a href="javascript:void(0)">Applied Jobs</a></li>
 					</ol>
                 </div>
                 <!-- row -->
@@ -238,7 +238,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 					<div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Worker Information</h4>
+                                <h4 class="card-title">Applied Job Details</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -246,12 +246,15 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                                         <thead>
                                             <tr>
                                                
-                                                <th>Customer name</th>
-                                                <th>Mobile</th>
-                                                <th>Email</th>
-                                                <th>DOB</th>
-                                                <th>Address</th>
-                                                <th>Status</th>
+                                                <th>Recruiter Name</th>
+                                                <th>Title</th>
+                                                <th>District</th>
+                                                <th>City</th>
+                                                <th>Description</th>
+                                                <th>Experience</th>
+                                                <th>Job type</th>
+                                                <th>Salary</th>
+                                                <th>Posted at</th>
                                                 <!-- <th>Table no</th> -->
                                                 <th>Action</th>
                                             </tr>
@@ -260,19 +263,23 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                                         <tbody>
                                         
                                         <?php
-                                         $sql="SELECT * FROM tbl_worker";
+                                         $sql="SELECT * FROM tbl_job_details";
                                         $result = $connect->query($sql);
                                          if($result->num_rows > 0){ 
                                         while($row = $result->fetch_assoc()) {
-                                            $user_id=trim($row['user_id']);
+                                            $user_id=$row['id'];
                                             ?>
                                                 <tr>
                                             
-                                                <td><?php echo $row['wor_name'];?></td>
-                                                <td><?php echo $row ['mob']; ?></td>
-                                                <td><?php echo $row['email'] ;?></td>
-                                                <td><?php echo $row['dob']; ?></td>
-                                                <td><?php echo $row['address']; ?></td>
+                                                <td><?php echo $row['user_name'];?></td>
+                                                <td><?php echo $row ['job_title']; ?></td>
+                                                <td><?php echo $row['district'] ;?></td>
+                                                <td><?php echo $row['city']; ?></td>
+                                                <td><?php echo $row['job_description']; ?></td>
+                                                <td><?php echo $row['experience']; ?></td>
+                                                <td><?php echo $row['job_type']; ?></td>
+                                                <td><?php echo $row['salary']; ?></td>
+                                                <td><?php echo $row['job_created_at']; ?></td>
 												<td>
 													
                                                         <?php
@@ -280,17 +287,29 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                                                         ?>
                                                         <span class="badge light badge-danger">
 														<i class="fa fa-circle text-danger me-1"></i>
-														<?php echo 'Inactive'; ?>
+														<?php 
+                                                        echo 'pending'; 
+                                                        ?>
                                                         </span>
                                                         <?php
                                                             } 
-                                                        else
+                                                        else if($row['status'] == 1)
                                                         {
                                                             ?>
                                                             <span class="badge light badge-success">
                                                             <i class="fa fa-circle text-success me-1"></i>
-														<?php echo 'Active'; 
-                                                        }?>
+														<?php 
+                                                        echo 'Approved'; 
+                                                        }
+                                                        else
+                                                        {
+                                                            ?>
+                                                            <span class="badge light badge-warning">
+                                                            <i class="fa fa-circle text-warning me-1"></i>
+														<?php 
+                                                        echo 'Rejected'; 
+                                                        }
+                                                        ?>
                                                         </span>
 													
 												</td>
@@ -303,8 +322,8 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 															<!-- <a class="dropdown-item" href="#enable_user">Enable</a>
 															<a class="dropdown-item" href="#disable_user">Disable</a> -->
 
-                                                            <a class="dropdown-item" href="disableWorker.php?uid= <?php echo $user_id ?> ">Disable</a>
-                                                             <a class="dropdown-item" href="enableWorker.php?uid= <?php echo $user_id ?> ">Enable</a>
+                                                            <a class="dropdown-item" href="rejectJob.php?uid= <?php echo $user_id ?> ">Reject</a>
+                                                             <a class="dropdown-item" href="approveJob.php?uid= <?php echo $user_id ?> ">Approve</a>
                                                              
 														</div>
 													</div>
@@ -334,7 +353,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright © Designed & Developed by : AljoBIju</p>
+                <p>Copyright © Designed & Developed by : AljoBiju</p>
             </div>
         </div>
         <!--**********************************
