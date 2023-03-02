@@ -112,18 +112,25 @@
 			});
 		}
 	}
+
+
 	var columnChart = function(){
 		var options = {
 			series: [{
-				name: 'Aplication Sent',
-				data: [40, 55, 15, 50, 70, 20, 55]
-			}, {
+				name: 'Jobs Reviewed',
+				data: [40,0,0,0]
+			},
+			 {
 				name: 'Appllication Answered',
-				data: [55, 55, 35, 15,  35, 55, 20]
+				data: [0, 55, 0, 0]
 			}, {
 				name: 'Hired',
-				data: [20, 17, 55, 45, 30, 65, 50]
-			}],
+				data: [0, 0, 100, 0]
+			}, {
+				name: 'Pending',
+				data: [0, 0, 0,95 ]
+			}
+		],
 			chart: {
 				type: 'bar',
 				height: 350,
@@ -151,14 +158,14 @@
 					startingShape: "rounded",
 					backgroundRadius: 10,
 					colors: {
-						backgroundBarColors: ['#ECECEC', '#ECECEC', '#ECECEC', '#ECECEC', '#ECECEC', '#ECECEC', '#ECECEC'],
+						backgroundBarColors: ['#ECECEC', '#ECECEC', '#ECECEC', '#ECECEC', '#ECECEC'],
 						backgroundBarOpacity: 1,
 						backgroundBarRadius: 10,
 					},
 				},
 				
 			},
-			colors:['#2BC155', '#FF9B52', '#3F9AE0'],
+			colors:['#2BC155', '#FF9B52', '#3F9AE0', '#F08080'],
 			xaxis: {
 				show: true,
 				axisBorder: {
@@ -178,7 +185,7 @@
 					show: false,
 				},
 				
-				categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+				categories: ['Sun', 'Mon', 'Tue', 'Wed'],
 			},
 			yaxis: {
 				show: false

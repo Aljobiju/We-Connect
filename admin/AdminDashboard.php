@@ -1,11 +1,12 @@
 <?php
 include('../config/connect.php');
 session_start();
+// $counter=$_SESSION['counter'];
 if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
      header("Location: ../login.php");
     die();
 } else {
-    
+	// $counter=$_SESSION["counter"];
 	?>
 <!DOCTYPE html>
 <html lang="en">
@@ -246,7 +247,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 								<div class="card overflow-hidden">
 									<div class="card-header border-0 pb-0">
 										<h4 class="fs-20 text-black">Profile Strength</h4>
-										<div class="dropdown float-right custom-dropdown mb-0">
+										<!-- <div class="dropdown float-right custom-dropdown mb-0">
 											<div class="" data-bs-toggle="dropdown" role="button" aria-expanded="false">
 												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -258,7 +259,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 												<a class="dropdown-item" href="javascript:void(0);">Details</a>
 												<a class="dropdown-item text-danger" href="javascript:void(0);">Cancel</a>
 											</div>
-										</div>
+										</div> -->
 									</div>
 									<div class="card-body pb-4">
 										<div class="row">
@@ -290,7 +291,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 												</div>
 												<div class="d-flex align-items-center">
 													<svg class="me-3 min-w32" width="32" height="23" viewBox="0 0 32 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<rect width="32" height="23" rx="11.5" fill="#C4C4C4"/>
+														<rect width="32" height="23" rx="11.5" fill="#F08080"/>
 													</svg>
 													<span class="fs-18 text-black me-3 font-w600">10%</span>
 													<span class="fs-14">Pending</span>
@@ -340,8 +341,8 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 							<div class="col-xl-4 col-xxl-6 col-lg-4 col-sm-6">
 								<div class="card">
 									<div class="card-body">
-										<p class="text-black mb-0">Profile Viewed</p>
-										<span class="fs-28 text-black font-w600 mb-5 d-block">456k</span>
+										<p class="text-black mb-0">Website Visited</p>
+										<span class="fs-28 text-black font-w600 mb-5 d-block"></span>
 										<div class="d-flex align-items-center">
 											<svg class="min-w42 me-3 primary-icon" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M21 6.99982C12.021 6.99982 4.20051 12.6394 0 21C4.20051 29.3622 12.021 35.0002 21 35.0002C29.979 35.0002 37.7995 29.3622 42 21C37.7995 12.6394 29.979 6.99982 21 6.99982ZM21 29.7502C16.1668 29.7502 12.2498 25.8332 12.2498 21C12.2498 16.1668 16.1668 12.2498 21 12.2498C25.8332 12.2498 29.7502 16.1668 29.7502 21C29.7502 25.8332 25.8332 29.7502 21 29.7502Z" fill="#40189D"/>
@@ -357,9 +358,19 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 							</div>
 							<div class="col-xl-4 col-xxl-6 col-lg-4 col-sm-6">
 								<div class="card">
+								<?php
+													$a=0;
+                                         $sql3="SELECT * FROM tbl_job_details";
+                                        $result3 = $connect->query($sql3);
+                                         if($result3->num_rows > 0){ 
+                                         while($row = $result3->fetch_assoc())
+										 {
+										 $a++;
+										 }}
+                                            ?>
 									<div class="card-body">
-										<p class="text-black mb-0">Unread Messages</p>
-										<span class="fs-28 text-black font-w600 mb-5 d-block">28</span>
+										<p class="text-black mb-0">Applied Jobs</p>
+										<span class="fs-28 text-black font-w600 mb-5 d-block"><?php echo $a ?></span>
 										<div class="d-flex align-items-center">
 											<svg class="min-w42 me-3 primary-icon"  width="42" height="42" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M33.0465 38.8331C33.3981 38.8331 33.745 38.9669 34.0088 39.2217C35.6956 40.8505 38.1561 41.3929 40.3434 40.714C38.9357 37.7814 38.7407 34.4217 39.8315 31.3109C41.1853 27.4404 41.5246 23.5611 39.9839 19.6703C38.6302 16.2524 36.0181 13.4128 32.7122 11.7935C32.9156 12.8777 33.0181 13.9825 33.0181 15.0989C33.0182 19.8378 31.196 24.2948 27.8873 27.6491C24.5783 31.0038 20.1426 32.8901 15.3975 32.9606C14.5158 32.9744 13.6382 32.9225 12.7705 32.8082C15.3784 37.3794 20.2967 40.3565 25.7014 40.4367C28.0657 40.4732 30.3359 39.9779 32.45 38.9683C32.6404 38.8773 32.8443 38.8331 33.0465 38.8331Z" fill="#40189D"/>
@@ -375,8 +386,18 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 							<div class="col-xl-4 col-xxl-6 col-lg-4 col-sm-6">
 								<div class="card">
 									<div class="card-body">
-										<p class="text-black mb-0">Application Sent</p>
-										<span class="fs-28 text-black font-w600 mb-5 d-block">651</span>
+									<?php
+													$b=0;
+                                         $sql4="SELECT * FROM tbl_job_details WHERE `status`= 1";
+                                        $result4 = $connect->query($sql4);
+                                         if($result4->num_rows > 0){ 
+                                         while($row = $result4->fetch_assoc())
+										 {
+										 $b++;
+										 }}
+                                            ?>
+										<p class="text-black mb-0">Approved Jobs</p>
+										<span class="fs-28 text-black font-w600 mb-5 d-block"><?php echo $b ?></span>
 										<div class="d-flex align-items-center">
 											<svg class="min-w42 me-3" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g clip-path="url(#clip0)">
@@ -396,9 +417,19 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 							</div>
 							<div class="col-xl-4 col-xxl-6 col-lg-4 col-sm-6">
 								<div class="card">
+								<?php
+													$c=0;
+                                         $sql5="SELECT * FROM tbl_applied_jobs";
+                                        $result5 = $connect->query($sql5);
+                                         if($result5->num_rows > 0){ 
+                                         while($row = $result5->fetch_assoc())
+										 {
+										 $c++;
+										 }}
+                                            ?>
 									<div class="card-body">
-										<p class="text-black mb-0">App. Answered</p>
-										<span class="fs-28 text-black font-w600 mb-5 d-block">24</span>
+										<p class="text-black mb-0">Applications sent</p>
+										<span class="fs-28 text-black font-w600 mb-5 d-block"><?php echo $c ?></span>
 										<div class="d-flex align-items-center">
 											<svg class="min-w42 me-3"  width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M21.84 15.2366V5.88067C21.84 5.56149 21.6603 5.27085 21.3764 5.12804C21.0925 4.98522 20.7497 5.01713 20.496 5.20867L0.336 20.3287C0.124359 20.4866 0 20.7352 0 21.0007C0 21.2644 0.124359 21.513 0.336 21.6727L20.496 36.7927C20.7496 36.9842 21.0924 37.0128 21.3764 36.8717C21.6603 36.7289 21.84 36.4382 21.84 36.1207V26.9428C31.4647 27.3846 37.3766 30.4304 40.409 36.4952C40.5535 36.7859 40.8458 36.9606 41.16 36.9606C41.2238 36.9606 41.2876 36.9522 41.3532 36.937C41.7328 36.848 42 36.5103 42 36.1206C42 24.3623 34.1157 16.2379 21.84 15.2366Z" fill="#FF9330"/>
@@ -444,8 +475,8 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 							<div class="col-xl-12">
 								<div class="card">
 									<div class="card-header border-0 pb-0">
-										<h4 class="fs-20 text-black">Network</h4>
-										<div class="dropdown float-right custom-dropdown mb-0">
+										<h4 class="fs-20 text-black">Users</h4>
+										<!-- <div class="dropdown float-right custom-dropdown mb-0">
 											<div class="" data-bs-toggle="dropdown" role="button" aria-expanded="false">
 												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -457,7 +488,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 												<a class="dropdown-item" href="javascript:void(0);">Details</a>
 												<a class="dropdown-item text-danger" href="javascript:void(0);">Cancel</a>
 											</div>
-										</div>
+										</div> -->
 									</div>
 									<div class="card-body">
 										<div class="row align-items-center">	
@@ -466,25 +497,45 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 													<svg class="me-3 min-w30" width="30" height="30" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<rect width="31" height="31" rx="15.5" fill="#374C98"/>
 													</svg>
+													<?php
+													$i=0;
+                                         $sql="SELECT * FROM tbl_register WHERE `type_id`= 2";
+                                        $result = $connect->query($sql);
+                                         if($result->num_rows > 0){ 
+                                         while($row = $result->fetch_assoc()){
+										 $i++;
+										 }}
+                                            ?>
 													<div>
-														<p class="fs-14 font-w500 mb-1">Following</p>
-														<span class="fs-20 text-black font-w600">567 Companies</span>
+														<p class="fs-14 font-w500 mb-1">Workers</p>
+														<span class="fs-20 text-black font-w600"><?php echo $i;?></span>
 													</div>
 												</div>
 												<div class="d-flex align-items-center">
 													<svg class="me-3 min-w30" width="30" height="30" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<rect width="31" height="31" rx="15.5" fill="#FBA92D"/>
 													</svg>
+													<?php
+													$j=0;
+                                         $sql1="SELECT * FROM tbl_register WHERE `type_id`= 3";
+                                        $result1 = $connect->query($sql1);
+                                         if($result1->num_rows > 0){ 
+                                         while($row = $result1->fetch_assoc()){
+										 $j++;
+										 }}
+										 $x=$j/$i;
+										 $y=$i/$j;
+                                            ?>
 													<div>
-														<p class="fs-14 font-w500 mb-1">Followers</p>
-														<span class="fs-20 text-black font-w600">8,334 Person</span>
+														<p class="fs-14 font-w500 mb-1">Recruiters</p>
+														<span class="fs-20 text-black font-w600"><?php echo $j;?></span>
 													</div>
 												</div>
 											</div>
 											<div class="col-sm-6 text-center">
 												<div class="d-inline-block network-chart mb-2 relative donut-chart-sale me-4">
-													<span class="donut" data-peity='{ "fill": ["rgb(55, 76, 152)", "rgba(255, 171, 45, 1)"],   "innerRadius": 65, "radius": 10}'>3/9</span>
-													<small class="text-black fs-30">23%</small>
+													<span class="donut" data-peity='{ "fill": ["rgb(55, 76, 152)", "rgba(255, 171, 45, 1)"],   "innerRadius": 65, "radius": 10}'><?php echo $j; ?>/<?php echo $i; ?></span>
+													<!-- <small class="text-black fs-30"></small> -->
 												</div>
 											</div>
 										</div>
