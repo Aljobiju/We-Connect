@@ -94,7 +94,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
                             <div class="dashboard_bar">
-                                Statistics
+                                Prediction
                             </div>
                         </div>
 
@@ -178,7 +178,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 						</a>
                         <ul aria-expanded="false">
 
-							<li><a href="AdminDashboard.php">Statistics</a></li>
+							<li><a href="AdminDashboard.php">Prediction</a></li>
 						</ul>
                     </li>
                     <li class="has-menu"><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -214,7 +214,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 						</a>
                         <ul aria-expanded="false">
                             <!-- <li><a href="table-bootstrap-basic.html">Bootstrap</a></li> -->
-							<li><a href="fakeorreal.php">Fake / Real jobs</a></li>
+							<li><a href="jobDetails.php">Fake / Real jobs</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -236,8 +236,8 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
             <div class="container-fluid">
                 <div class="page-titles">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="javascript:void(0)">Job Details</a></li>
-						<li class="breadcrumb-item active"><a href="javascript:void(0)">Applied Jobs</a></li>
+						<li class="breadcrumb-item"><a href="javascript:void(0)">Prediction</a></li>
+						<li class="breadcrumb-item active"><a href="javascript:void(0)">Fake or Real</a></li>
 					</ol>
                 </div>
                 <!-- row -->
@@ -257,13 +257,14 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                                                
                                                 <th>Recruiter Name</th>
                                                 <th>Title</th>
-                                                <th>District</th>
+                                                <!-- <th>District</th> -->
                                                 <th>City</th>
                                                 <th>Description</th>
-                                                <th>Experience</th>
+                                                <!-- <th>Experience</th> -->
                                                 <th>Job type</th>
-                                                <th>Salary</th>
+                                                <!-- <th>Salary</th> -->
                                                 <th>Posted at</th>
+                                                <th>Prediction</th>
                                                 <th>Status</th>
                                                 <!-- <th>Table no</th> -->
                                                 <th>Action</th>
@@ -283,13 +284,55 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                                             
                                                 <td><?php echo $row['user_name'];?></td>
                                                 <td><?php echo $row ['job_title']; ?></td>
-                                                <td><?php echo $row['district'] ;?></td>
+                                                
                                                 <td><?php echo $row['city']; ?></td>
                                                 <td><?php echo $row['job_description']; ?></td>
-                                                <td><?php echo $row['experience']; ?></td>
+                                                
                                                 <td><?php echo $row['job_type']; ?></td>
-                                                <td><?php echo $row['salary']; ?></td>
+                                               
                                                 <td><?php echo $row['job_created_at']; ?></td>
+
+
+<?php
+
+                                                $data = array(
+    array('title' => $row['job_title'], 'description' => $row['job_description']),
+);
+
+// Define the criteria for identifying fake job postings
+$fake_criteria = array(
+    'title' => array('work from home', 'remote', 'no experience required'),
+    'description' => array('earn thousands of dollars', 'no experience needed', 'easy job'),
+);
+
+// Analyze the job postings and identify the fake ones
+$fake_postings = array();
+foreach ($data as $posting) {
+    foreach ($fake_criteria as $field => $keywords) {
+        foreach ($keywords as $keyword) {
+            if (stripos($posting[$field], $keyword) !== false) {
+                $fake_postings[] = $posting;
+                break 2;
+            }
+        }
+    }
+}
+
+// Print the results
+if (count($fake_postings) > 0) {?>
+    <td><?php echo 'fake'; ?></td>
+   <?php
+} else {?>
+    <td><?php echo 'real'; ?></td>
+    <?php
+}
+
+
+?>
+
+
+
+
 												<td>
 													
                                                         <?php
