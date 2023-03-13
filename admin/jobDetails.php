@@ -255,6 +255,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                                                 <th>Job type</th>
                                                 <th>Salary</th>
                                                 <th>Posted at</th>
+                                                <th>Status</th>
                                                 <!-- <th>Table no</th> -->
                                                 <th>Action</th>
                                             </tr>

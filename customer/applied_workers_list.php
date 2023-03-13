@@ -131,7 +131,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                             $result1 = $connect->query($sql1);
                                              if($result1->num_rows > 0){ 
                                             while($row = $result1->fetch_assoc()) {
-                                                 $user_id=$row['user_id'];
+                                                 $user_id=$row['user_id'];  
  
                                             ?>
                                         

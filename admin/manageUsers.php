@@ -90,7 +90,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 									<div class="input-group-append">
 										<button class="input-group-text"><i class="flaticon-381-search-2"></i></button>
 									</div>
-								</div>
+								</div> 
 							</li>
 							<li class="nav-item dropdown notification_dropdown">
                                 <a class="nav-link  ai-icon" href="#" role="button" data-bs-toggle="dropdown">

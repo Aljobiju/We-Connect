@@ -27,7 +27,7 @@ if (isset($_SESSION["wcSession"]) == session_id()) {
 
                 //No user exists
                 if ($checkEmailCount == 0) {
-                        $password = md5( $password);
+                        $password = md5( $password); 
                         $date = date("Y-m-d");
                         //Insert into database
                         $insertDb = "INSERT INTO `tbl_register`(`username`, `mob`, `email`,`dob`, `password`, `address`, `user_created_at`, `type_id`) VALUES ('$uname','$mob','$email','$dob','$password','$uaddress','$date','$role')";

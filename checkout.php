@@ -123,7 +123,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
 					</td>
 				</tr>
 				<tr>
-					<td>2</td>
+					<td>2</td> 
 					<td><label>CUSTID ::*</label></td>
 					<td><input id="CUST_ID" tabindex="2" maxlength="12" size="12" name="CUST_ID" autocomplete="off" value="CUST001" readonly></td>
 				</tr>

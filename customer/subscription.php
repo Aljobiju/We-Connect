@@ -164,7 +164,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             </div>
                             <div class="pxp-plans-card-1-bottom">
                                 <div class="pxp-plans-card-1-cta">
-                                    <a href="../checkout.php" class="btn rounded-pill pxp-card-btn">Choose Plan</a>
+                                    <a href="../razorpay.php" class="btn rounded-pill pxp-card-btn">Choose Plan</a>
                                 </div>
                             </div>
                         </div>
