@@ -94,7 +94,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
                             <div class="dashboard_bar">
-                                Statistics
+                                Applied Jobs
                             </div>
                         </div>
 

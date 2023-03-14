@@ -1,4 +1,10 @@
 <?php
+require_once '../vendor/autoload.php'; // assuming Phpml is installed using Composer
+// Import required libraries
+use Phpml\Classification\KNearestNeighbors;
+use Phpml\Classification\NaiveBayes;
+use Phpml\CrossValidation\RandomSplit;
+use Phpml\Dataset\CsvDataset;
 include('../config/connect.php');
 session_start();
 if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
@@ -178,7 +184,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 						</a>
                         <ul aria-expanded="false">
 
-							<li><a href="AdminDashboard.php">Prediction</a></li>
+							<li><a href="AdminDashboard.php">Statistics</a></li>
 						</ul>
                     </li>
                     <li class="has-menu"><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -295,6 +301,47 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 
 <?php
 
+
+
+// // Load the job postings dataset
+// // $dataset = file_get_contents('fake_job_postings.json');
+// $job_postings = json_decode($dataset, true);
+
+// // Preprocess the job postings dataset
+// $vectorized_job_postings = [];
+// foreach ($job_postings['data'] as $job_posting) {
+//     $vectorized_job_posting = [
+//         strlen($job_posting['title']),
+//         strlen($job_posting['description']),
+//         strlen($job_posting['company']),
+//         strlen($job_posting['location']),
+//         $job_posting['salary'] ? 1 : 0,
+//         $job_posting['date_posted'] ? 1 : 0,
+//     ];
+//     $vectorized_job_postings[] = $vectorized_job_posting;
+// }
+
+// // Train a k-NN model on the vectorized job postings
+// // $classifier = new KNearestNeighbors($k = 3);
+// $classifier->train($vectorized_job_postings, $job_postings['target']);
+
+// // Define a function to predict if a job posting is fake or real
+// function predict_job_posting($classifier, $job_posting) {
+//     $vectorized_job_posting = [
+//         strlen($job_posting['title']),
+//         strlen($job_posting['description']),
+//         strlen($job_posting['company']),
+//         strlen($job_posting['location']),
+//         $job_posting['salary'] ? 1 : 0,
+//         $job_posting['date_posted'] ? 1 : 0,
+//     ];
+//     $prediction = $classifier->predict([$vectorized_job_posting]);
+//     return $prediction[0];
+// }
+
+
+
+
                                                 $data = array(
     array('title' => $row['job_title'], 'description' => $row['job_description']),
 );
@@ -320,10 +367,19 @@ foreach ($data as $posting) {
 
 // Print the results
 if (count($fake_postings) > 0) {?>
-    <td><?php echo 'fake'; ?></td>
+    <td>
+    <span class="badge light badge-danger">
+<i class="fa fa-circle text-danger me-1"></i>    
+    <?php echo 'fake'; ?>
+    </span>
+</td>
    <?php
 } else {?>
-    <td><?php echo 'real'; ?></td>
+    <td>
+    <span class="badge light badge-success">        <i class="fa fa-circle text-success me-1"></i>    
+    <?php echo 'real'; ?>
+    </span>
+</td>
     <?php
 }
 

@@ -94,7 +94,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
                             <div class="dashboard_bar">
-                                Statistics
+                                Manage Workers
                             </div>
                         </div>
 
@@ -206,6 +206,15 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                         <ul aria-expanded="false">
                             <!-- <li><a href="table-bootstrap-basic.html">Bootstrap</a></li> -->
 							<li><a href="jobDetails.php">Applied jobs</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-menu"><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-network"></i>
+							<span class="nav-text">Prediction</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <!-- <li><a href="table-bootstrap-basic.html">Bootstrap</a></li> -->
+							<li><a href="jobDetails.php">Fake / Real jobs</a></li>
                         </ul>
                     </li>
                 </ul>
