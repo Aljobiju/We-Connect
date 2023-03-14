@@ -161,7 +161,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                     </div>
                 </nav>
             </div>
-        </div> -->
+        </div> 
         <!--**********************************
             Header end ti-comment-alt
         ***********************************-->
@@ -258,7 +258,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 
 <?php
 $sq = "SELECT * from tbl_feedback";
-$resul = $conn->query($sq);
+$resul = $connect->query($sq);
 
 
 if ($resul->num_rows > 0) {
