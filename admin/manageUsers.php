@@ -195,6 +195,15 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                     </li>
                     <li class="has-menu"><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
 							<i class="flaticon-381-network"></i>
+							<span class="nav-text">Feedback</span>
+						</a>
+                        <ul aria-expanded="false">
+                            <!-- <li><a href="table-bootstrap-basic.html">Bootstrap</a></li> -->
+							<li><a href="display_feedback.php">Comments</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-menu"><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-network"></i>
 							<span class="nav-text">Prediction</span>
 						</a>
                         <ul aria-expanded="false">
