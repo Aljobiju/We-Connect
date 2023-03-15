@@ -113,7 +113,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 									</div>
 								</div>
 							</li>
-							<li class="nav-item dropdown notification_dropdown">
+							<!-- <li class="nav-item dropdown notification_dropdown">
                                 <a class="nav-link  ai-icon" href="#" role="button" data-bs-toggle="dropdown">
                                     <svg width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M9.45251 25.6682C10.0606 27.0357 11.4091 28 13.0006 28C14.5922 28 15.9407 27.0357 16.5488 25.6682C15.4266 25.7231 14.2596 25.76 13.0006 25.76C11.7418 25.76 10.5748 25.7231 9.45251 25.6682Z" fill="#3E4954"/>
@@ -139,7 +139,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 									</div>
                                     <a class="all-notification" href="#">See all notifications <i class="ti-arrow-right"></i></a>
                                 </div>
-                            </li>
+                            </li> -->
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
                                     <img src="images/profile/17.jpg" width="20" alt=""/>

@@ -27,7 +27,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <link rel="stylesheet" href="../css/animate.css">
         <link rel="stylesheet" href="../css/style.css">
 
-        <title>We-Connect - Worker dashboard - Applications</title>
+        <title>We-Connect - Worker dashboard - Feedback</title>
     </head>
     <body style="background-color: var(--pxpSecondaryColorLight);">
      <!-- Google translate start -->
@@ -50,9 +50,9 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <ul class="list-unstyled">
                     <li><a href="worker_index.php"><span class="fa fa-home"></span>Home</a></li>
                     <li><a href="WorkerDashboard-profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
-                    <li class="pxp-active"><a href="WorkerDashboard-applications.php"><span class="fa fa-file-text-o"></span>Applications</a></li>
+                    <li><a href="WorkerDashboard-applications.php"><span class="fa fa-file-text-o"></span>Applications</a></li>
                     <!-- <li><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li> -->
-                    <li><a href="WorkerDashboard-change_password.php"><span class="fa fa-lock"></span>Change Password</a></li>
+                    <li class="pxp-active"><a href="WorkerDashboard-change_password.php"><span class="fa fa-lock"></span>Change Password</a></li>
                     <li class="nav-item"><a href="WorkerDashboard-feedback.php"><span class="fa fa-pencil"></span>Feedback</a></li>
                 </ul>
                 <!-- <div class="pxp-dashboard-side-label mt-3 mt-lg-4">Insights</div>
@@ -163,132 +163,28 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             </div>
 
             <div class="pxp-dashboard-content-details">
-                <h1>Applications</h1>
-                <p class="pxp-text-light">Detailed list of your job applications.</p>
+                <h1>Feedback</h1>
+                <!-- <p class="pxp-text-light">Choose a new account password.</p> -->
+                <?php
+//  $sql="SELECT * FROM tbl_worker WHERE `user_id`= $_SESSION[userId]";
+//  $result = $connect->query($sql);
+//  while($row = $result->fetch_assoc()) {
+    // $user_id=trim($row['user_id']);
+     ?>
 
-                <div class="mt-4 mt-lg-5">
-                    <div class="row justify-content-between align-content-center">
-                        <!-- <div class="col-auto order-2 order-sm-1">
-                            <div class="pxp-candidate-dashboard-jobs-bulk-actions mb-3">
-                                <select class="form-select">
-                                    <option>Bulk actions</option>
-                                    <option>Delete</option>
-                                </select>
-                                <button class="btn ms-2">Apply</button>
-                            </div>
-                        </div> -->
-                        <!-- <div class="col-auto order-1 order-sm-2">
-                            <div class="pxp-candidate-dashboard-jobs-search mb-3">
-                                <div class="pxp-candidate-dashboard-jobs-search-results me-3">16 job applications</div>
-                                <div class="pxp-candidate-dashboard-jobs-search-search-form">
-                                    <div class="input-group">
-                                        <span class="input-group-text"><span class="fa fa-search"></span></span>
-                                        <input type="text" class="form-control" placeholder="Search jobs...">
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
+                <form action="ins_feedback.php" method="POST">
+
+                    <div class="row">
+                        <div class="mb-3">
+                        <label for="pxp-candidate-about" class="form-label">type your comments</label>
+                        <textarea class="form-control" id="feed" name="feed" placeholder="Type your feedback here..."></textarea>
                     </div>
-                    <div class="table-responsive">
-
-                   
-                        <table class="table table-hover align-middle">
-                            <thead>
-                                <tr>
-                                    <th style="width: 25%;">Job</th>
-                                    <th style="width: 15%;">Recruiter</th>
-                                    <!-- <th style="width: 20%;">Category</th> -->
-                                    <th style="width: 12%;">Type</th>
-                                    <th>Date<span class="fa fa-angle-up ms-3"></span></th>
-                                    <th style="width: 25%;">Status</th>
-                                    <th>&nbsp;</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <?php
-                                         $sql="SELECT * FROM tbl_job_details WHERE id IN (SELECT job_id FROM tbl_applied_jobs WHERE user_id='$_SESSION[userId]')";
-                                        //  $sql1="SELECT * FROM tbl_worker WHERE user_id IN (SELECT user_id FROM tbl_applied_jobs WHERE job_id='$jId')";
-                                        $result = $connect->query($sql);
-                                         if($result->num_rows > 0){ 
-                                        while($row = $result->fetch_assoc()) {
-                                            $job_id=$row['id'];
-                                            ?>
-                                <tr>
-                                    <td>
-                                        <a href="#">
-                                            <div class="pxp-candidate-dashboard-job-title"><?php echo $row['job_title'] ?></div>
-                                            <div class="pxp-candidate-dashboard-job-location"><span class="fa fa-globe me-1"></span><?php echo $row['city'] ?>,<?php echo $row['district'] ?></div>
-                                        </a>
-                                    </td>
-                                    <td><a href="#" class="pxp-candidate-dashboard-job-company"><?php echo $row['user_name'] ?></a></td>
-                                    <!-- <td><div class="pxp-candidate-dashboard-job-category">Marketing & Communication</div></td> -->
-                                    <td><div class="pxp-candidate-dashboard-job-type"><?php echo $row['job_type'] ?></div></td>
-                                    <td><div class="pxp-candidate-dashboard-job-date mt-1"><?php echo $row['job_created_at'] ?></div></td>
-                                    
-                                    <?php
-                                        
-                                          $sql1="SELECT * FROM tbl_applied_jobs WHERE job_id='$job_id' && user_id='$_SESSION[userId]'";
-                                         $result1 = $connect->query($sql1);
-                                          if($result1->num_rows > 0){ 
-                                          while($row = $result1->fetch_assoc()) {
-                                            //  $job_id=$row['id'];
-                                            
-                                                            if ($row['status'] == 1) {
-                                                        ?>
-														 <!-- <td><div class="pxp-candidate-dashboard-job-date mt-1">Approved</div></td> -->
-                                                         <td><div class="pxp-company-dashboard-job-status"><span class="badge rounded-pill bg-success">Approved</span></div></td>
-                                                    <?php
-                                                           } 
-                                                        else
-                                                        {
-                                                            ?>
-                                                            
-                                                            <td><div class="pxp-company-dashboard-job-status"><span class="badge rounded-pill bg-danger">Pending</span></div></td>
-                                                            <!-- <td><div class="pxp-candidate-dashboard-job-date mt-1">Pending</div></td> -->
-                                                            <?php
-                                                        }?>
-
-                                                
-
-
-                                    <!-- <td><div class="pxp-company-dashboard-job-status"><span class="badge rounded-pill bg-success">Approved</span></div></td> -->
-                                    
-                                   <?php
-                                          
-                                                    }}
-                                                }
-                                        }
-                                          ?>
-        
-                                </tr>
-                                <?php
-                                        //  }
-                                        // }
-                                
-                                        ?>
-                                
-                            </tbody>
-                          
-                        </table>
-
-                        <!-- <div class="row mt-4 mt-lg-5 justify-content-between align-items-center">
-                            <div class="col-auto">
-                                <nav class="mt-3 mt-sm-0" aria-label="Applications list pagination">
-                                    <ul class="pagination pxp-pagination">
-                                        <li class="page-item active" aria-current="page">
-                                            <span class="page-link">1</span>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <div class="col-auto">
-                                <a href="#" class="btn rounded-pill pxp-section-cta mt-3 mt-sm-0">Show me more<span class="fa fa-angle-right"></span></a>
-                            </div>
-                        </div> -->
                     </div>
-                </div>
+
+                    <div class="mt-4 mt-lg-5">
+                        <button type="submit" id="subfeed" name="subfeed" class="btn rounded-pill pxp-section-cta" >Submit</button>
+                    </div>
+                </form>
             </div>
 
             <footer>
@@ -306,6 +202,6 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
 
 </html>
 <?php
-                                         }
+ }
 
-?>
+ ?>

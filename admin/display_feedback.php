@@ -99,7 +99,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
                         </div>
 
                         <ul class="navbar-nav header-right">
-							<li class="nav-item">
+							<!-- <li class="nav-item">
 								<div class="input-group search-area d-lg-inline-flex d-none">
 									<input type="text" class="form-control" placeholder="Search something here...">
 									<div class="input-group-append">
@@ -133,7 +133,7 @@ if (isset($_SESSION["wcSessionAdmin"])  != session_id()) {
 									</div>
                                     <a class="all-notification" href="#">See all notifications <i class="ti-arrow-right"></i></a>
                                 </div>
-                            </li>
+                            </li> -->
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
                                     <img src="images/profile/17.jpg" width="20" alt=""/>

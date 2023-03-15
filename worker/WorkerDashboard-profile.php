@@ -51,8 +51,9 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                     <li><a href="worker_index.php"><span class="fa fa-home"></span>Home</a></li>
                     <li class="pxp-active"><a href="WorkerDashboard-profile.php"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                     <li><a href="WorkerDashboard-applications.php"><span class="fa fa-file-text-o"></span>Applications</a></li>
-                    <li><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li>
+                    <!-- <li><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li> -->
                     <li><a href="WorkerDashboard-change_password.php"><span class="fa fa-lock"></span>Change Password</a></li>
+                    <li class="nav-item"><a href="WorkerDashboard-feedback.php"><span class="fa fa-pencil"></span>Feedback</a></li>
                 </ul>
                 <!-- <div class="pxp-dashboard-side-label mt-3 mt-lg-4">Insights</div>
                 <ul class="list-unstyled">
@@ -109,8 +110,9 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <li class="nav-item"><a href="worker_index.php"><span class="fa fa-home"></span>Home</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-profile.html"><span class="fa fa-pencil"></span>Edit Profile</a></li>
                                     <li class="nav-item"><a href="candidate-dashboard-applications.html"><span class="fa fa-file-text-o"></span>Applications</a></li>
-                                    <li class="nav-item"><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li>
+                                    <!-- <li class="nav-item"><a href="candidate-dashboard-fav-jobs.html"><span class="fa fa-heart-o"></span>Favourite Jobs</a></li> -->
                                     <li class="nav-item"><a href="WorkerDashboard-change_password.php"><span class="fa fa-lock"></span>Change Password</a></li>
+                                    <li class="nav-item"><a href="WorkerDashboard-feedback.php"><span class="fa fa-pencil"></span>Feedback</a></li>
                                     <!-- <li class="pxp-dropdown-header mt-4">Insights</li>
                                     <li class="nav-item">
                                         <a href="candidate-dashboard-inbox.html" class="d-flex justify-content-between align-items-center">
