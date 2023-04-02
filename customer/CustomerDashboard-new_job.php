@@ -71,7 +71,7 @@ function validateForm(name)
                     <li class="pxp-active"><a href="CustomerDashboard-new_job.php"><span class="fa fa-file-text-o"></span>New Job</a></li>
                     <li><a href="CustomerDashboard-manage_jobs.php"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
                     <!-- <li><a href="company-dashboard-candidates.html"><span class="fa fa-user-circle-o"></span>Candidates</a></li> -->
-                    <li><a href="company-dashboard-subscriptions.html"><span class="fa fa-credit-card"></span>Subscriptions</a></li>
+                    <!-- <li><a href="company-dashboard-subscriptions.html"><span class="fa fa-credit-card"></span>Subscriptions</a></li> -->
                     <li class="nav-item"><a href="feedback.php"><span class="fa fa-pencil"></span>Feedback</a></li>
                     <li><a href="CustomerDashboard-changepassword.php"><span class="fa fa-lock"></span>Change Password</a></li>
                 </ul>
@@ -117,7 +117,7 @@ function validateForm(name)
                                     <li class="nav-item"><a href="CustomerDashboard-new_job.php"><span class="fa fa-file-text-o"></span>New Job</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-manage_jobs.php"><span class="fa fa-briefcase"></span>Manage Jobs</a></li>
                                     <!-- <li class="nav-item"><a href="company-dashboard-candidates.html"><span class="fa fa-user-circle-o"></span>Candidates</a></li> -->
-                                    <li class="nav-item"><a href="company-dashboard-subscriptions.html"><span class="fa fa-credit-card"></span>Subscriptions</a></li>
+                                    <!-- <li class="nav-item"><a href="company-dashboard-subscriptions.html"><span class="fa fa-credit-card"></span>Subscriptions</a></li> -->
                                     <li class="nav-item"><a href="feedback.php"><span class="fa fa-pencil"></span>Feedback</a></li>
                                     <li class="nav-item"><a href="CustomerDashboard-changepassword.php"><span class="fa fa-lock"></span>Change Password</a></li>
                                 </ul>
@@ -146,8 +146,7 @@ function validateForm(name)
                 <p class="pxp-text-light">Add a new job to your jobs list.</p>
 
                 <form action="add_new_job.php" method="POST"  
-                
-                >
+                onsubmit="return validateForm(document.form1.jobtitle)" name="form1">
                     <div class="row mt-4 mt-lg-5">
                         <div class="col-xxl-6">
                             <div class="mb-3">

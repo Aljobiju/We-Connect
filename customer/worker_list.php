@@ -104,20 +104,20 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <h1>Search Workers</h1>
                 <div class="pxp-hero-subtitle pxp-text-light">Work with the most talented candidates in the world</div>
                 <div class="pxp-hero-form pxp-hero-form-round pxp-large mt-3 mt-lg-4">
-                    <form class="row gx-3 align-items-center">
+                    <form class="row gx-3 align-items-center" method="GET" action="search.php">
                         <div class="col-12 col-lg">
                             <div class="input-group mb-3 mb-lg-0">
                                 <span class="input-group-text"><span class="fa fa-search"></span></span>
-                                <input type="text" class="form-control" placeholder="Candidate Name or Keyword">
+                                <input type="text" name="query1" class="form-control" placeholder="Candidate Name or Keyword">
                             </div>
                         </div>
                         <div class="col-12 col-lg pxp-has-left-border">
                             <div class="input-group mb-3 mb-lg-0">
                                 <span class="input-group-text"><span class="fa fa-globe"></span></span>
-                                <input type="text" class="form-control" placeholder="Location">
+                                <input type="text" name="query2" class="form-control" placeholder="Location">
                             </div>
                         </div>
-                        <div class="col-12 col-lg pxp-has-left-border">
+                        <!-- <div class="col-12 col-lg pxp-has-left-border">
                             <div class="input-group mb-3 mb-lg-0">
                                 <span class="input-group-text"><span class="fa fa-folder-o"></span></span>
                                 <select class="form-select">
@@ -133,7 +133,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     <option>Software Engineering</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-12 col-lg-auto">
                             <button>Find Candidates</button>
                         </div>
@@ -149,13 +149,13 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                         <div class="col-auto">
                             <h2><span class="pxp-text-light">Showing </span> <span class="pxp-text-light">candidates</span></h2>
                         </div>
-                        <div class="col-auto">
+                        <!-- <div class="col-auto">
                             <select class="form-select">
                                 <option value="0" selected>Most relevant</option>
                                 <option value="1">Name Asc</option>
                                 <option value="2">Name Desc</option>
                             </select>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 

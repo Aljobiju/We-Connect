@@ -97,9 +97,22 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             </div>
         </header>
 
+<?php
+ $sql5="SELECT * FROM tbl_customer WHERE `user_id`= $_SESSION[userId]";
+ $result5 = $connect->query($sql5);
+ if($result5->num_rows > 0){ 
+    while($row = $result5->fetch_assoc()) {
+  $n=$row['payment_status'];
+  if($n==0)
+ {
+   
+?>
+
+
+
         <section class="mt-100 pxp-no-hero">
             <div class="pxp-container">
-                <h2 class="pxp-section-h2">Price Plans</h2>
+                <h2 class="pxp-section-h2">Price P</h2>
                 <p class="pxp-text-light">Choose the plan that suits you best</p>
 
                 <div class="mt-4 mt-md-5">
@@ -113,34 +126,6 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 </div>
 
                 <div class="row mt-3 mt-md-4 pxp-animate-in pxp-animate-in-top">
-                    <!-- <div class="col-md-6 col-xl-4 col-xxl-3 pxp-plans-card-1-container">
-                        <div class="pxp-plans-card-1">
-                            <div class="pxp-plans-card-1-top">
-                                <div class="pxp-plans-card-1-title">Basic</div>
-                                <div class="pxp-plans-card-1-price">
-                                    <div class="pxp-plans-price-monthly">
-                                    ₹199<span class="pxp-period">/month</span>
-                                    </div>
-                                    <div class="pxp-plans-price-annual">
-                                    ₹189<span class="pxp-period">/year</span>
-                                    </div>
-                                </div>
-                                <div class="pxp-plans-card-1-list">
-                                    <ul class="list-unstyled">
-                                        <li><img src="images/check.svg" alt="">1 job posting</li>
-                                        <li><img src="images/check.svg" alt="">0 featured job</li>
-                                        <li><img src="images/check.svg" alt="">Job displayed for 20 days</li>
-                                        <li><img src="images/check.svg" alt="">Premium Support 24/7</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="pxp-plans-card-1-bottom">
-                                <div class="pxp-plans-card-1-cta">
-                                    <a href="#" class="btn rounded-pill pxp-card-btn">Choose Plan</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="col-md-6 col-xl-4 col-xxl-3 pxp-plans-card-1-container">
                         <div class="pxp-plans-card-1">
                             <div class="pxp-plans-card-1-top">
@@ -169,66 +154,16 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-md-6 col-xl-4 col-xxl-3 pxp-plans-card-1-container">
-                        <div class="pxp-plans-card-1 pxp-is-featured">
-                            <div class="pxp-plans-card-1-top">
-                                <div class="pxp-plans-card-1-featured-label">Recommended</div>
-                                <div class="pxp-plans-card-1-title">Professional</div>
-                                <div class="pxp-plans-card-1-price">
-                                    <div class="pxp-plans-price-monthly">
-                                    ₹499<span class="pxp-period">/month</span>
-                                    </div>
-                                    <div class="pxp-plans-price-annual">
-                                    ₹489<span class="pxp-period">/year</span>
-                                    </div>
-                                </div>
-                                <div class="pxp-plans-card-1-list">
-                                    <ul class="list-unstyled">
-                                        <li><img src="images/check-light.svg" alt="">1 job posting</li>
-                                        <li><img src="images/check-light.svg" alt="">0 featured job</li>
-                                        <li><img src="images/check-light.svg" alt="">Job displayed for 20 days</li>
-                                        <li><img src="images/check-light.svg" alt="">Premium Support 24/7</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="pxp-plans-card-1-bottom">
-                                <div class="pxp-plans-card-1-cta">
-                                    <a href="#" class="btn rounded-pill pxp-card-btn">Choose Plan</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="col-md-6 col-xl-4 col-xxl-3 pxp-plans-card-1-container">
-                        <div class="pxp-plans-card-1">
-                            <div class="pxp-plans-card-1-top">
-                                <div class="pxp-plans-card-1-title">Extended</div>
-                                <div class="pxp-plans-card-1-price">
-                                    <div class="pxp-plans-price-monthly">
-                                        $799<span class="pxp-period">/month</span>
-                                    </div>
-                                    <div class="pxp-plans-price-annual">
-                                        $789<span class="pxp-period">/year</span>
-                                    </div>
-                                </div>
-                                <div class="pxp-plans-card-1-list">
-                                    <ul class="list-unstyled">
-                                        <li><img src="images/check.svg" alt="">1 job posting</li>
-                                        <li><img src="images/check.svg" alt="">0 featured job</li>
-                                        <li><img src="images/check.svg" alt="">Job displayed for 20 days</li>
-                                        <li><img src="images/check.svg" alt="">Premium Support 24/7</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="pxp-plans-card-1-bottom">
-                                <div class="pxp-plans-card-1-cta">
-                                    <a href="#" class="btn rounded-pill pxp-card-btn">Choose Plan</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </section>
+        <?php
+ }
+ else
+ {
+        include('demo.php');
+ }}}
+        ?>
 
         <footer class="pxp-main-footer mt-100">
             <div class="pxp-main-footer-top pt-100 pb-100" style="background-color: var(--pxpMainColorLight);">

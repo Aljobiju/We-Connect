@@ -23,7 +23,16 @@ if(isset($_POST['publishjob']))
     $date = date("Y-m-d");
 
             // $sql = "UPDATE `tbl_customer` SET cus_name=`$name` WHERE user_id= `$id`";
-            $sql = "INSERT INTO `tbl_job_details`(`user_id`,`user_name`,`job_title`,`district`,`city`,`job_description`,`experience`,`job_type`,`salary`,`job_created_at`) VALUES ('$id','$name','$title','$district','$city','$description','$exp','$jobtype','$salary','$date')";
+          
+            $sql6="SELECT * FROM tbl_customer WHERE `user_id`= $id";
+            $result6 = $connect->query($sql6);
+            if($result6->num_rows > 0){ 
+            while($row = $result6->fetch_assoc())
+            {
+
+    if($row['payment_status']==1)
+{
+    $sql = "INSERT INTO `tbl_job_details`(`user_id`,`user_name`,`job_title`,`district`,`city`,`job_description`,`experience`,`job_type`,`salary`,`job_created_at`) VALUES ('$id','$name','$title','$district','$city','$description','$exp','$jobtype','$salary','$date')";
     $result = mysqli_query($connect, $sql);
 
     if($result)
@@ -44,7 +53,14 @@ if(isset($_POST['publishjob']))
        // header('Location: reg_gyno.php'); 
     } 
 }
+else
+{
+    echo "<script> alert('Please subscribe to post job'); 
+    window.location.href='CustomerDashboard-new_job.php';
+    </script>";
 }
-
+}
+            }
+        }}
 
 ?>

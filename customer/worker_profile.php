@@ -210,6 +210,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                     </div>
                                     <div class="col-sm-4 col-xxl-auto mt-3 mt-xxl-0 pxp-text-right">
                                 <a href="appoint_worker.php?uid= <?php echo $user_id ?>&jid= <?php echo $jId ?>" class="btn rounded-pill pxp-card-btn">Approve Worker</a>
+                                <!-- <a href="appoint_worker.php" class="btn rounded-pill pxp-card-btn">Approve Worker</a> -->
                             </div>
             
                                     <!-- <div class="pxp-single-candidate-side-panel mt-4 mt-lg-5">

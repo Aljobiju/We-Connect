@@ -11,7 +11,7 @@ $sql1 = "UPDATE `tbl_applied_jobs` SET `status`='1' WHERE `user_id`='$uId' AND `
                 //$_SESSION['status'] = "Your Data is Updated";
                 //$_SESSION['status_code'] = "success";
                 echo "<script> alert('Worker Approved'); 
-                window.location.href='CustomerDashboard-manage_jobs.php.php';</script>";
+                window.location.href='send_sms.php';</script>";
                 //header('Location: reg_gyno.php'); 
             }
             else
@@ -24,5 +24,5 @@ $sql1 = "UPDATE `tbl_applied_jobs` SET `status`='1' WHERE `user_id`='$uId' AND `
                // header('Location: reg_gyno.php'); 
             } 
 
-header("Location: CustomerDashboard-manage_jobs.php");
+// header("Location: CustomerDashboard-manage_jobs.php");
 ?>
