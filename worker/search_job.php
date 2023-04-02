@@ -5,7 +5,8 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
     header("Location: ../login.php");
     die();
 } else {
-    
+    $name = $_GET['query1'];
+    $location = $_GET['query2'];
 ?>
 
 <!doctype html>
@@ -106,7 +107,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <h1>Search Jobs</h1>
                 <div class="pxp-hero-subtitle pxp-text-ligh">Search your career opportunity through <strong>12,800</strong> jobs</div>
                 <div class="pxp-hero-form pxp-hero-form-round pxp-large mt-3 mt-lg-4">
-                    <form class="row gx-3 align-items-center" action="search_job.php" method="GET">
+                <form class="row gx-3 align-items-center" action="search_job.php" method="GET">
                         <div class="col-12 col-lg">
                             <div class="input-group mb-3 mb-lg-0">
                                 <span class="input-group-text"><span class="fa fa-search"></span></span>
@@ -147,6 +148,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         <section class="mt-100">
             <div class="pxp-container">
                 <div class="pxp-jobs-list-top mt-3 mt-lg-4">
+                <a href="joblist.php" class="btn rounded-pill pxp-section-cta mt-3 mt-sm-0">Reset filter<span class="fa fa-angle-right"></span></a>
                     <div class="row justify-content-between align-items-center">
                         <div class="col-auto">
                             <h2><span class="pxp-text-light">Showing jobs</span></h2>
@@ -164,7 +166,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 <div>
 
                 <?php
-                                         $sql="SELECT * FROM tbl_job_details WHERE `status`= 1";
+                                         $sql = "SELECT * FROM tbl_job_details WHERE job_title LIKE '%$name%' AND district LIKE '%$location%' AND city LIKE '%$location%'  AND `status`= 1";
                                         $result = $connect->query($sql);
                                          if($result->num_rows > 0){ 
                                         while($row = $result->fetch_assoc()) {

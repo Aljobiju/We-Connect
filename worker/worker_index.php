@@ -58,6 +58,9 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             <li class="dropdown">
                                 <a href="WorkerDashboard-profile.php">Dashboard</a>
                             </li>
+                            <li class="dropdown">
+                                <a href="subscription_worker.php">Subscription</a>
+                            </li>
                             <!-- <li class="dropdown">
                                 <a href="subscription_worker.php">Subscription</a>
                             </li> -->

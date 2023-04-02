@@ -144,7 +144,6 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
         </section>
         <section class="mt-100">
             <div class="pxp-container">
-
                 <div class="pxp-candidates-list-top">
                 <a href="worker_list.php" class="btn rounded-pill pxp-section-cta mt-3 mt-sm-0">Reset filter<span class="fa fa-angle-right"></span></a>
                     <div class="row justify-content-between align-items-center">
@@ -164,7 +163,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
 
                 <div class="row">
                 <?php
-                                       $sql = "SELECT * FROM tbl_worker WHERE wor_name LIKE '%$name%' AND address LIKE '%$location%'";
+                                       $sql = "SELECT * FROM tbl_worker WHERE wor_name LIKE '%$name%' AND address LIKE '%$location%'  AND `status`= 1";
                                         $result = $connect->query($sql);
                                          if($result->num_rows > 0){ 
                                         while($row = $result->fetch_assoc()) {

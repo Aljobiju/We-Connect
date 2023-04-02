@@ -52,43 +52,46 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 <div class="pxp-line-2"></div>
                                 <div class="pxp-line-3"></div>
                             </a>
+                            <div class="offcanvas offcanvas-start pxp-nav-mobile-container" tabindex="-1" id="pxpMobileNav">
+                                <div class="offcanvas-header">
+                                    <div class="pxp-logo">
+                                        <a href="index.html" class="pxp-animate"><span style="color: var(--pxpMainColor)">We</span>-Connect</a>
+                                    </div>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                            </div>
                         </div>
                         <nav class="pxp-nav dropdown-hover-all d-none d-xl-block">
                             <ul>
                                 <li class="dropdown">
-                                    <a href="customer_index.php">Home</a>
+                                    <a href="worker_index.php" >Home</a>
+                                  
                                 </li>
                                 <li class="dropdown">
-                                    <a href="worker_list.php" >Find Workers</a>
+                                    <a href="joblist.php">Find Jobs</a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="CustomerDashboard-Profile.php" >Dashboard</a>
+                                    <a href="WorkerDashboard-profile.php">Dashboard</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="subscription_worker.php">Subscription</a>
                                 </li>
                                 <!-- <li class="dropdown">
-                                    <a href="#">Contact us</a>
+                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Candidates</a>
                                 </li> -->
-                                <!-- <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Blog</a> -->
-                                    <!-- <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="blog-list-1.html">Articles Cards</a></li>
-                                        <li><a class="dropdown-item" href="blog-list-2.html">Articles List</a></li>
-                                        <li><a class="dropdown-item" href="blog-list-3.html">Articles Boxed</a></li>
-                                        <li><a class="dropdown-item" href="single-blog-post.html">Single Article</a></li>
-                                    </ul> -->
-                                </li>
                             </ul>
                         </nav>
                     </div>
                     <nav class="pxp-user-nav pxp-on-light">
-                        <a href="CustomerDashboard-new_job.php" class="btn rounded-pill pxp-nav-btn">Post a Job</a>
+                        <!-- <a href="company-dashboard-new-job.html" class="btn rounded-pill pxp-nav-btn">Post a Job</a> -->
                         <div class="dropdown pxp-user-nav-dropdown">
                         <a role="button" class="dropdown-toggle" data-bs-toggle="dropdown">
                             <div class="pxp-user-nav-avatar pxp-cover" style="background-image: url(../images/company-logo-1.png);"></div>
                             <div class="pxp-user-nav-name d-none d-md-block"><?php echo $_SESSION['userName'] ?></div>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Dashboard</a></li>
-                            <li><a class="dropdown-item" href="CustomerDashboard-Profile.php">Edit profile</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Dashboard</a></li>
+                            <li><a class="dropdown-item" href="WorkerDashboard-profile.php">Edit profile</a></li>
                             <li><a class="dropdown-item" href="../auth/logoutController.php">Logout</a></li>
                         </ul>
                     </div>
@@ -97,73 +100,43 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
             </div>
         </header>
 
-<?php
- $sql5="SELECT * FROM tbl_customer WHERE `user_id`= $_SESSION[userId]";
- $result5 = $connect->query($sql5);
- if($result5->num_rows > 0){ 
-    while($row = $result5->fetch_assoc()) {
-  $n=$row['payment_status'];
-  if($n==0)
- {
-   
-?>
-
-
 
         <section class="mt-100 pxp-no-hero">
-            <div class="pxp-container">
-                <h2 class="pxp-section-h2">Price Plans</h2>
-                <p class="pxp-text-light">Choose the plan that suits you best</p>
-
-                <div class="mt-4 mt-md-5">
-                    <div class="btn-group pxp-price-plans-switcher" role="group" aria-label="Price plans switcher">
-                        <input type="radio" class="btn-check" name="pxp-price-plans-switcher" id="pxp-price-plan-monthly" data-period="month" checked>
-                        <label class="btn btn-outline-primary" for="pxp-price-plan-monthly">Monthly</label>
-
-                        <!-- <input type="radio" class="btn-check" name="pxp-price-plans-switcher" id="pxp-price-plan-nnnual" data-period="year">
-                        <label class="btn btn-outline-primary" for="pxp-price-plan-nnnual">Annual</label> -->
-                    </div>
-                </div>
-
-                <div class="row mt-3 mt-md-4 pxp-animate-in pxp-animate-in-top">
-                    <div class="col-md-6 col-xl-4 col-xxl-3 pxp-plans-card-1-container">
-                        <div class="pxp-plans-card-1">
-                            <div class="pxp-plans-card-1-top">
-                                <div class="pxp-plans-card-1-title">Standard</div>
-                                <div class="pxp-plans-card-1-price">
-                                    <div class="pxp-plans-price-monthly">
-                                    ₹299<span class="pxp-period">/month</span>
-                                    </div>
-                                    <!-- <div class="pxp-plans-price-annual">
-                                    ₹289<span class="pxp-period">/year</span>
-                                    </div> -->
-                                </div>
-                                <div class="pxp-plans-card-1-list">
-                                    <ul class="list-unstyled">
-                                        <li><img src="images/check.svg" alt="">unlimited job posting</li>
-                                        <li><img src="images/check.svg" alt="">1 featured job</li>
-                                        <li><img src="images/check.svg" alt="">Job displayed for 30 days</li>
-                                        <li><img src="images/check.svg" alt="">Premium Support 24/7</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="pxp-plans-card-1-bottom">
-                                <div class="pxp-plans-card-1-cta">
-                                    <a href="../razorpay.php" class="btn rounded-pill pxp-card-btn">Choose Plan</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <?php
- }
- else
- {
-        include('demo.php');
- }}}
-        ?>
+$apiKey="rzp_test_r3ni5GGLsmApmp";
+?>
+
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+<form action="paydone_worker.php" method="POST">
+<script
+    src="https://checkout.razorpay.com/v1/checkout.js"
+    data-key="<?php echo $apiKey; ?>" // Enter the Test API Key ID generated from Dashboard → Settings → API Keys
+    data-amount="<?php echo 250  * 100;?>" // Amount is in currency subunits. Hence, 29935 refers to 29935 paise or ₹299.35.
+    data-currency="INR"// You can accept international payments by changing the currency code. Contact our Support Team to enable International for your account
+    data-id="order_CgmcjRh9ti2lP7"// Replace with the order_id generated by you in the backend.
+    data-buttontext="Pay with Razorpay"
+    data-name="Fragrance IND"
+    data-description="Everything’s better with a bit of fragrance."
+    data-image="https://st4.depositphotos.com/31445094/41249/v/1600/depositphotos_412499652-stock-illustration-perfume-icon-design-template-isolated.jpg"
+    data-prefill.name="Minu Joe"
+    data-prefill.email=""
+    data-theme.color="#F37254"
+></script>
+<input type="hidden" custom="Hidden Element" name="hidden" class="btn btn-primary">
+</form>
+<!--gateway end-->
+
+<style>
+    .razorpay-payment-button{
+        background-color: #0DCAF0;
+        color: white;
+        font-size: 18px;padding: 8px 10px;font-weight: bold;
+        border-radius: 12px; border: none;text-align: center; 
+    }
+</style>
+
+        </section>
 
         <footer class="pxp-main-footer mt-100">
             <div class="pxp-main-footer-top pt-100 pb-100" style="background-color: var(--pxpMainColorLight);">

@@ -73,6 +73,9 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                                 <li class="dropdown">
                                     <a href="WorkerDashboard-profile.php">Dashboard</a>
                                 </li>
+                                <li class="dropdown">
+                                    <a href="subscription_worker.php">Subscription</a>
+                                </li>
                                 <!-- <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">Candidates</a>
                                 </li> -->
@@ -96,7 +99,16 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 </div>
             </div>
         </header>
-
+        <?php
+ $sql5="SELECT * FROM tbl_worker WHERE `user_id`= $_SESSION[userId]";
+ $result5 = $connect->query($sql5);
+ if($result5->num_rows > 0){ 
+    while($row = $result5->fetch_assoc()) {
+  $n=$row['payment_status'];
+  if($n==0)
+ {
+   
+?>
 
         <section class="mt-100 pxp-no-hero">
             <div class="pxp-container">
@@ -165,7 +177,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             </div>
                             <div class="pxp-plans-card-1-bottom">
                                 <div class="pxp-plans-card-1-cta">
-                                    <a href="checkout_worker.php" class="btn rounded-pill pxp-card-btn">Choose Plan</a>
+                                    <a href="razorpay_worker.php" class="btn rounded-pill pxp-card-btn">Choose Plan</a>
                                 </div>
                             </div>
                         </div>
@@ -230,6 +242,13 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                 </div>
             </div>
         </section>
+        <?php
+ }
+ else
+ {
+        include('premium.php');
+ }}}
+        ?>
 
         <footer class="pxp-main-footer mt-100">
             <div class="pxp-main-footer-top pt-100 pb-100" style="background-color: var(--pxpMainColorLight);">
