@@ -1,2 +1,2 @@
 # We-Connect
-Mini-Project
+Main-Project
