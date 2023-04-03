@@ -167,7 +167,7 @@ if (isset($_SESSION["wcSession"]) != session_id()) {
                             </div>
                             <div class="pxp-footer-section mt-3 mt-md-4">
                                 <h3>Call us</h3>
-                                <div class="pxp-footer-phone">(123) 456-7890</div>
+                                <div class="pxp-footer-phone">+91 9061673186</div>
                             </div>
                             <div class="mt-3 mt-md-4 pxp-footer-section">
                                 <div class="pxp-footer-text">
